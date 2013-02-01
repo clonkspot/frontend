@@ -36,6 +36,11 @@ app.engine 'ect', renderer.render
 app.get '/', (req, res) ->
   res.send renderer.render 'index', {data, t: chooseLanguage(req)}
 
+unless app.get('env') is 'production'
+  # Get images from the production server.
+  app.get '/images/*', (req, res) ->
+    res.redirect 'http://clonkspot.org/images/'+req.params[0]
+
 PORT = 3235
 app.listen PORT
 console.log "Running on port #{PORT}"
