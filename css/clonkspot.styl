@@ -107,8 +107,8 @@ h5 {
 
 .ExternalButton {
   box-shadow: inset 0px 0px 3px 0px #ffffff
-  background: linear-gradient( center top, #87d969 5%, #61b346 100% )
   background-color: #87d969
+  background-image: linear-gradient(#87d969 5%, #61b346 100%)
   border-radius: 4px
   border: 1px solid #74a67b
   display: inline-block
@@ -118,16 +118,16 @@ h5 {
   padding: 9px 33px
   text-decoration: none
   user-select: none
-}
 
-.ExternalButton:hover {
-  background: linear-gradient( center top, #91dc77 5%, #87d969 100% )
-  background-color: #61b346
-}
+  &:hover {
+    background-color: #61b346
+    background-image: linear-gradient(#91dc77 5%, #87d969 100%)
+  }
 
-.ExternalButton:active {
-  position: relative
-  top: 2px
+  &:active {
+    position: relative
+    top: 2px
+  }
 }
 
 /*Links*/
