@@ -1,5 +1,7 @@
 # Frontend application
 
+fs = require 'fs'
+
 express = require 'express'
 ECT = require 'ect'
 
@@ -35,6 +37,18 @@ app.engine 'ect', renderer.render
 
 app.get '/', (req, res) ->
   res.send renderer.render 'index', {data, t: chooseLanguage(req)}
+
+# Semi-static pages
+getPage = (page, url = "/#{page}") ->
+  app.get url, (req, res) ->
+    res.send renderer.render "pages/#{page}", {data, t: chooseLanguage(req)}
+
+fs.readdir 'html/pages', (err, files) ->
+  unless err
+    for file in files
+      if m = file.match /^(\w+)\.ect$/
+        getPage m[1]
+  return
 
 unless app.get('env') is 'production'
   # Get images from the production server.
