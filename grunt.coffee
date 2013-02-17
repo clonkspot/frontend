@@ -4,6 +4,10 @@ module.exports = (grunt) ->
       compile:
         files:
           'public/css/clonkspot.css': 'css/*.styl'
+    watch:
+      stylus:
+        files: 'css/*.styl'
+        tasks: 'stylus'
 
   grunt.loadNpmTasks 'grunt-contrib-stylus'
 
