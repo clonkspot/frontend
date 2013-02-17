@@ -3,7 +3,7 @@
 module.exports =
   nav:
     blog: '/blog'
-    forums: '/cgi-bin/forum'
+    forums: '/cgi-bin/forum/forum.pl'
     clonkforge: 'http://clonkforge.net/'
     official: 'http://clonk.de/'
     openclonk: 'http://openclonk.org/'
