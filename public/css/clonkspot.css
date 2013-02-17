@@ -14,45 +14,6 @@ body {
   text-align: left;
   position: relative;
 }
-header .logo {
-  margin-top: -100px;
-  margin-left: 20px;
-}
-header .icon {
-  position: absolute;
-  top: 60px;
-}
-header .icon.twitter {
-  right: 70px;
-}
-header .icon.youtube {
-  right: 35px;
-}
-header .language {
-  position: absolute;
-  top: 24px;
-  right: 10px;
-}
-header nav {
-  background: #d4d4d4;
-  white-space: nowrap;
-  height: 70px;
-  padding-top: 30px;
-  padding-left: 30px;
-}
-header nav a {
-  display: inline-block;
-  width: 167px;
-  color: #353535 !important;
-}
-header nav a:first-child {
-  width: 100px;
-}
-header nav a small {
-  display: block;
-  margin-top: -16px;
-  font-size: 10px;
-}
 .content {
   margin: 20px auto;
   margin-top: 42px;
@@ -154,6 +115,52 @@ a:buttonlink:active {
 @font-face {
   font-family: Rockwell;
   src: url("Rockwell_Bold.ttf");
+}
+
+/* Layout */
+header .logo {
+  margin-top: -100px;
+  margin-left: 20px;
+}
+header .icon {
+  position: absolute;
+  top: 60px;
+}
+header .icon.twitter {
+  right: 70px;
+}
+header .icon.youtube {
+  right: 35px;
+}
+header .language {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+}
+header nav {
+  background: #d4d4d4;
+  white-space: nowrap;
+  height: 70px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+header nav a {
+  display: inline-block;
+  width: 167px;
+  color: #353535 !important;
+}
+header nav a:first-child {
+  width: 100px;
+}
+header nav a small {
+  display: block;
+  margin-top: -16px;
+  font-size: 10px;
+}
+footer {
+  margin-top: 30px;
+  height: 50px;
+  background-color: #545454;
 }
 
 /* Impressum */
