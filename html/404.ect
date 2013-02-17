@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title><%= @t.notfound.title %></title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="/css/clonkspot.css" type="text/css" charset="utf-8">
+
+    <style>
+      html {
+        background-color: white;
+        background-image: none;
+      }
+      #text {
+        position: absolute;
+        left: 800px;
+        top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="/images/404.jpg" alt=404>
+
+    <div id="text">
+      <h1><%= @t.notfound.heading %></h1>
+      <h4><i><%= @t.notfound.terrible %></i></h4>
+      <p><%= @t.notfound.picture %></p>
+      <a class="ExternalButton buttonlink" href="/">Bring me home!</a>
+    </div>
+
+  </body>
+</html>

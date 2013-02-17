@@ -60,6 +60,10 @@ unless app.get('env') is 'production'
   app.get '/images/*', (req, res) ->
     res.redirect 'http://clonkspot.org/images/'+req.params[0]
 
+# 404 handler
+app.use (req, res, next) ->
+  res.status(404).send renderer.render '404', {data, t: chooseLanguage(req)}
+
 PORT = 3235
 app.listen PORT
 console.log "Running on port #{PORT}"
