@@ -1,6 +1,7 @@
 /* Clonkspot CSS */
 html {
   background: #b3b3b3 url("/images/bg.jpg") no-repeat;
+  background-position: 50%;
 }
 body {
   font-family: Arial, sans-serif;
@@ -19,13 +20,13 @@ header .logo {
 }
 header .icon {
   position: absolute;
-  top: 80px;
+  top: 60px;
 }
 header .icon.twitter {
   right: 70px;
 }
 header .icon.youtube {
-  right: 40px;
+  right: 35px;
 }
 header .language {
   position: absolute;
