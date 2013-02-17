@@ -1,26 +1,12 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Clonkspot</title>
-    <meta charset='utf-8'>
-    <link rel="stylesheet" href="/css/clonkspot.css" type="text/css" charset="utf-8">
-  </head>
-  <body>
-    <header>
-      <a href="http://clonkspot.org"><img src="/images/header.jpg" alt="clonkspot - your hub for Clonk."></a>
+<% extend 'layout.ect' %>
 
-      <div id="logo">
-        <a href="http://clonkspot.org"><img src="/images/logo.png" alt=""></a>
-      </div>
-
-      <nav>
-        <% for key, item of @t.nav : %>
-        <a href="<%- @data.nav[key] %>">
-          <b><%= item[0] %></b>
-          <p><%= item[1] %></p>
-        </a>
-        <% end %>
-      </nav>
-    </header>
-  </body>
-</html>
+<div id="content">
+  <h1>Hi!</h1>
+  <p>
+    Wir basteln zur Zeit an unserer neuen Startseite.
+  </p>
+  <a class="ExternalButton buttonlink" href="http://clonkspot.org/blog/">Blog</a>
+  <a class="ExternalButton buttonlink" href="http://clonkspot.org/cgi-bin/forum/forum.pl">Forum</a>
+  <br>
+  <a href="impressum.html"><small>Impressum</small></a>
+</div>
