@@ -154,7 +154,7 @@ header nav a:first-child {
   width: 100px;
   position: relative;
   top: 10px;
-  ((null)): 0;
+  left: 0;
 }
 header nav a small {
   display: block;
