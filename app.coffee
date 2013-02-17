@@ -48,7 +48,7 @@ getPage = (page, url = "/#{page}") ->
   app.get url, (req, res) ->
     res.send renderer.render "pages/#{page}", {data, t: chooseLanguage(req)}
 
-fs.readdir 'html/pages', (err, files) ->
+fs.readdir "#{__dirname}/html/pages", (err, files) ->
   unless err
     for file in files
       if m = file.match /^(\w+)\.ect$/
