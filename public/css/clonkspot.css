@@ -53,10 +53,14 @@ header nav a small {
   margin-top: -16px;
   font-size: 10px;
 }
-#content {
+.content {
   margin: 20px auto;
   margin-top: 42px;
   padding: 0 30px;
+}
+.smalltext {
+  font-size: 13px;
+  line-height: 18px;
 }
 h1 {
   font-family: Arial, sans-serif;
@@ -150,4 +154,14 @@ a:buttonlink:active {
 @font-face {
   font-family: Rockwell;
   src: url("Rockwell_Bold.ttf");
+}
+
+/* Impressum */
+#impressum {
+  position: relative;
+}
+#impressum .uberspace {
+  position: absolute;
+  top: 67px;
+  left: 250px;
 }
