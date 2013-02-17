@@ -140,8 +140,8 @@ header .language {
 header nav {
   background: #d4d4d4;
   white-space: nowrap;
-  height: 70px;
-  padding-top: 30px;
+  height: 75px;
+  padding-top: 25px;
   padding-left: 30px;
 }
 header nav a {
@@ -152,6 +152,9 @@ header nav a {
 }
 header nav a:first-child {
   width: 100px;
+  position: relative;
+  top: 10px;
+  ((null)): 0;
 }
 header nav a small {
   display: block;
