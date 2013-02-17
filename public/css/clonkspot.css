@@ -148,6 +148,7 @@ header nav a {
   display: inline-block;
   width: 167px;
   color: #353535 !important;
+  text-decoration: none;
 }
 header nav a:first-child {
   width: 100px;
