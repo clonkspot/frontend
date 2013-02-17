@@ -1,6 +1,9 @@
 # German strings
 
 module.exports =
+  lang: 'en'
+  otherlang: 'de'
+  langselect: 'Ich möchte Deutsch.'
   nav:
     blog: ['Blog', 'our thoughts about Clonk']
     forums: ['Forums', 'join the mumbling']
