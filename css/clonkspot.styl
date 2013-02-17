@@ -1,130 +1,132 @@
-﻿/* clonkspot css*/
+/* Clonkspot CSS */
+
+@import "nib"
+
+html {
+  background: #B3B3B3 url(/images/bg.jpg) no-repeat
+}
 
 body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24pt;
-  color: #212121;
+  font-family: Arial, sans-serif
+  font-size: 16px
+  line-height: 24pt
+  color: #212121
+
+  width: 1006px
+  background-color: white
+  margin: 0 auto
+  text-align: left
+  position: relative
 }
 
-.pagewidth {
-  width: 1006px;
-  background-color: white;
-  margin: 20px auto;
-  text-align: left;
-  position: relative; 
-}
+header {
+  .logo {
+    margin-top: -100px
+    margin-left: 20px
+  }
 
-#logo {
-  margin-top: -100px;
+  .icon {
+    position: absolute
+    top: 80px
+
+    &.twitter {
+      right: 70px
+    }
+
+    &.youtube {
+      right: 40px
+    }
+  }
+
+  .language {
+    position: absolute
+    top: 24px
+    right: 10px
+  }
+
+  nav {
+    background: #D4D4D4
+    white-space: nowrap
+    padding = 30px
+    height: 100px - padding
+    padding-top: padding
+    padding-left: 30px
+    a {
+      display: inline-block
+      width: 167px
+      color: #353535 !important
+      &:first-child {
+        width: 100px
+      }
+      small {
+        display: block
+        margin-top: -16px
+        font-size: 10px
+      }
+    }
+  }
 }
 
 #content {
-  position: relative;
-  width: 1006px;
-  background-color: white;
-  margin: 20px auto;
-  margin-top: 42px;
-  text-align: left;
-  position: relative; 
-}
-
-#twitter {
-  position: absolute;
-  top: 80px;
-  left: 1359px;
-  z-index: 1;
-}
-
-#youtube {
-  position: absolute;
-  top: 80px;
-  left: 1400px;
-  z-index: 1;
-}
-
-#language{
-  position: absolute;
-  top: 24px;
-  left: 1291px;
-  z-index: 2;
-}
-
-#badgetmp{
-  position: absolute;
-  margin-top: 67px;
-  margin-left: 250px;
+  margin: 20px auto
+  margin-top: 42px
+  padding: 0 30px
 }
 
 h1 {
-  font-family: Arial, sans-serif;
-  font-size: 36px;
+  font-family: Arial, sans-serif
+  font-size: 36px
 }
 
 h2 {
-  font-family: Arial Black, Arial, sans-serif;
-  font-size: 20px;
+  font-family: Arial Black, Arial, sans-serif
+  font-size: 20px
 }
 
 h3 {
-  font-family: Arial, sans-serif;
-  font-size: 20px;
+  font-family: Arial, sans-serif
+  font-size: 20px
 }
 
 h4 {
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  font-style: regular;
-  color: #515050;
+  font-family: Arial, sans-serif
+  font-size: 20px
+  font-style: regular
+  color: #515050
 }
 
 h5 {
-  font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-family: Arial, sans-serif
+  font-size: 13px
 }
 
 .specialtext {
-  line-height: 30px;
+  line-height: 30px
 }
-
-.smalltext {
-  font-size: 13px;
-  line-height: 18px;
-}
-
 
 .ExternalButton {
-  -moz-box-shadow: inset 0px 0px 3px 0px #ffffff;
-  -webkit-box-shadow: inset 0px 0px 3px 0px #ffffff;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  box-shadow: inset 0px 0px 3px 0px #ffffff;
-  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #87d969), color-stop(1, #61b346) );
-  background: -moz-linear-gradient( center top, #87d969 5%, #61b346 100% );
-  background-color: #87d969;
-  border-radius: 4px;
-  border: 1px solid #74a67b;
-  display: inline-block;
-  color: #ffffff;
-  font-family: Rockwell, Times New Roman, serif;
-  font-size: 16px;
-  padding: 9px 33px;
-  text-decoration: none;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
+  box-shadow: inset 0px 0px 3px 0px #ffffff
+  background: linear-gradient( center top, #87d969 5%, #61b346 100% )
+  background-color: #87d969
+  border-radius: 4px
+  border: 1px solid #74a67b
+  display: inline-block
+  color: #ffffff
+  font-family: Rockwell, Times New Roman, serif
+  font-size: 16px
+  padding: 9px 33px
+  text-decoration: none
+  user-select: none
 }
 
 .ExternalButton:hover {
-  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #91dc77), color-stop(1, #87d969) );
-  background: -moz-linear-gradient( center top, #91dc77 5%, #87d969 100% );
-  background-color:#61b346;
+  background: linear-gradient( center top, #91dc77 5%, #87d969 100% )
+  background-color: #61b346
 }
 
 .ExternalButton:active {
-  position: relative;
-  top: 2px;
+  position: relative
+  top: 2px
 }
 
 /*Links*/
