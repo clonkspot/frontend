@@ -30,6 +30,11 @@ chooseLanguage = (req) ->
 
 module.exports.app = app = express()
 
+if app.get('env') is 'production'
+  app.use express.logger()
+else
+  app.use express.logger 'dev'
+
 app.use express.static('public')
 app.use express.cookieParser()
 
