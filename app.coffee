@@ -55,6 +55,11 @@ fs.readdir "#{__dirname}/html/pages", (err, files) ->
         getPage m[1]
   return
 
+# Comics
+# TODO: dynamic rendering
+app.get '/comic/1', (req, res) ->
+  res.send renderer.render 'comic', {data, t: chooseLanguage(req)}
+
 unless app.get('env') is 'production'
   # Get images from the production server.
   app.get '/images/*', (req, res) ->
