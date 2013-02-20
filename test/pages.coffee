@@ -24,6 +24,12 @@ describe 'GET /', ->
         .set('Accept-Language', 'de')
         .expect(/lang="de"/, done)
 
+    it 'should use the first fitting language', (done) ->
+      request
+        .get('/')
+        .set('Accept-Language', 'fr, en, de')
+        .expect(/lang="en"/, done)
+
     it 'should allow overriding using the language cookie', (done) ->
       request
         .get('/')
