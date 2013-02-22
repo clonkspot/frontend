@@ -5,8 +5,14 @@ fs = require 'fs'
 express = require 'express'
 ECT = require 'ect'
 
+# Initialize the application
+module.exports.app = app = express()
+
+# Is the application running in production?
+PRODUCTION = app.get('env') is 'production'
+
 # Setup ECT rendering
-renderer = ECT root: "#{__dirname}/html", watch: on, ext: '.ect'
+renderer = ECT root: "#{__dirname}/html", watch: !PRODUCTION, ext: '.ect'
 
 # Get the language strings
 lang =
@@ -28,9 +34,7 @@ chooseLanguage = (req) ->
   # Default to English
   lang.en
 
-module.exports.app = app = express()
-
-if app.get('env') is 'production'
+if PRODUCTION
   app.use express.logger()
 else
   app.use express.logger 'dev'
@@ -73,7 +77,7 @@ app.get '/comic/:id', (req, res, next) ->
     # Pass through to the 404 handler
     next()
 
-unless app.get('env') is 'production'
+unless PRODUCTION
   # Get images from the production server.
   app.get '/images/*', (req, res) ->
     res.redirect 'http://clonkspot.org/images/'+req.params[0]
