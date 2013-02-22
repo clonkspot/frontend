@@ -43,3 +43,10 @@ describe 'Comics', ->
       request
         .get('/comic/foobar')
         .expect(404, done)
+
+  describe 'GET /comic/random', ->
+    it 'should redirect to a comic', (done) ->
+      request.get('/comic/random')
+        .expect(302)
+        .expect('Location', /\/comic\/\d+/)
+        .end done

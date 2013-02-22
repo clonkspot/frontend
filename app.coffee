@@ -63,7 +63,8 @@ renderComic = (req, id = data.comics.length) ->
 app.get '/comic', (req, res) ->
   res.send renderComic(req)
 app.get '/comic/random', (req, res) ->
-  res.send renderComic(req, 1 + Math.floor(Math.random() * data.comics.length))
+  id = 1 + Math.floor(Math.random() * data.comics.length)
+  res.redirect "/comic/#{id}"
 app.get '/comic/:id', (req, res, next) ->
   id = +req.params.id
   if id > 0 && id <= data.comics.length
