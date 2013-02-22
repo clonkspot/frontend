@@ -1,7 +1,9 @@
 
 describe 'Comics', ->
+  # Matches the comic image path
   comic = (id) -> ///\/images\/comics\/comic#{id}\.png///
   comics = require '../data/comics'
+
   describe 'GET /comic', ->
     it 'should show the latest comic', (done) ->
       request
@@ -9,6 +11,19 @@ describe 'Comics', ->
         .expect(200)
         .expect(comic comics.length)
         .end done
+
+    describe 'Archive', ->
+      it 'should exist', (done) ->
+        request.get('/comic')
+          .expect(200, /Archive/, done)
+      it 'should contain all comics', (done) ->
+        request.get('/comic')
+          .end (err, res) ->
+            throw err if err
+            for c in comics
+              res.text.should.contain c
+            done()
+
   describe 'GET /comic/:id', ->
     it 'should show the correct comic', (done) ->
       request
