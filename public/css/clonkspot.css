@@ -174,10 +174,16 @@ footer {
 #comic {
   text-align: center;
 }
+#comic nav .dummy {
+  display: inline-block;
+  width: 30px;
+}
 #comic .archive {
   text-align: left;
 }
 #comic .archive ol {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
   column-count: 3;
 }
 #comic .archive ol li {

@@ -2,14 +2,18 @@
 
 <div class="content" id="comic">
   <nav class=controls>
-    <% unless @id is 1: %>
-      <a href="/comic/1"><img src="/images/comics/first.png" alt="|<"></a>
+    <% if @id > 1: %>
+      <!--<a href="/comic/1"><img src="/images/comics/first.png" alt="|<"></a>-->
       <a href="/comic/<%= @id-1 %>"><img src="/images/comics/prev.png" alt="< prev"></a>
+    <% else: %>
+      <span class=dummy> </span>
     <% end %>
-    <a href="/comic/random"><img src="/images/comics/random.png" alt="random"></a>
-    <% unless @id is @data.comics.length: %>
+    <!--<a href="/comic/random"><img src="/images/comics/random.png" alt="random"></a>-->
+    <% if @id < @data.comics.length: %>
       <a href="/comic/<%= @id+1 %>"><img src="/images/comics/next.png" alt="next >"></a>
-      <a href="/comic"><img src="/images/comics/last.png" alt=">|"></a>
+      <!--<a href="/comic"><img src="/images/comics/last.png" alt=">|"></a>-->
+    <% else: %>
+      <span class=dummy> </span>
     <% end %>
   </nav>
 
