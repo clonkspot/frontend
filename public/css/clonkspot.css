@@ -117,6 +117,36 @@ a:buttonlink:active {
   src: url("Rockwell_Bold.ttf");
 }
 
+/* Comics */
+#comic {
+  text-align: center;
+}
+#comic nav .dummy {
+  display: inline-block;
+  width: 30px;
+}
+#comic .archive {
+  text-align: left;
+}
+#comic .archive ol {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+#comic .archive ol li {
+  margin-left: 2em;
+}
+
+/* Impressum */
+#impressum {
+  position: relative;
+}
+#impressum .uberspace {
+  position: absolute;
+  top: 67px;
+  left: 250px;
+}
+
 /* Layout */
 header .logo {
   margin-top: -100px;
@@ -168,34 +198,4 @@ footer {
   margin-top: 30px;
   height: 50px;
   background-color: #545454;
-}
-
-/* Comics */
-#comic {
-  text-align: center;
-}
-#comic nav .dummy {
-  display: inline-block;
-  width: 30px;
-}
-#comic .archive {
-  text-align: left;
-}
-#comic .archive ol {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-}
-#comic .archive ol li {
-  margin-left: 2em;
-}
-
-/* Impressum */
-#impressum {
-  position: relative;
-}
-#impressum .uberspace {
-  position: absolute;
-  top: 67px;
-  left: 250px;
 }
