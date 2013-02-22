@@ -83,6 +83,8 @@ unless app.get('env') is 'production'
 app.use (req, res, next) ->
   res.status(404).send renderer.render '404', {data, t: chooseLanguage(req)}
 
-PORT = 3235
-app.listen PORT
-console.log "Running on port #{PORT}"
+# Only run if invoked directly.
+if process.argv[1] is __filename
+  PORT = 3235
+  app.listen PORT
+  console.log "Running on port #{PORT}"
