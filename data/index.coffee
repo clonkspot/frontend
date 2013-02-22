@@ -8,3 +8,5 @@ module.exports =
     clonkforge: 'http://clonkforge.net/'
     official: 'http://clonk.de/'
     openclonk: 'http://openclonk.org/'
+
+  comics: require './comics'

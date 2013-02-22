@@ -1,5 +1,17 @@
 <% extend 'layout.ect' %>
 
 <div class="content" id="comic">
-	<img src="/images/comics/comic1.png" alt="Comic #1: Everybody knows the pain.">
+  <nav class=controls>
+    <% unless @id is 1: %>
+      <a href="/comic/1"><img src="/images/first.png" alt="|<"></a>
+      <a href="/comic/<%= @id-1 %>"><img src="/images/prev.png" alt="< prev"></a>
+    <% end %>
+    <a href="/comic/random"><img src="/images/random.png" alt="random"></a>
+    <% unless @id is @data.comics.length: %>
+      <a href="/comic/<%= @id+1 %>"><img src="/images/next.png" alt="next >"></a>
+      <a href="/comic"><img src="/images/last.png" alt=">|"></a>
+    <% end %>
+  </nav>
+
+  <img src="/images/comics/comic<%= @id %>.png" alt="Comic #<%= @id %>: <%= @data.comics[@id-1] %>">
 </div>

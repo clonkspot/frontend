@@ -56,9 +56,23 @@ fs.readdir "#{__dirname}/html/pages", (err, files) ->
   return
 
 # Comics
-# TODO: dynamic rendering
-app.get '/comic/1', (req, res) ->
-  res.send renderer.render 'comic', {data, t: chooseLanguage(req)}
+# Renders the given comic, defaulting to the last one.
+renderComic = (req, id = data.comics.length) ->
+  renderer.render 'comic', {id, data, t: chooseLanguage(req)}
+
+app.get '/comic', (req, res) ->
+  res.send renderComic(req)
+app.get '/comic/random', (req, res) ->
+  res.send renderComic(req, 1 + Math.floor(Math.random() * data.comics.length))
+app.get '/comic/:id', (req, res, next) ->
+  id = +req.params.id
+  console.log id
+  console.log data.comics.length
+  if id > 0 && id <= data.comics.length
+    res.send renderComic(req, id)
+  else
+    # Pass through to the 404 handler
+    next()
 
 unless app.get('env') is 'production'
   # Get images from the production server.
