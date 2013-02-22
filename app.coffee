@@ -66,8 +66,6 @@ app.get '/comic/random', (req, res) ->
   res.send renderComic(req, 1 + Math.floor(Math.random() * data.comics.length))
 app.get '/comic/:id', (req, res, next) ->
   id = +req.params.id
-  console.log id
-  console.log data.comics.length
   if id > 0 && id <= data.comics.length
     res.send renderComic(req, id)
   else
