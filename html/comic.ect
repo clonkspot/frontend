@@ -3,13 +3,13 @@
 <div class="content" id="comic">
   <nav class=controls>
     <% unless @id is 1: %>
-      <a href="/comic/1"><img src="/images/first.png" alt="|<"></a>
-      <a href="/comic/<%= @id-1 %>"><img src="/images/prev.png" alt="< prev"></a>
+      <a href="/comic/1"><img src="/images/comics/first.png" alt="|<"></a>
+      <a href="/comic/<%= @id-1 %>"><img src="/images/comics/prev.png" alt="< prev"></a>
     <% end %>
-    <a href="/comic/random"><img src="/images/random.png" alt="random"></a>
+    <a href="/comic/random"><img src="/images/comics/random.png" alt="random"></a>
     <% unless @id is @data.comics.length: %>
-      <a href="/comic/<%= @id+1 %>"><img src="/images/next.png" alt="next >"></a>
-      <a href="/comic"><img src="/images/last.png" alt=">|"></a>
+      <a href="/comic/<%= @id+1 %>"><img src="/images/comics/next.png" alt="next >"></a>
+      <a href="/comic"><img src="/images/comics/last.png" alt=">|"></a>
     <% end %>
   </nav>
 
