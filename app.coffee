@@ -9,7 +9,7 @@ ECT = require 'ect'
 module.exports.app = app = express()
 
 # Is the application running in production?
-PRODUCTION = app.get('env') is 'production'
+GLOBAL.PRODUCTION = app.get('env') is 'production'
 
 # Setup ECT rendering
 renderer = ECT root: "#{__dirname}/html", watch: !PRODUCTION, ext: '.ect'
