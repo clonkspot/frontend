@@ -14,4 +14,13 @@
   </nav>
 
   <img src="/images/comics/comic<%= @id %>.png" alt="Comic #<%= @id %>: <%= @data.comics[@id-1] %>">
+
+  <section class=archive>
+    <h3>Archive</h3>
+    <ol>
+      <% for comic, id in @data.comics: %>
+        <li><a href="/comic/<%= id+1 %>"><%= comic %></a></li>
+      <% end %>
+    </ol>
+  </section>
 </div>
