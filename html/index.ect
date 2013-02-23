@@ -40,6 +40,18 @@
 
   </div>
   <!--LayerSlider end-->
+
+  <aside class=newsfeed>
+    <% for entry in @t.index.news: %>
+      <a href="<%= entry.link %>">
+        <img src="/images/stream_<%= entry.type %>.png" alt="<%= entry.type %>">
+        <div>
+          <b><%= entry.title %></b>
+          <small><%= @t.index.posted + entry.user + ' | ' + entry.date %></small>
+        </div>
+      </a>
+    <% end %>
+  </aside>
   
   <%= @t.index.welcome %>
   

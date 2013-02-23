@@ -21,3 +21,29 @@ module.exports =
 
   index:
     welcome: 'This is a construction area. Possibility of broken parts: High'
+    posted: 'posted by '
+    news: [
+      title: "I'm a thread this long"
+      link: ''
+      user: 'Nachtschatten'
+      date: 'Jan 30, 2013'
+      type: 'newpost'
+    ,
+      title: "Settlement Tutorial"
+      link: ''
+      user: 'clonkspot'
+      date: 'Jan 23, 2026'
+      type: 'youtube'
+    ,
+      title: "I'm a thread this long"
+      link: ''
+      user: 'Nachtschatten'
+      date: 'Jan 30, 2013'
+      type: 'newpost'
+    ,
+      title: "I'm a thread this long"
+      link: ''
+      user: 'Nachtschatten'
+      date: 'Jan 30, 2013'
+      type: 'newpost'
+    ]

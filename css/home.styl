@@ -1,8 +1,10 @@
 /* Home page */
 
+@import "nib"
 @import "lib/variables"
 
 #home {
+  position: relative
   margin: 0
   padding: 0
 
@@ -17,6 +19,39 @@
       font-weight: bold
       font-size: 18px
       padding: 5px 10px
+    }
+  }
+
+  .newsfeed {
+    absolute: top 0 right 0
+    width: mainWidth - sliderWidth
+    height: sliderHeight
+    a {
+      red = #CF0401
+      display: block
+      box-sizing: border-box
+      width: 100%
+      height: (@height / 4)
+      color: white !important
+      text-decoration: none !important
+      background-color: #3A3A3A
+      border-bottom: 6px solid red
+      &:hover {
+        background-color: red
+      }
+
+      img {
+        float: right
+      }
+      div {
+        relative: top 16px left 15px
+        > * {
+          display: block
+        }
+      }
+      b {
+        font-size: 20px
+      }
     }
   }
 }
