@@ -8,20 +8,23 @@ module.exports = (grunt) ->
           'public/css/clonkspot.css': 'css/*.styl'
     browserify:
       main:
-        files:
-          'public/js/main.js': 'js/main.coffee'
+        files: 'public/js/main.js': 'js/main.coffee'
+      home:
+        files: 'public/js/home.js': 'js/home.coffee'
     watch:
       stylus:
         files: 'css/*.styl'
         tasks: 'stylus'
+      browserify:
+        files: 'js/**/*'
+        tasks: 'browserify'
 
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', 'stylus'
+  grunt.registerTask 'default', 'stylus browserify'
 
   grunt.registerMultiTask 'browserify', 'Runs browserify', ->
-    console.log require('util').inspect this
     browserify = require 'browserify'
     for file, i in @files
       b = browserify(@options())

@@ -137,6 +137,22 @@ a:buttonlink:active {
   margin-left: 2em;
 }
 
+/* Home page */
+#home {
+  margin: 0;
+  padding: 0;
+}
+#home #layerslider {
+  width: 620px;
+  height: 390px;
+}
+#home #layerslider p {
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
 /* Impressum */
 #impressum {
   position: relative;

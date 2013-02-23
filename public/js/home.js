@@ -432,12 +432,16 @@ process.binding = function (name) {
 
 });
 
-require.define("/main.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
+require.define("/home.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
 
-  console.log('Hello World');
+  $('#layerslider').layerSlider({
+    responsive: false,
+    skin: 'noskin',
+    animateFirstLayer: false
+  });
 
 }).call(this);
 
 });
-require("/main.coffee");
+require("/home.coffee");
 })();
