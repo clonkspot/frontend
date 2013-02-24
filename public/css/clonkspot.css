@@ -146,7 +146,7 @@ a:buttonlink:active {
 }
 #home #layerslider {
   width: 620px;
-  height: 390px;
+  height: 388px;
 }
 #home #layerslider p {
   background-color: #fff;
@@ -159,7 +159,7 @@ a:buttonlink:active {
   top: 0;
   right: 0;
   width: 386px;
-  height: 390px;
+  height: 388px;
 }
 #home .newsfeed a {
   display: block;
@@ -167,7 +167,7 @@ a:buttonlink:active {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  height: 97.5px;
+  height: 97px;
   color: #fff !important;
   text-decoration: none !important;
   background-color: #3a3a3a;
