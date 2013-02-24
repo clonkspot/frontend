@@ -171,9 +171,13 @@ a:buttonlink:active {
   color: #fff !important;
   text-decoration: none !important;
   background-color: #3a3a3a;
+  background-image: url("/images/stream_iconarea.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
   border-bottom: 6px solid #cf0401;
 }
 #home .newsfeed a:hover {
+  background-image: none;
   background-color: #cf0401;
 }
 #home .newsfeed a img {
