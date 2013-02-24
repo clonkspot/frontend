@@ -15,5 +15,5 @@ npm install
 
 Then run the server with `coffee app.coffee` or `supervisor app.coffee`.
 
-On Windows you might need to use `supervisor --exec .\node_modules\.bin\coffee.cmd app.coffee`.
+On Windows you can use the `run.cmd` as a shortcut.
 
