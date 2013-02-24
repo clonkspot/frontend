@@ -3,5 +3,5 @@
 # Enable the LayerSlider
 $('#layerslider').layerSlider
   responsive: off
-  skin: 'noskin'
+  skin: 'darkskin'
   animateFirstLayer: off
