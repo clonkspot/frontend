@@ -153,6 +153,7 @@ a:buttonlink:active {
   font-weight: bold;
   font-size: 17px;
   padding: 5px 10px;
+  white-space: nowrap;
 }
 #home .newsfeed {
   position: absolute;
