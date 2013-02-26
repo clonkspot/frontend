@@ -433,10 +433,11 @@ process.binding = function (name) {
 });
 
 require.define("/home.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
+  var ls;
 
-  $('#layerslider').layerSlider({
+  ls = $('#layerslider').layerSlider({
     responsive: false,
-    skin: 'darkskin',
+    skin: 'borderlessdark',
     animateFirstLayer: false
   });
 

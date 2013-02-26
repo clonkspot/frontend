@@ -1,7 +1,7 @@
 # Index page
 
 # Enable the LayerSlider
-$('#layerslider').layerSlider
+ls = $('#layerslider').layerSlider
   responsive: off
-  skin: 'darkskin'
+  skin: 'borderlessdark'
   animateFirstLayer: off
