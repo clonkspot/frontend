@@ -22,7 +22,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', 'stylus browserify'
+  grunt.registerTask 'default', ['stylus', 'browserify']
 
   grunt.registerMultiTask 'browserify', 'Runs browserify', ->
     browserify = require 'browserify'
