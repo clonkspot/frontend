@@ -4,4 +4,5 @@
 ls = $('#layerslider').layerSlider
   responsive: off
   skin: 'borderlessdark'
-  animateFirstLayer: off
+  animateFirstLayer: on
+  slideDelay: 6000
