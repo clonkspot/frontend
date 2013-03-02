@@ -27,7 +27,7 @@ module.exports =
       link: ''
       user: 'Nachtschatten'
       date: 'Jan 30, 2013'
-      type: 'newpost'
+      type: 'comic'
     ,
       title: "Settlement Tutorial"
       link: ''
