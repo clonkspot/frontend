@@ -23,27 +23,27 @@ module.exports =
     welcome: 'This is a construction area. Possibility of broken parts: High'
     posted: 'posted by '
     news: [
-      title: "I'm a thread this long"
-      link: ''
-      user: 'Nachtschatten'
-      date: 'Jan 30, 2013'
+      title: 'Projekt "Finish Projects"'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=42'
+      user: 'ala'
+      date: 'March 3, 2013'
       type: 'newpost'
     ,
-      title: "Settlement Tutorial"
-      link: ''
-      user: 'clonkspot'
-      date: 'Jan 23, 2026'
+      title: 'SdM #9: Heilung der Welt'
+      link: 'http://clonkspot.org/blog/2013/03/01/sdm9-heilung-der-welt/'
+      user: 'Nachtfalter'
+      date: 'March 1, 2013'
+      type: 'blog'
+    ,
+      title: 'DP: Forest [Timelapse]'
+      link: 'http://youtu.be/VhwGua44c_Q'
+      user: 'Nachtfalter'
+      date: '26 February, 2013'
       type: 'youtube'
     ,
-      title: "I'm a thread this long"
-      link: ''
+      title: 'Dubbing'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=37'
       user: 'Nachtschatten'
-      date: 'Jan 30, 2013'
-      type: 'newpost'
-    ,
-      title: "I'm a thread this long"
-      link: ''
-      user: 'Nachtschatten'
-      date: 'Jan 30, 2013'
+      date: '21 February, 2013'
       type: 'newpost'
     ]

@@ -23,27 +23,27 @@ module.exports =
     welcome: 'Wir basteln zur Zeit an unserer neuen Seite. Es könnte etwas kaputt sein!'
     posted: 'geschrieben von '
     news: [
-      title: "I'm a thread this long"
-      link: ''
-      user: 'Nachtschatten'
-      date: 'Jan 30, 2013'
-      type: 'comic'
-    ,
-      title: "Settlement Tutorial"
-      link: ''
-      user: 'clonkspot'
-      date: 'Jan 23, 2026'
-      type: 'youtube'
-    ,
-      title: "I'm a thread this long"
-      link: ''
-      user: 'Nachtschatten'
-      date: 'Jan 30, 2013'
+      title: 'Projekt "Finish Projects"'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=42'
+      user: 'ala'
+      date: '3. März, 2013'
       type: 'newpost'
     ,
-      title: "I'm a thread this long"
-      link: ''
+      title: 'SdM #9: Heilung der Welt'
+      link: 'http://clonkspot.org/blog/2013/03/01/sdm9-heilung-der-welt/'
+      user: 'Nachtfalter'
+      date: '1. März, 2013'
+      type: 'blog'
+    ,
+      title: 'DP: Forest [Timelapse]'
+      link: 'http://youtu.be/VhwGua44c_Q'
+      user: 'Nachtfalter'
+      date: '26. Feb, 2013'
+      type: 'youtube'
+    ,
+      title: 'Dubbing'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=37'
       user: 'Nachtschatten'
-      date: 'Jan 30, 2013'
+      date: '21. Feb, 2013'
       type: 'newpost'
     ]
