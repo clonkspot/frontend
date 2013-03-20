@@ -299,6 +299,14 @@ header nav a small {
 }
 footer {
   margin-top: 30px;
+  padding-left: 50px;
   height: 50px;
+  line-height: 50px;
   background-color: #545454;
+}
+footer a:link,
+footer a:visited {
+  font-size: 80%;
+  color: #fff;
+  text-decoration: none;
 }
