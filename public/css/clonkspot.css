@@ -197,6 +197,47 @@ a:buttonlink:active {
 #home .newsfeed a b {
   font-size: 20px;
 }
+#home .download > h2 {
+  margin-bottom: 0;
+}
+#home .download > p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+#home .download .buttons a {
+  display: block;
+  float: left;
+  width: 140px;
+  height: 140px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 5px #371a1a;
+  box-shadow: 0px 1px 5px #371a1a;
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+}
+#home .download .buttons a img {
+  margin-top: 15px;
+}
+#home .download .buttons a strong {
+  display: block;
+}
+#home .download .buttons a p {
+  margin: 0;
+  font-size: 80%;
+  font-style: italic;
+}
+#home .download .buttons a + a {
+  margin-left: 20px;
+}
+#home .download .buttons .cr img {
+  margin-bottom: 5px;
+}
+#home .download .buttons:after {
+  clear: both;
+  content: ' ';
+  display: table;
+}
 
 /* Impressum */
 #impressum {
