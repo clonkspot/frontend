@@ -47,3 +47,39 @@ module.exports =
       date: '21 February, 2013'
       type: 'newpost'
     ]
+    slider:
+      whatis: [
+        'What is Clonk?'
+        '''Clonk is a highly versatile multiplayer game<br>
+           of strategy, action, skill, and endless fun!'''
+      ]
+      shapeworld: [
+        'Play together with your friends.'
+        'And change the world to your liking!'
+      ]
+      cmc: [
+        'Load.'
+        'Release.'
+        'Save the world!'
+      ]
+      mars: [
+        'Discover far worlds.'
+        'And take up<br>new challenges!'
+      ]
+      alone: [
+        "Don't want to play alone?"
+        'Join a server.'
+        'Host your own game.'
+        'Or play split screen on a single PC!'
+      ]
+      os: [
+        'What is your favorite system?'
+      ]
+      dev: [
+        'Fully documented development kit!'
+        'Draw new maps.'
+        'Write your own scripts.'
+        'Develop your own objects.'
+        'Or even big packages!'
+        'Build your own Clonk!'
+      ]

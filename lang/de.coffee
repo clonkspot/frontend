@@ -47,3 +47,40 @@ module.exports =
       date: '21. Feb, 2013'
       type: 'newpost'
     ]
+
+    slider:
+      whatis: [
+        'Was ist Clonk?'
+        '''Clonk ist ein Multiplayer-Action-Taktik-Geschicklichkeitsspiel <br>
+           der außergewöhnlichen Sorte.'''
+      ]
+      shapeworld: [
+        'Spiel zusammen mit deinen Freunden.'
+        'Und formt die Welt wie sie euch gefällt!'
+      ]
+      cmc: [
+        'Laden.'
+        'Entsichern.'
+        'Die Welt retten!'
+      ]
+      mars: [
+        'Entdecke ferne Welten.'
+        'Und stell dich immer wieder<br>neuen Herausforderungen!'
+      ]
+      alone: [
+        'Keine Lust alleine zu spielen?'
+        'Tritt einem Server bei.'
+        'Hoste dein eigenes Spiel.'
+        'Oder sogar Splitscreen an einem PC!'
+      ]
+      os: [
+        'Welches System bevorzugst du?'
+      ]
+      dev: [
+        'Vollständig dokumentierter Entwicklermodus!'
+        'Zeichne neue Karten.'
+        'Schreibe deine eigenen Scripts.'
+        'Entwickle deine eigenen Objekte.'
+        'Oder sogar ganze Objektpakete!'
+        'Bau dir ein eigenes Clonk!'
+      ]
