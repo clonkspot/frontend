@@ -62,7 +62,12 @@
     }
   }
 
+  bottomHeight = 300px
+
   .download {
+    height: bottomHeight
+    padding-left: 50px
+
     > h2 {
       margin-bottom: 0
     }
@@ -113,6 +118,34 @@
         content: ' '
         display: table
       }
+    }
+  }
+
+  .clonk {
+    absolute: left 400px bottom 10px
+  }
+
+  .screenshots {
+    width: 380px
+    height: bottomHeight + 6px
+    absolute: right 0 bottom 10px
+
+    ul {
+      list-style-type: none
+      padding-left: 0
+      width: 350px
+    }
+
+    li {
+      display: inline-block
+      width: 97px
+      height: 58px
+      overflow: hidden
+      border: 4px solid black
+    }
+
+    img {
+      position: relative
     }
   }
 }

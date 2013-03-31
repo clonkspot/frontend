@@ -173,4 +173,17 @@
       </a>
     </div>
   </section>
+  <img class="clonk" src="/images/knight.png" alt="">
+  <section class="screenshots">
+    <h2>Screenshots</h2>
+    <ul>
+      <% for screenshot in @data.home.screenshots: %>
+        <li>
+          <a href="<%- screenshot.link %>">
+            <img src="<%- screenshot.img %>" alt="SdM" style="bottom: <%- screenshot.y ? 0 %>px; right: <%- screenshot.x ? 0 %>px">
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </section>
 </div>
