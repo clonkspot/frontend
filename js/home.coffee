@@ -3,6 +3,6 @@
 # Enable the LayerSlider
 ls = $('#layerslider').layerSlider
   responsive: off
-  skin: 'borderlessdark'
+  skin: 'noskin'
   animateFirstLayer: on
   slideDelay: 6000

@@ -437,7 +437,7 @@ require.define("/home.coffee",function(require,module,exports,__dirname,__filena
 
   ls = $('#layerslider').layerSlider({
     responsive: false,
-    skin: 'borderlessdark',
+    skin: 'noskin',
     animateFirstLayer: true,
     slideDelay: 6000
   });
