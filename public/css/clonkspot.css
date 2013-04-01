@@ -150,6 +150,7 @@ a:buttonlink:active {
 #home #layerslider {
   width: 620px;
   height: 388px;
+  background-color: #3a3a3a;
 }
 #home #layerslider p {
   background-color: #fff;
