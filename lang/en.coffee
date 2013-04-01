@@ -83,3 +83,7 @@ module.exports =
         'Or even big packages!'
         'Build your own Clonk!'
       ]
+
+    download:
+      version: 'Choose version:'
+      oc: 'in development'

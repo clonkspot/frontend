@@ -84,3 +84,7 @@ module.exports =
         'Oder sogar ganze Objektpakete!'
         'Bau dir ein eigenes Clonk!'
       ]
+
+    download:
+      version: 'Version:'
+      oc: 'in Entwicklung'
