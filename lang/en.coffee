@@ -23,30 +23,32 @@ module.exports =
     welcome: 'This is a construction area. Possibility of broken parts: High'
     posted: 'posted by '
     news: [
-      title: 'Projekt "Finish Projects"'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=42'
+      title: 'Eisbach Tal [Highlights]'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=50'
+      user: 'Nachtfalter'
+      date: '1. April, 2013'
+      type: 'youtube'
+     ,
+      title: 'CCAN Play - Siedlung - Teil2'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=50'
       user: 'ala'
-      date: 'March 3, 2013'
+      date: '1. April, 2013'
       type: 'newpost'
     ,
-      title: 'SdM #9: Heilung der Welt'
-      link: 'http://clonkspot.org/blog/2013/03/01/sdm9-heilung-der-welt/'
+      title: 'Clonk bald im AppStore'
+      link: 'http://clonkspot.org/blog/2013/04/01/clonk-bald-im-appstore/'
       user: 'Nachtfalter'
-      date: 'March 1, 2013'
+      date: '1. April, 2013'
       type: 'blog'
     ,
-      title: 'DP: Forest [Timelapse]'
-      link: 'http://youtu.be/VhwGua44c_Q'
-      user: 'Nachtfalter'
-      date: '26 February, 2013'
-      type: 'youtube'
-    ,
-      title: 'Dubbing'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=37'
-      user: 'Nachtschatten'
-      date: '21 February, 2013'
+      title: 'CCAN Play #1 – Siedlung'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=45'
+      user: 'ala'
+      date: '31. March, 2013'
       type: 'newpost'
+    ,
     ]
+
     slider:
       whatis: [
         'What is Clonk?'
