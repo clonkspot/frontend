@@ -22,7 +22,7 @@ module.exports =
   index:
     posted: 'posted by '
     news: [
-      title: 'Eisbach Tal [Highlights]'
+      title: 'Arktische Tiefen [Highlights]'
       link: 'http://youtu.be/zrxPEj4M7fY'
       user: 'Nachtfalter'
       date: '1. April, 2013'
