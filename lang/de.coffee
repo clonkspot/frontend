@@ -51,8 +51,8 @@ module.exports =
     slider:
       whatis: [
         'Was ist Clonk?'
-        '''Clonk ist ein Multiplayer-Action-Taktik-Geschicklichkeitsspiel <br>
-           der außergewöhnlichen Sorte.'''
+        '''Clonk ist ein unterhaltsames, actionreiches<br>
+           Taktik- und Geschicklichkeitsspiel.'''
       ]
       shapeworld: [
         'Spiel zusammen mit deinen Freunden.'
