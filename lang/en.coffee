@@ -20,7 +20,6 @@ module.exports =
     picture: "But wait! Enjoy this picture! Go back to the homepage if you've finished this task."
 
   index:
-    welcome: 'This is a construction area. Possibility of broken parts: High'
     posted: 'posted by '
     news: [
       title: 'Eisbach Tal [Highlights]'

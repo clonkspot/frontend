@@ -20,7 +20,6 @@ module.exports =
     picture: 'Aber hey! Viel Spaß mit dem Bild! Geh zurück zur Startseite, wenn du fertig bist.'
 
   index:
-    welcome: 'Wir basteln zur Zeit an unserer neuen Seite. Es könnte etwas kaputt sein!'
     posted: 'geschrieben von '
     news: [
       title: 'Eisbach Tal [Highlights]'
