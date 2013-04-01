@@ -23,7 +23,7 @@ module.exports =
     posted: 'geschrieben von '
     news: [
       title: 'Eisbach Tal [Highlights]'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=50'
+      link: 'http://youtu.be/zrxPEj4M7fY'
       user: 'Nachtfalter'
       date: '1. April, 2013'
       type: 'youtube'
