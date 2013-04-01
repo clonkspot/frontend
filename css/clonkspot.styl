@@ -1,6 +1,7 @@
 /* Clonkspot CSS */
 
 @import "nib"
+@import "lib/variables"
 
 html {
   background: #B3B3B3 url(/images/bg.jpg) no-repeat
@@ -13,11 +14,15 @@ body {
   line-height: 24pt
   color: #212121
 
-  width: 1006px
+  width: mainWidth
   background-color: white
   margin: 0 auto
   text-align: left
   position: relative
+}
+
+img {
+  border: none
 }
 
 .content {
@@ -26,8 +31,8 @@ body {
   padding: 0 30px
 }
 
-.smalltext {
-  font-size: 13px
+.smalltext, small {
+  font-size: 12px
   line-height: 18px
 }
 

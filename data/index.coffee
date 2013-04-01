@@ -9,4 +9,5 @@ module.exports =
     official: 'http://clonk.de/'
     openclonk: 'http://openclonk.org/'
 
+  home: require './home'
   comics: require './comics'

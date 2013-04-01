@@ -3,6 +3,7 @@
   <head>
     <title>Clonkspot</title>
     <meta charset='utf-8'>
+	<% content 'head' %>
     <link rel="stylesheet" href="/css/clonkspot.css" type="text/css" charset="utf-8">
   </head>
   <body>
@@ -35,7 +36,9 @@
     </header>
     <% content %>
     <footer>
+      <a href="/impressum">Impressum</a>
     </footer>
+
     <% if PRODUCTION: %>
       <!-- Piwik --> 
       <script type="text/javascript">
@@ -50,5 +53,8 @@
       </script><noscript><p><img src="http://piwik.clonkspot.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
       <!-- End Piwik Tracking Code -->
     <% end %>
+
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <% content 'script' %>
   </body>
 </html>
