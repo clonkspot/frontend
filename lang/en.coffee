@@ -22,6 +22,12 @@ module.exports =
   index:
     posted: 'posted by '
     news: [
+      title: 'Eure Featurewünsche?'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=53'
+      user: 'Nachtfalter'
+      date: '1. April, 2013'
+      type: 'newpost'
+     ,
       title: 'Arktische Tiefen [Highlights]'
       link: 'http://youtu.be/zrxPEj4M7fY'
       user: 'Nachtfalter'
@@ -39,12 +45,6 @@ module.exports =
       user: 'Nachtfalter'
       date: '1. April, 2013'
       type: 'blog'
-    ,
-      title: 'CCAN Play #1 – Siedlung'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=45'
-      user: 'ala'
-      date: '31. March, 2013'
-      type: 'newpost'
     ,
     ]
 
