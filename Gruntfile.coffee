@@ -6,6 +6,7 @@ module.exports = (grunt) ->
           compress: off
         files:
           'public/css/clonkspot.css': 'css/*.styl'
+          'public/css/pages.css': 'css/pages/*.styl'
     browserify:
       main:
         files: 'public/js/main.js': 'js/main.coffee'
