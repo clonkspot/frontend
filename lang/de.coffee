@@ -22,6 +22,12 @@ module.exports =
   index:
     posted: 'geschrieben von '
     news: [
+      title: 'Clonk Tricks #1: Wallhacks'
+      link: 'http://youtu.be/hMhRY_NbHP8'
+      user: 'Nachtfalter'
+      date: '3. April, 2013'
+      type: 'youtube'
+     ,
       title: 'Eure Featurewünsche?'
       link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=53'
       user: 'Nachtfalter'
@@ -39,12 +45,6 @@ module.exports =
       user: 'ala'
       date: '1. April, 2013'
       type: 'newpost'
-    ,
-      title: 'Clonk bald im AppStore'
-      link: 'http://clonkspot.org/blog/2013/04/01/clonk-bald-im-appstore/'
-      user: 'Nachtfalter'
-      date: '1. April, 2013'
-      type: 'blog'
     ,
     ]
 
