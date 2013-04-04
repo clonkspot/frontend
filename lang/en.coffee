@@ -22,6 +22,12 @@ module.exports =
   index:
     posted: 'posted by '
     news: [
+      title: 'Clonk Tricks #2: Vacuuming'
+      link: 'http://youtu.be/HLXFUKXnTYo'
+      user: 'Nachtfalter'
+      date: '4. April, 2013'
+      type: 'youtube'
+     ,
       title: 'Clonk Tricks #1: Wallhacks'
       link: 'http://youtu.be/SAKI-J6gBSc'
       user: 'Nachtfalter'
@@ -39,13 +45,6 @@ module.exports =
       user: 'Nachtfalter'
       date: '1. April, 2013'
       type: 'youtube'
-     ,
-      title: 'CCAN Play - Siedlung - Teil2'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=50'
-      user: 'ala'
-      date: '1. April, 2013'
-      type: 'newpost'
-    ,
     ]
 
     slider:
