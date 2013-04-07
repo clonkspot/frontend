@@ -22,28 +22,28 @@ module.exports =
   index:
     posted: 'posted by '
     news: [
-      title: 'Clonk Tricks #2: Vacuuming'
-      link: 'http://youtu.be/HLXFUKXnTYo'
+      title: 'y u no zoom?'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=61'
+      user: 'Pyrit'
+      date: '7. April, 2013'
+      type: 'newpost'
+     ,
+      title: 'Projekt: Online Ordner'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=62'
+      user: 'ala'
+      date: '6. April, 2013'
+      type: 'newpost'
+     ,
+      title: 'Clonk Tricks: Vacuum Cleaner'
+      link: 'http://www.youtube.com/watch?v=HLXFUKXnTYo'
       user: 'Nachtfalter'
       date: '4. April, 2013'
       type: 'youtube'
      ,
-      title: 'Clonk Tricks #1: Wallhacks'
-      link: 'http://youtu.be/SAKI-J6gBSc'
+      title: 'Clonk Tricks: Wallhacks'
+      link: 'http://www.youtube.com/watch?v=SAKI-J6gBSc'
       user: 'Nachtfalter'
       date: '3. April, 2013'
-      type: 'youtube'
-     ,
-      title: 'Eure Featurewünsche?'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=53'
-      user: 'Nachtfalter'
-      date: '1. April, 2013'
-      type: 'newpost'
-     ,
-      title: 'Arktische Tiefen [Highlights]'
-      link: 'http://youtu.be/zrxPEj4M7fY'
-      user: 'Nachtfalter'
-      date: '1. April, 2013'
       type: 'youtube'
     ]
 
