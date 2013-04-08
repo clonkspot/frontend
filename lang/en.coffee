@@ -22,6 +22,12 @@ module.exports =
   index:
     posted: 'posted by '
     news: [
+      title: 'CCAN Play | Was dann?'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=63'
+      user: 'Maddino'
+      date: '8. April, 2013'
+      type: 'newpost'
+     ,
       title: 'y u no zoom?'
       link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=61'
       user: 'Pyrit'
@@ -39,12 +45,7 @@ module.exports =
       user: 'Nachtfalter'
       date: '4. April, 2013'
       type: 'youtube'
-     ,
-      title: 'Clonk Tricks: Wallhacks'
-      link: 'http://www.youtube.com/watch?v=SAKI-J6gBSc'
-      user: 'Nachtfalter'
-      date: '3. April, 2013'
-      type: 'youtube'
+    ,
     ]
 
     slider:
