@@ -2,6 +2,7 @@
 
 fs = require 'fs'
 
+_ = require 'underscore'
 express = require 'express'
 ECT = require 'ect'
 
@@ -45,6 +46,10 @@ chooseLanguage = (req) ->
   # Default to English
   lang.en
 
+# Returns an object containing data for passing to templates.
+pageData = (req, data = {}) ->
+  _.extend {req, t: chooseLanguage(req), data: lang.common}, data
+
 if PRODUCTION
   app.use express.logger()
 else
@@ -56,12 +61,12 @@ app.use express.cookieParser()
 app.engine 'ect', renderer.render
 
 app.get '/', (req, res) ->
-  res.send renderer.render 'index', {data: lang.common, t: chooseLanguage(req)}
+  res.send renderer.render 'index', pageData(req)
 
 # Semi-static pages
 getPage = (page, url = "/#{page}") ->
   app.get url, (req, res) ->
-    res.send renderer.render "pages/#{page}", {data: lang.common, t: chooseLanguage(req)}
+    res.send renderer.render "pages/#{page}", pageData(req)
 
 fs.readdir "#{__dirname}/html/pages", (err, files) ->
   unless err
@@ -74,7 +79,7 @@ fs.readdir "#{__dirname}/html/pages", (err, files) ->
 comics = lang.common.comics.length
 # Renders the given comic, defaulting to the last one.
 renderComic = (req, id = comics) ->
-  renderer.render 'comic', {id, data: lang.common, t: chooseLanguage(req)}
+  renderer.render 'comic', pageData(req, {id})
 
 app.get '/comic', (req, res) ->
   res.send renderComic(req)
@@ -96,7 +101,7 @@ unless PRODUCTION
 
 # 404 handler
 app.use (req, res, next) ->
-  res.status(404).send renderer.render '404', {data: lang.common, t: chooseLanguage(req)}
+  res.status(404).send renderer.render '404', pageData(req)
 
 # Only run if invoked directly.
 if process.argv[1] is __filename
