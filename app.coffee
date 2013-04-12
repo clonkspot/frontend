@@ -2,7 +2,6 @@
 
 fs = require 'fs'
 
-_ = require 'underscore'
 express = require 'express'
 ECT = require 'ect'
 
@@ -15,40 +14,8 @@ GLOBAL.PRODUCTION = app.get('env') is 'production'
 # Setup ECT rendering
 renderer = ECT root: "#{__dirname}/html", watch: !PRODUCTION, ext: '.ect'
 
-uncachedRequire = (path) ->
-  delete require.cache[require.resolve path]
-  require path
-
-# Get the language strings
-lang = if PRODUCTION
-  de: require('./lang/de')
-  en: require('./lang/en')
-  common: require('./data')
-else
-  Object.create null,
-    de:
-      get: -> uncachedRequire('./lang/de')
-    en:
-      get: -> uncachedRequire('./lang/en')
-    common:
-      get: -> uncachedRequire('./data')
-
-# Returns the best fitting language strings.
-chooseLanguage = (req) ->
-  # Check the cookies.
-  switch req.cookies.language
-    when 'de' then return lang.de
-    when 'en' then return lang.en
-  # Try to guess the correct language based on browser settings.
-  for l in req.acceptedLanguages
-    return lang.de if l.indexOf('de') != -1
-    return lang.en if l.indexOf('en') != -1
-  # Default to English
-  lang.en
-
-# Returns an object containing data for passing to templates.
-pageData = (req, data = {}) ->
-  _.extend {req, t: chooseLanguage(req), data: lang.common}, data
+# Get the page data.
+loader = require './lib/loader'
 
 if PRODUCTION
   app.use express.logger()
@@ -61,12 +28,12 @@ app.use express.cookieParser()
 app.engine 'ect', renderer.render
 
 app.get '/', (req, res) ->
-  res.send renderer.render 'index', pageData(req)
+  res.send renderer.render 'index', loader.pageData(req)
 
 # Semi-static pages
 getPage = (page, url = "/#{page}") ->
   app.get url, (req, res) ->
-    res.send renderer.render "pages/#{page}", pageData(req)
+    res.send renderer.render "pages/#{page}", loader.pageData(req)
 
 fs.readdir "#{__dirname}/html/pages", (err, files) ->
   unless err
@@ -76,10 +43,10 @@ fs.readdir "#{__dirname}/html/pages", (err, files) ->
   return
 
 # Comics
-comics = lang.common.comics.length
+comics = loader.lang.common.comics.length
 # Renders the given comic, defaulting to the last one.
 renderComic = (req, id = comics) ->
-  renderer.render 'comic', pageData(req, {id})
+  renderer.render 'comic', loader.pageData(req, {id})
 
 app.get '/comic', (req, res) ->
   res.send renderComic(req)
@@ -101,7 +68,7 @@ unless PRODUCTION
 
 # 404 handler
 app.use (req, res, next) ->
-  res.status(404).send renderer.render '404', pageData(req)
+  res.status(404).send renderer.render '404', loader.pageData(req)
 
 # Only run if invoked directly.
 if process.argv[1] is __filename
