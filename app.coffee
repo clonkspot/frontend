@@ -5,6 +5,8 @@ fs = require 'fs'
 express = require 'express'
 ECT = require 'ect'
 
+require './lib/polyfill'
+
 # Initialize the application
 module.exports.app = app = express()
 

@@ -24,11 +24,11 @@
       <a class="icon youtube" href="http://youtube.com/user/clonkspot"><img src="/images/youtube.png" alt="YouTube"></a>
 
       <nav>
-        <a href="/">
+        <a href="/" class="<%- if @req.url is '/' then 'active' else '' %>">
           <img src="/images/home.png" alt="Home">
         </a>
         <% for key, item of @t.nav : %>
-        <a href="<%- @data.nav[key] %>">
+        <a href="<%- @data.nav[key] %>" class="<%- if @req.url.startsWith(@data.nav[key]) then 'active' else '' %>">
           <b><%= item[0] %></b>
           <small><%= item[1] %></small>
         </a>

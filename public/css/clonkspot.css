@@ -163,6 +163,9 @@ header nav a:first-child {
   top: 10px;
   left: 0;
 }
+header nav a.active {
+  color: #ce0400 !important;
+}
 header nav a small {
   display: block;
   margin-top: -16px;
