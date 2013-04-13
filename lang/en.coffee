@@ -45,7 +45,7 @@ module.exports =
       user: 'Nachtfalter'
       date: '12. April, 2013'
       type: 'youtube'
-     ,
+    ,
     ]
 
     slider:
