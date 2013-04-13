@@ -22,29 +22,29 @@ module.exports =
   index:
     posted: 'geschrieben von '
     news: [
+      title: 'Eos Chaos Pt. 2 [Live Cap]'
+      link: 'http://www.youtube.com/watch?v=KmtX0pd5A9g'
+      user: 'Nachtfalter'
+      date: '13. April, 2013'
+      type: 'youtube'
+     ,
+      title: 'Eos Chaos Pt. 1 [Live Cap]'
+      link: 'http://www.youtube.com/watch?v=Bw4xg58avF4'
+      user: 'Nachtfalter'
+      date: '13. April, 2013'
+      type: 'youtube'
+     ,
+      title: 'Reise z. Mittelpunkt der Erde'
+      link: 'http://www.youtube.com/watch?v=yUxyDLNZdL4'
+      user: 'Nachtfalter'
+      date: '12. April, 2013'
+      type: 'youtube'
+     ,
       title: 'CCAN Play | Was dann?'
       link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=63'
       user: 'Maddino'
       date: '8. April, 2013'
       type: 'newpost'
-     ,
-      title: 'y u no zoom?'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=61'
-      user: 'Pyrit'
-      date: '7. April, 2013'
-      type: 'newpost'
-     ,
-      title: 'Projekt: Online Ordner'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=62'
-      user: 'ala'
-      date: '6. April, 2013'
-      type: 'newpost'
-     ,
-      title: 'Clonk Tricks: Staubsauger'
-      link: 'http://www.youtube.com/watch?v=-sAs_P614E8'
-      user: 'Nachtfalter'
-      date: '4. April, 2013'
-      type: 'youtube'
     ,
     ]
 
