@@ -22,6 +22,12 @@ module.exports =
   index:
     posted: 'posted by '
     news: [
+      title: 'Neuer YouTube Kanal'
+      link: 'http://clonkspot.org/blog/2013/04/13/neuer-youtube-kanal/'
+      user: 'Nachtfalter'
+      date: '13. April, 2013'
+      type: 'blog'
+     ,
       title: 'Eos Chaos Pt. 2 [Live Cap]'
       link: 'http://www.youtube.com/watch?v=KmtX0pd5A9g'
       user: 'Nachtfalter'
@@ -40,12 +46,6 @@ module.exports =
       date: '12. April, 2013'
       type: 'youtube'
      ,
-      title: 'CCAN Play | Was dann?'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=63'
-      user: 'Maddino'
-      date: '8. April, 2013'
-      type: 'newpost'
-    ,
     ]
 
     slider:
