@@ -34,6 +34,11 @@
         </a>
         <% end %>
       </nav>
+
+      <!-- Twitch stream notification shown via JS -->
+      <div class="twitch">
+        <a href="#"><%= @t.twitch %></a>
+      </div>
     </header>
     <% content %>
     <footer>
@@ -56,6 +61,7 @@
     <% end %>
 
     <script src="/js/jquery.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
     <% content 'script' %>
   </body>
 </html>

@@ -12,6 +12,8 @@ module.exports =
     official: ['Official Website', 'the origin of Clonk']
     openclonk: ['OpenClonk', 'meet the OpenSource variant']
 
+  twitch: 'Clonk Livestream on Twitch.tv!'
+
   # 404 error page
   notfound:
     title: 'Site not found'

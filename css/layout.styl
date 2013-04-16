@@ -1,6 +1,7 @@
 /* Layout */
 
 @import "nib"
+@import "lib/variables"
 
 header {
   .logo {
@@ -26,8 +27,8 @@ header {
     font-size: 13px
   }
 
-  a {
-    color: #353535 !important
+  a:link, a:visited {
+    color: #353535
     text-decoration: none
   }
 
@@ -46,7 +47,7 @@ header {
         relative: top 10px left 0
       }
       &.active {
-        color: #CE0400 !important
+        color: csRed !important
       }
       small {
         display: block
@@ -54,6 +55,17 @@ header {
         font-size: 10px
         line-height: inherit
       }
+    }
+  }
+
+  .twitch {
+    background-color: csRed
+    font-weight: bold
+    text-align: center
+    display: none
+
+    a:link, a:visited {
+      color: white
     }
   }
 }
