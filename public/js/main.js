@@ -432,9 +432,25 @@ process.binding = function (name) {
 
 });
 
+require.define("/twitch.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
+  var CHANNEL_URL;
+
+  CHANNEL_URL = 'https://api.twitch.tv/kraken/streams/Nachtfalter89?callback=?';
+
+  $.getJSON(CHANNEL_URL).then(function(data) {
+    var _ref, _ref1;
+    if (data != null ? (_ref = data.stream) != null ? (_ref1 = _ref.game) != null ? _ref1.match(/clonk/i) : void 0 : void 0 : void 0) {
+      return $('header .twitch').slideDown().find('a').attr('href', data.stream.channel.url);
+    }
+  });
+
+}).call(this);
+
+});
+
 require.define("/main.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
 
-  console.log('Hello World');
+  require('./twitch');
 
 }).call(this);
 
