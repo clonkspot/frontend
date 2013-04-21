@@ -24,6 +24,18 @@ module.exports =
   index:
     posted: 'posted by '
     news: [
+      title: 'Clonk Party 2 [Live Cap]'
+      link: 'http://www.youtube.com/watch?v=oTIp557mG8I'
+      user: 'Nachtfalter'
+      date: '20. April, 2013'
+      type: 'youtube'
+     ,
+      title: 'Stonegalge Crags [Live Cap]'
+      link: 'http://www.youtube.com/watch?v=oqVMyUL6rW0'
+      user: 'Nachtfalter'
+      date: '20. April, 2013'
+      type: 'youtube'
+     ,
       title: 'Neuer YouTube Kanal'
       link: 'http://clonkspot.org/blog/2013/04/13/neuer-youtube-kanal/'
       user: 'Nachtfalter'
@@ -34,18 +46,6 @@ module.exports =
       link: 'http://www.youtube.com/watch?v=KmtX0pd5A9g'
       user: 'Nachtfalter'
       date: '13. April, 2013'
-      type: 'youtube'
-     ,
-      title: 'Eos Chaos Pt. 1 [Live Cap]'
-      link: 'http://www.youtube.com/watch?v=Bw4xg58avF4'
-      user: 'Nachtfalter'
-      date: '13. April, 2013'
-      type: 'youtube'
-     ,
-      title: 'Reise z. Mittelpunkt der Erde'
-      link: 'http://www.youtube.com/watch?v=yUxyDLNZdL4'
-      user: 'Nachtfalter'
-      date: '12. April, 2013'
       type: 'youtube'
     ,
     ]
