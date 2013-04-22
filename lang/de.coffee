@@ -24,6 +24,12 @@ module.exports =
   index:
     posted: 'geschrieben von '
     news: [
+      title: 'Tipps und Tricks 3: Blitzgeld'
+      link: 'http://www.youtube.com/watch?v=_6jt8rAYMbs'
+      user: 'Nachtfalter'
+      date: '22. April, 2013'
+      type: 'youtube'
+     ,
       title: 'Clonk Party 2 [Live Cap]'
       link: 'http://www.youtube.com/watch?v=oTIp557mG8I'
       user: 'Nachtfalter'
@@ -41,12 +47,6 @@ module.exports =
       user: 'Nachtfalter'
       date: '13. April, 2013'
       type: 'blog'
-     ,
-      title: 'Eos Chaos Pt. 2 [Live Cap]'
-      link: 'http://www.youtube.com/watch?v=KmtX0pd5A9g'
-      user: 'Nachtfalter'
-      date: '13. April, 2013'
-      type: 'youtube'
     ,
     ]
 
