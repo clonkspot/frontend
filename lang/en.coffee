@@ -24,29 +24,29 @@ module.exports =
   index:
     posted: 'posted by '
     news: [
+      title: 'Tempel der Verdammnis'
+      link: 'http://www.youtube.com/watch?v=JthKUcZRTgM'
+      user: 'Nachtfalter'
+      date: '27. April, 2013'
+      type: 'youtube'
+     ,
+      title: 'Clonkspot Party [Ideen]'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=71'
+      user: 'Nachtfalter'
+      date: '23. April, 2013'
+      type: 'newpost'
+     ,
       title: 'Tips and Tricks 3: Blitzmoney'
       link: 'http://www.youtube.com/watch?v=zVZ2bv2DSj8'
       user: 'Nachtfalter'
       date: '22. April, 2013'
       type: 'youtube'
      ,
-      title: 'Clonk Party 2 [Live Cap]'
-      link: 'http://www.youtube.com/watch?v=oTIp557mG8I'
-      user: 'Nachtfalter'
+      title: 'Clonkspot Party'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=68'
+      user: 'Nachtschatten'
       date: '20. April, 2013'
-      type: 'youtube'
-     ,
-      title: 'Stonegalge Crags [Live Cap]'
-      link: 'http://www.youtube.com/watch?v=oqVMyUL6rW0'
-      user: 'Nachtfalter'
-      date: '20. April, 2013'
-      type: 'youtube'
-     ,
-      title: 'Neuer YouTube Kanal'
-      link: 'http://clonkspot.org/blog/2013/04/13/neuer-youtube-kanal/'
-      user: 'Nachtfalter'
-      date: '13. April, 2013'
-      type: 'blog'
+      type: 'newpost'
     ,
     ]
 
