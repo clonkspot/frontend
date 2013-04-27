@@ -24,6 +24,12 @@ module.exports =
   index:
     posted: 'geschrieben von '
     news: [
+      title: 'YT Videotitel'
+      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=73'
+      user: 'Zapper'
+      date: '27. April, 2013'
+      type: 'newpost'
+     ,
       title: 'Tempel der Verdammnis'
       link: 'http://www.youtube.com/watch?v=JthKUcZRTgM'
       user: 'Nachtfalter'
@@ -41,12 +47,6 @@ module.exports =
       user: 'Nachtfalter'
       date: '22. April, 2013'
       type: 'youtube'
-     ,
-      title: 'Clonkspot Party'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=68'
-      user: 'Nachtschatten'
-      date: '20. April, 2013'
-      type: 'newpost'
     ,
     ]
 
