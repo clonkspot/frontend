@@ -10,10 +10,15 @@
 
   sliderWidth = 620px
   sliderHeight = 388px
-  #layerslider {
+  #sliderarea {
     width: sliderWidth
     height: sliderHeight
     background-color: #3A3A3A
+
+    #layerslider {
+      width: sliderWidth
+      height: sliderHeight
+    }
 
     p {
       background-color: white
@@ -24,10 +29,24 @@
     }
   }
 
+  .news-admin {
+    // Hide per default.
+    &[ng-cloak] {
+      display: none
+    }
+
+    label {
+      color: white
+      display: block
+      font-weight: bold
+    }
+  }
+
   .newsfeed {
     absolute: top 0 right 0
     width: mainWidth - sliderWidth
     height: sliderHeight
+    background-color: #3A3A3A
     a {
       display: block
       box-sizing: border-box
@@ -35,7 +54,6 @@
       height: (@height / 4)
       color: white !important
       text-decoration: none !important
-      background-color: #3A3A3A
       background-image: url(/images/stream_iconarea.png)
       background-repeat: no-repeat
       background-position: 100% 0
