@@ -1,9 +1,11 @@
 # Frontend application
 
 fs = require 'fs'
+url = require 'url'
 
 express = require 'express'
 ECT = require 'ect'
+proxy = require 'proxy-middleware'
 
 require './lib/polyfill'
 
@@ -23,6 +25,9 @@ if PRODUCTION
   app.use express.logger()
 else
   app.use express.logger 'dev'
+
+  # Proxy dpd requests to the online backend.
+  app.use '/dpd', proxy(url.parse('http://clonkspot.org/dpd'))
 
 app.use express.static('public')
 app.use express.cookieParser()
