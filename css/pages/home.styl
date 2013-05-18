@@ -10,10 +10,15 @@
 
   sliderWidth = 620px
   sliderHeight = 388px
-  #layerslider {
+  #sliderarea {
     width: sliderWidth
     height: sliderHeight
     background-color: #3A3A3A
+
+    #layerslider {
+      width: sliderWidth
+      height: sliderHeight
+    }
 
     p {
       background-color: white
@@ -21,6 +26,19 @@
       font-size: 17px
       padding: 5px 10px
       white-space: nowrap
+    }
+  }
+
+  .news-admin {
+    // Hide per default.
+    &[ng-cloak] {
+      display: none
+    }
+
+    label {
+      color: white
+      display: block
+      font-weight: bold
     }
   }
 

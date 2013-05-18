@@ -15,150 +15,181 @@
   <script src="/js/home.js" type="text/javascript"></script>
 <% end %>
 
-<div class="content" id=home>
+<div class="content" id=home ng-app="clonkspotNewsApp" ng-controller="NewsCtrl">
  
-  <!--LayerSlider begin-->
-  <div id="layerslider">
+  <div id="sliderarea">
+    <!--LayerSlider begin-->
+    <div id="layerslider" ng-hide="adminView">
 
-    <div class="ls-layer"  style="color: #4a2b0c">
-      <img class="ls-bg" src="/images/slider/whatis.png" alt="What is Clonk?">
+      <div class="ls-layer"  style="color: #4a2b0c">
+        <img class="ls-bg" src="/images/slider/whatis.png" alt="What is Clonk?">
 
-      <p style="font-size: 20px; color: #382cbc; background-color: white; top: 50px; left: 405px; delayin: 100; slidedirection: right;" class="ls-s2">
-        <%- @t.index.slider.whatis[0] %>
-      </p>
+        <p style="font-size: 20px; color: #382cbc; background-color: white; top: 50px; left: 405px; delayin: 100; slidedirection: right;" class="ls-s2">
+          <%- @t.index.slider.whatis[0] %>
+        </p>
 
-      <p style="background-color: white; top: 278px; left: 105px; delayin: 1000; slidedirection: left;" class="ls-s2">
-        <%- @t.index.slider.whatis[1] %>
-      </p>
+        <p style="background-color: white; top: 278px; left: 105px; delayin: 1000; slidedirection: left;" class="ls-s2">
+          <%- @t.index.slider.whatis[1] %>
+        </p>
+      </div>
+
+
+      <div class="ls-layer"  style="color: #e7c307">
+        <img class="ls-bg" src="/images/slider/shapeworld.png" alt="Shape the World">
+
+        <p style="background-color: #321707; top: 85px; left: 280px; delayin: 100; slidedirection: left;" class="ls-s2">
+          <%- @t.index.slider.shapeworld[0] %>
+        </p>
+        <p style="background-color: #321707; top: 120px; left: 280px; delayin: 1500; slidedirection: right;" class="ls-s4">
+          <%- @t.index.slider.shapeworld[1] %>
+        </p>
+      </div>
+
+
+
+      <div class="ls-layer">
+        <img class="ls-bg" src="/images/slider/cmcbg.jpg" alt="Codename Modem Wombat">
+        <img src="/images/slider/cmc1.jpg" alt="Codename Modem Wombat" class="ls-s3" style="top: 0px; left: 0px; slidedirection: left; delayin: 800;">
+        <img src="/images/slider/cmc2.jpg" alt="Codename Modem Wombat" class="ls-s3" style="top: 0px; left: 0px; slidedirection: right; delayin: 1800;">
+        <img src="/images/slider/cmc3.jpg" alt="Codename Modem Wombat" class="ls-s3" style="top: 0px; left: 0px; slidedirection: left; delayin: 2800;">
+
+        <p style="background-color: #ffcd00; top: 200px; left: 60px; slidedirection: left; delayin: 800;" class="ls-s3">
+          <%- @t.index.slider.cmc[0] %>
+        </p>
+        <p style="background-color: #ffcd00; top: 240px; left: 60px; slidedirection: right; delayin: 1800;" class="ls-s3">
+          <%- @t.index.slider.cmc[1] %>
+        </p>
+        <p style="background-color: #ffcd00; top: 280px; left: 60px; slidedirection: left; delayin: 2800;" class="ls-s3">
+          <%- @t.index.slider.cmc[2] %>
+        </p>
+      </div>
+
+
+
+      <div class="ls-layer" style="color: #873620">
+        <img class="ls-bg" src="/images/slider/marsbg.jpg" alt="Discover Far Worlds">
+
+        <img src="/images/slider/marssettle.png" alt="ClonkMars" class="ls-s3" style="top: 0px; left: 0px; slidedirection: left; delayin: 1500;">
+
+        <p class="ls-s1" style="top: 35px; left: 211px; slidedirection: top; slideoutdirection: top; delayin: 200;">
+          <%- @t.index.slider.mars[0] %>
+        </p>
+        <p class="ls-s5" style="top: 200px; left: 350px; slidedirection: right; delayin: 1600;">
+          <%- @t.index.slider.mars[1] %>
+        </p>
+      </div>
+
+
+
+      <div class="ls-layer"  style="color: #232323">
+        <img class="ls-bg" src="/images/slider/alone-bg.png" alt="You're not alone.">
+
+        <img src="/images/slider/masterserver.png" alt="Masterserver" class="ls-s3" style="top: 0px; left: 264px; slidedirection: right; delayin: 2000;">
+        <img src="/images/slider/lobby.png" alt="Lobby" class="ls-s3" style="top: 186px; left: 0px; slidedirection: right; delayin: 2000;">
+        <img src="/images/slider/splitscreen.png" alt="Splitscreen" class="ls-s3" style="top: 200px; left: 264px; slidedirection: right; delayin: 2000;">
+
+        <p style="background-color: white; top: 70px; left: 5px; delayin: 100; slidedirection: left;" class="ls-s2">
+          <%- @t.index.slider.alone[0] %>
+        </p>
+        <p class="ls-s5" style="top: 5px; left: 350px; slidedirection: right; delayin: 2000;">
+          <%- @t.index.slider.alone[1] %>
+        </p>
+        <p class="ls-s5" style="top: 340px; left: 20px; slidedirection: right; delayin: 2000;">
+          <%- @t.index.slider.alone[2] %>
+        </p>
+        <p class="ls-s5" style="top: 340px; left: 290px; slidedirection: right; delayin: 2000;">
+          <%- @t.index.slider.alone[3] %>
+        <p>
+      </div>
+
+
+
+      <div class="ls-layer"  style="color: #051c75; delayout: 1300;">
+        <img class="ls-bg" src="/images/slider/os_bg.png" alt="prefer OS">
+
+        <img src="/images/slider/os_windows.png" alt="Windows" class="ls-s3" style="top: 0px; left: 0px; slidedirection: top; delayin: 2000; delayout: 1000;">
+        <img src="/images/slider/icon_windows.png" alt="Windows" class="ls-s3" style="top: 200px; left: 44px; slidedirection: left; delayin: 1000; delayout: 500;">
+
+        <img src="/images/slider/os_linux.png" alt="Linux" class="ls-s4" style="top: 0px; left: 207px; slidedirection: bottom; delayin: 2500; delayout: 1000;">
+        <img src="/images/slider/icon_linux.png" alt="Linux" class="ls-s3" style="top: 270px; left: 314px; slidedirection: left; delayin: 1000; delayout: 500;">
+
+        <img src="/images/slider/os_mac.png" alt="Mac" class="ls-s6" style="top: 0px; left: 414px; slidedirection: top; delayin: 3000; delayout: 1000;">
+        <img src="/images/slider/icon_mac.png" alt="Mac" class="ls-s6" style="top: 20px; left: 490px; slidedirection: left; delayin: 1000; delayout: 500;">
+
+        <p style="top: 15px; left: 167px; slidedirection: top; delayin: 500" class="ls-s3">
+          <%- @t.index.slider.os[0] %>
+        </p>
+      </div>
+
+
+
+      <div class="ls-layer"  style="color: white; slidedelay: 10000;">
+        <img class="ls-bg" src="/images/slider/developer.png" alt="Developer">
+        <img src="/images/slider/developer2.png" alt="Developer" class="ls-s3" style="top: 0px; left: 0px; slidedirection: right; delayin: 3000;">
+
+        <p style="background-color: #1d1d1d; top: 155px; left: 130px; delayin: 100; slidedirection: left; showuntil: 1500;" class="ls-s2">
+          <%- @t.index.slider.dev[0] %>
+        </p>
+        <p style="background-color: #1d1d1d; top: 150px; left: 130px; delayin: 3000; slidedirection: left; showuntil: 3000;" class="ls-s6">
+          <%- @t.index.slider.dev[1] %>
+        </p>
+        <p style="background-color: #1d1d1d; top: 190px; left: 130px; delayin: 3800; slidedirection: left; showuntil: 2200;" class="ls-s6">
+          <%- @t.index.slider.dev[2] %>
+        </p>
+        <p style="background-color: #1d1d1d; top: 230px; left: 130px; delayin: 4600; slidedirection: left; showuntil: 1400;" class="ls-s6">
+          <%- @t.index.slider.dev[3] %>
+        </p>
+        <p style="background-color: #1d1d1d; top: 270px; left: 130px; delayin: 5400; slidedirection: left; showuntil: 600;" class="ls-s6">
+          <%- @t.index.slider.dev[4] %>
+        </p>
+        <p style="font-size: 18px; background-color: #1d1d1d; top: 155px; left: 130px; delayin: 7300; slidedirection: left; showuntil: 2000;" class="ls-s4">
+          <%- @t.index.slider.dev[5] %>
+        </p>
+      </div>
+
     </div>
+    <!--LayerSlider end-->
 
-
-    <div class="ls-layer"  style="color: #e7c307">
-      <img class="ls-bg" src="/images/slider/shapeworld.png" alt="Shape the World">
-
-      <p style="background-color: #321707; top: 85px; left: 280px; delayin: 100; slidedirection: left;" class="ls-s2">
-        <%- @t.index.slider.shapeworld[0] %>
-      </p>
-      <p style="background-color: #321707; top: 120px; left: 280px; delayin: 1500; slidedirection: right;" class="ls-s4">
-        <%- @t.index.slider.shapeworld[1] %>
-      </p>
+    <div class="news-admin" ng-cloak ng-hide="!adminView" key-toggle="adminView" keys="Ctrl+Shift+A">
+      <form class="news-login" ng-hide="me" ng-submit="authenticate(login)">
+        <label>Login</label>
+        <input type="text" placeholder="Username" ng-model="login.username">
+        <input type="password" placeholder="Password" ng-model="login.password">
+        <input type="submit">
+      </form>
+      <div ng-hide="!me">
+        <button ng-click="addItem(); changeEditItem(0)">Add item...</button>
+        <button ng-click="logout()">Logout</button>
+        <form class="news-form" ng-submit="updateNewsItems()">
+          <label>Title</label>
+          <input required type=text size=30 ng-model="news[editItem].title">
+          <label>Link</label>
+          <input required type=text size=30 ng-model="news[editItem].link">
+          <label>Author</label>
+          <input required type=text size=30 ng-model="news[editItem].author">
+          <label>Date</label>
+          <input required type=date size=30 ng-model="news[editItem].date">
+          <label>Type</label>
+          <select required ng-model="news[editItem].type">
+            <option value="blog">Blog</option>
+            <option value="comic">Comic</option>
+            <option value="newpost">New Post</option>
+            <option value="youtube">YouTube</option>
+          </select>
+          <input type=submit>
+        </form>
+      </div>
     </div>
-
-
-
-    <div class="ls-layer">
-      <img class="ls-bg" src="/images/slider/cmcbg.jpg" alt="Codename Modem Wombat">
-      <img src="/images/slider/cmc1.jpg" alt="Codename Modem Wombat" class="ls-s3" style="top: 0px; left: 0px; slidedirection: left; delayin: 800;">
-      <img src="/images/slider/cmc2.jpg" alt="Codename Modem Wombat" class="ls-s3" style="top: 0px; left: 0px; slidedirection: right; delayin: 1800;">
-      <img src="/images/slider/cmc3.jpg" alt="Codename Modem Wombat" class="ls-s3" style="top: 0px; left: 0px; slidedirection: left; delayin: 2800;">
-
-      <p style="background-color: #ffcd00; top: 200px; left: 60px; slidedirection: left; delayin: 800;" class="ls-s3">
-        <%- @t.index.slider.cmc[0] %>
-      </p>
-      <p style="background-color: #ffcd00; top: 240px; left: 60px; slidedirection: right; delayin: 1800;" class="ls-s3">
-        <%- @t.index.slider.cmc[1] %>
-      </p>
-      <p style="background-color: #ffcd00; top: 280px; left: 60px; slidedirection: left; delayin: 2800;" class="ls-s3">
-        <%- @t.index.slider.cmc[2] %>
-      </p>
-    </div>
-
-
-
-    <div class="ls-layer" style="color: #873620">
-      <img class="ls-bg" src="/images/slider/marsbg.jpg" alt="Discover Far Worlds">
-
-      <img src="/images/slider/marssettle.png" alt="ClonkMars" class="ls-s3" style="top: 0px; left: 0px; slidedirection: left; delayin: 1500;">
-
-      <p class="ls-s1" style="top: 35px; left: 211px; slidedirection: top; slideoutdirection: top; delayin: 200;">
-        <%- @t.index.slider.mars[0] %>
-      </p>
-      <p class="ls-s5" style="top: 200px; left: 350px; slidedirection: right; delayin: 1600;">
-        <%- @t.index.slider.mars[1] %>
-      </p>
-    </div>
-
-
-
-    <div class="ls-layer"  style="color: #232323">
-      <img class="ls-bg" src="/images/slider/alone-bg.png" alt="You're not alone.">
-
-      <img src="/images/slider/masterserver.png" alt="Masterserver" class="ls-s3" style="top: 0px; left: 264px; slidedirection: right; delayin: 2000;">
-      <img src="/images/slider/lobby.png" alt="Lobby" class="ls-s3" style="top: 186px; left: 0px; slidedirection: right; delayin: 2000;">
-      <img src="/images/slider/splitscreen.png" alt="Splitscreen" class="ls-s3" style="top: 200px; left: 264px; slidedirection: right; delayin: 2000;">
-
-      <p style="background-color: white; top: 70px; left: 5px; delayin: 100; slidedirection: left;" class="ls-s2">
-        <%- @t.index.slider.alone[0] %>
-      </p>
-      <p class="ls-s5" style="top: 5px; left: 350px; slidedirection: right; delayin: 2000;">
-        <%- @t.index.slider.alone[1] %>
-      </p>
-      <p class="ls-s5" style="top: 340px; left: 20px; slidedirection: right; delayin: 2000;">
-        <%- @t.index.slider.alone[2] %>
-      </p>
-      <p class="ls-s5" style="top: 340px; left: 290px; slidedirection: right; delayin: 2000;">
-        <%- @t.index.slider.alone[3] %>
-      <p>
-    </div>
-
-
-
-    <div class="ls-layer"  style="color: #051c75; delayout: 1300;">
-      <img class="ls-bg" src="/images/slider/os_bg.png" alt="prefer OS">
-
-      <img src="/images/slider/os_windows.png" alt="Windows" class="ls-s3" style="top: 0px; left: 0px; slidedirection: top; delayin: 2000; delayout: 1000;">
-      <img src="/images/slider/icon_windows.png" alt="Windows" class="ls-s3" style="top: 200px; left: 44px; slidedirection: left; delayin: 1000; delayout: 500;">
-
-      <img src="/images/slider/os_linux.png" alt="Linux" class="ls-s4" style="top: 0px; left: 207px; slidedirection: bottom; delayin: 2500; delayout: 1000;">
-      <img src="/images/slider/icon_linux.png" alt="Linux" class="ls-s3" style="top: 270px; left: 314px; slidedirection: left; delayin: 1000; delayout: 500;">
-
-      <img src="/images/slider/os_mac.png" alt="Mac" class="ls-s6" style="top: 0px; left: 414px; slidedirection: top; delayin: 3000; delayout: 1000;">
-      <img src="/images/slider/icon_mac.png" alt="Mac" class="ls-s6" style="top: 20px; left: 490px; slidedirection: left; delayin: 1000; delayout: 500;">
-
-      <p style="top: 15px; left: 167px; slidedirection: top; delayin: 500" class="ls-s3">
-        <%- @t.index.slider.os[0] %>
-      </p>
-    </div>
-
-
-
-    <div class="ls-layer"  style="color: white; slidedelay: 10000;">
-      <img class="ls-bg" src="/images/slider/developer.png" alt="Developer">
-      <img src="/images/slider/developer2.png" alt="Developer" class="ls-s3" style="top: 0px; left: 0px; slidedirection: right; delayin: 3000;">
-
-      <p style="background-color: #1d1d1d; top: 155px; left: 130px; delayin: 100; slidedirection: left; showuntil: 1500;" class="ls-s2">
-        <%- @t.index.slider.dev[0] %>
-      </p>
-      <p style="background-color: #1d1d1d; top: 150px; left: 130px; delayin: 3000; slidedirection: left; showuntil: 3000;" class="ls-s6">
-        <%- @t.index.slider.dev[1] %>
-      </p>
-      <p style="background-color: #1d1d1d; top: 190px; left: 130px; delayin: 3800; slidedirection: left; showuntil: 2200;" class="ls-s6">
-        <%- @t.index.slider.dev[2] %>
-      </p>
-      <p style="background-color: #1d1d1d; top: 230px; left: 130px; delayin: 4600; slidedirection: left; showuntil: 1400;" class="ls-s6">
-        <%- @t.index.slider.dev[3] %>
-      </p>
-      <p style="background-color: #1d1d1d; top: 270px; left: 130px; delayin: 5400; slidedirection: left; showuntil: 600;" class="ls-s6">
-        <%- @t.index.slider.dev[4] %>
-      </p>
-      <p style="font-size: 18px; background-color: #1d1d1d; top: 155px; left: 130px; delayin: 7300; slidedirection: left; showuntil: 2000;" class="ls-s4">
-        <%- @t.index.slider.dev[5] %>
-      </p>
-    </div>
-
   </div>
-  <!--LayerSlider end-->
 
   <aside class=newsfeed>
-    <% for entry in @t.index.news: %>
-      <a href="<%= entry.link %>">
-        <img src="/images/stream_<%= entry.type %>.png" alt="<%= entry.type %>">
-        <div>
-          <b><%= entry.title %></b>
-          <small><%= @t.index.posted + entry.user + ' | ' + entry.date %></small>
-        </div>
-      </a>
-    <% end %>
+    <a href="{{ item.link }}" ng-repeat="item in news" ng-mouseenter="changeEditItem($index)">
+      <img ng-src="http://clonkspot.org/images/stream_{{ item.type }}.png" alt="{{ item.type }}">
+      <div>
+        <b>{{ item.title }}</b>
+        <small><%= @t.index.posted %> {{ item.author }} | {{ item.date | date:'longDate' }}</small>
+      </div>
+    </a>
   </aside>
   
   <section class="download content">

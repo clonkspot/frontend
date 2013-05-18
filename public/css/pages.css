@@ -24,17 +24,29 @@
   margin: 0;
   padding: 0;
 }
-#home #layerslider {
+#home #sliderarea {
   width: 620px;
   height: 388px;
   background-color: #3a3a3a;
 }
-#home #layerslider p {
+#home #sliderarea #layerslider {
+  width: 620px;
+  height: 388px;
+}
+#home #sliderarea p {
   background-color: #fff;
   font-weight: bold;
   font-size: 17px;
   padding: 5px 10px;
   white-space: nowrap;
+}
+#home .news-admin[ng-cloak] {
+  display: none;
+}
+#home .news-admin label {
+  color: #fff;
+  display: block;
+  font-weight: bold;
 }
 #home .newsfeed {
   position: absolute;
