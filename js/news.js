@@ -1,7 +1,7 @@
 /* Angular News Application */
 
 angular.module('clonkspotNewsApp', [])
-  .controller('NewsCtrl', function($scope, $http) {
+  .controller('NewsCtrl', ['$scope', '$http', function($scope, $http) {
     var lang = document.documentElement.lang
     var dpd = '/dpd'
 
@@ -74,7 +74,7 @@ angular.module('clonkspotNewsApp', [])
           })
       })
     }
-  })
+  }])
 
   // Toggles a variable when pressing a certain key combination.
   .directive('keyToggle', function() {
