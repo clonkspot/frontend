@@ -23,32 +23,6 @@ module.exports =
 
   index:
     posted: 'posted by '
-    news: [
-      title: 'YT Videotitel'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=73'
-      user: 'Zapper'
-      date: '27. April, 2013'
-      type: 'newpost'
-     ,
-      title: 'Tempel der Verdammnis'
-      link: 'http://www.youtube.com/watch?v=JthKUcZRTgM'
-      user: 'Nachtfalter'
-      date: '27. April, 2013'
-      type: 'youtube'
-     ,
-      title: 'Clonkspot Party [Ideen]'
-      link: 'http://clonkspot.org/cgi-bin/forum/topic_show.pl?tid=71'
-      user: 'Nachtfalter'
-      date: '23. April, 2013'
-      type: 'newpost'
-     ,
-      title: 'Tips and Tricks 3: Blitzmoney'
-      link: 'http://www.youtube.com/watch?v=zVZ2bv2DSj8'
-      user: 'Nachtfalter'
-      date: '22. April, 2013'
-      type: 'youtube'
-    ,
-    ]
 
     slider:
       whatis: [
