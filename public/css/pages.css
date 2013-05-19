@@ -40,7 +40,7 @@
   padding: 5px 10px;
   white-space: nowrap;
 }
-#home .news-admin[ng-cloak] {
+#home [ng-cloak] {
   display: none;
 }
 #home .news-admin label {

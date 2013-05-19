@@ -29,12 +29,12 @@
     }
   }
 
-  .news-admin {
-    // Hide per default.
-    &[ng-cloak] {
-      display: none
-    }
+  // Prevents flash of uninterpolated templates.
+  [ng-cloak] {
+    display: none
+  }
 
+  .news-admin {
     label {
       color: white
       display: block
