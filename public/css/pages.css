@@ -41,7 +41,7 @@
   white-space: nowrap;
 }
 #home [ng-cloak] {
-  display: none;
+  display: none !important;
 }
 #home .news-admin label {
   color: #fff;
