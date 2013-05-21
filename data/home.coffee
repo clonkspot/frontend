@@ -2,6 +2,9 @@
 
 module.exports =
   screenshots: [
+    link: 'http://clonkspot.org/blog/2013/05/21/sdm10-vom-winde-verweht/'
+    img: 'http://clonkspot.org/blog/wp-content/uploads/2013/05/VomWindeverweht-150x150.jpg'
+  ,
     link: 'http://clonkspot.org/blog/2013/03/01/sdm9-heilung-der-welt/'
     img: 'http://clonkspot.org/blog/wp-content/uploads/2013/03/Screenshot005-150x150.jpg'
   ,
@@ -35,6 +38,4 @@ module.exports =
     link: 'http://clonkspot.org/blog/2012/09/01/sdw2-freiluft-akrobatik/'
     img: 'http://clonkspot.org/blog/wp-content/uploads/2012/09/Weekly-9-Freiluft-Akrobatik-150x150.png'
   ,
-    link: 'http://clonkspot.org/blog/2012/08/24/sdw1-kenny-und-die-flutwelle/'
-    img: 'http://clonkspot.org/blog/wp-content/uploads/2012/08/Weekly-2-Kenny-und-die-Flutwelle-150x150.png'
   ]
