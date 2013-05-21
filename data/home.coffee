@@ -4,6 +4,8 @@ module.exports =
   screenshots: [
     link: 'http://clonkspot.org/blog/2013/05/21/sdm10-vom-winde-verweht/'
     img: 'http://clonkspot.org/blog/wp-content/uploads/2013/05/VomWindeverweht-150x150.jpg'
+    x: 30
+    y: 50
   ,
     link: 'http://clonkspot.org/blog/2013/03/01/sdm9-heilung-der-welt/'
     img: 'http://clonkspot.org/blog/wp-content/uploads/2013/03/Screenshot005-150x150.jpg'
