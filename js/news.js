@@ -2,19 +2,44 @@
 
 angular.module('clonkspotNewsApp', [])
   .constant('language', document.documentElement.lang)
-  .controller('NewsCtrl', ['$scope', '$http', 'language', function($scope, $http, lang) {
-    var dpd = '/dpd'
-
+  .constant('dpd', '/dpd')
+  .factory('Authenticator', ['$rootScope', '$http', 'dpd', function($rootScope, $http, dpd) {
+    return {
+      // Check for authentication.
+      check: function() {
+        $http.get(dpd+'/users/me').success(function(result) {
+          $rootScope.me = result
+        })
+      },
+      login: function(credentials) {
+        $http.post(dpd+'/users/login', credentials)
+          .success(function(result) {
+            $rootScope.me = result
+          })
+          .error(function(error) {
+            alert('Could not log in: ' + error.message)
+          })
+      },
+      logout: function() {
+        $http.post(dpd+'/users/logout')
+        .success(function() {
+          $rootScope.me = null
+        })
+        .error(function(error) {
+          alert('Could not log out: ' + error.message)
+        })
+      }
+    }
+  }])
+  .run(['Authenticator', function(Authenticator) {
+    Authenticator.check()
+  }])
+  .controller('NewsCtrl', ['$scope', '$http', 'Authenticator', 'language', 'dpd', function($scope, $http, Authenticator, lang, dpd) {
     // Load the news from the server.
     $http.get(dpd+'/news?' + JSON.stringify({lang: lang, $limit: 4, $sort: {date: -1}}))
       .success(function(news) {
         $scope.news = news
       })
-
-    // Check for authentication.
-    $http.get(dpd+'/users/me').success(function(result) {
-      $scope.me = result
-    })
 
     // Whether the admin view or the slider is shown.
     $scope.adminView = false
@@ -22,26 +47,9 @@ angular.module('clonkspotNewsApp', [])
     $scope.login = {}
 
     // Login
-    $scope.authenticate = function(credentials) {
-      $http.post(dpd+'/users/login', credentials)
-        .success(function(result) {
-          $scope.me = result
-        })
-        .error(function(error) {
-          alert('Could not log in: ' + error.message)
-        })
-    }
-
+    $scope.authenticate = Authenticator.login
     // Logout
-    $scope.logout = function() {
-      $http.post(dpd+'/users/logout')
-      .success(function() {
-        $scope.me = null
-      })
-      .error(function(error) {
-        alert('Could not log out: ' + error.message)
-      })
-    }
+    $scope.logout = Authenticator.logout
 
     // The item that is being edited.
     $scope.editItem = 1
