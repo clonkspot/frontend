@@ -3,18 +3,19 @@
 angular.module('clonkspotNewsApp', [])
   .constant('language', document.documentElement.lang)
   .constant('dpd', '/dpd')
+
   .factory('Authenticator', ['$rootScope', '$http', 'dpd', function($rootScope, $http, dpd) {
-    return {
+    var auth =  {
       // Check for authentication.
       check: function() {
         $http.get(dpd+'/users/me').success(function(result) {
-          $rootScope.me = result
+          $rootScope.me = auth.me = result
         })
       },
       login: function(credentials) {
         $http.post(dpd+'/users/login', credentials)
           .success(function(result) {
-            $rootScope.me = result
+            $rootScope.me = auth.me = result
           })
           .error(function(error) {
             alert('Could not log in: ' + error.message)
@@ -22,14 +23,15 @@ angular.module('clonkspotNewsApp', [])
       },
       logout: function() {
         $http.post(dpd+'/users/logout')
-        .success(function() {
-          $rootScope.me = null
-        })
-        .error(function(error) {
-          alert('Could not log out: ' + error.message)
-        })
+          .success(function() {
+            $rootScope.me = auth.me = null
+          })
+          .error(function(error) {
+            alert('Could not log out: ' + error.message)
+          })
       }
     }
+    return auth
   }])
   .run(['Authenticator', function(Authenticator) {
     Authenticator.check()
