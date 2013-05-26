@@ -59,7 +59,7 @@ angular.module('clonkspotNewsApp', [])
     Authenticator.check()
   }])
 
-  .controller('NewsCtrl', ['$scope', 'News', 'Authenticator', 'language', function($scope, News, Authenticator, lang) {
+  .controller('NewsCtrl', ['$scope', 'News', 'Authenticator', function($scope, News, Authenticator) {
     // Load the news from the server.
     News.get().success(function(news) {
         $scope.news = news
@@ -68,10 +68,6 @@ angular.module('clonkspotNewsApp', [])
     // Whether the admin view or the slider is shown.
     $scope.adminView = false
 
-    $scope.login = {}
-
-    // Login
-    $scope.authenticate = Authenticator.login
     // Logout
     $scope.logout = Authenticator.logout
 
@@ -102,6 +98,11 @@ angular.module('clonkspotNewsApp', [])
           })
       })
     }
+  }])
+
+  .controller('LoginCtrl', ['$scope', 'Authenticator', function($scope, Authenticator) {
+    $scope.login = {}
+    $scope.authenticate = Authenticator.login
   }])
 
   // Toggles a variable when pressing a certain key combination.

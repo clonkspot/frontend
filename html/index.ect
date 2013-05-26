@@ -151,7 +151,7 @@
     <!--LayerSlider end-->
 
     <div class="news-admin" ng-cloak ng-hide="!adminView" key-toggle="adminView" keys="Ctrl+Shift+A">
-      <form class="news-login" ng-hide="me" ng-submit="authenticate(login)">
+      <form class="news-login" ng-controller="LoginCtrl" ng-hide="me" ng-submit="authenticate(login)">
         <label>Login</label>
         <input type="text" placeholder="Username" ng-model="login.username">
         <input type="password" placeholder="Password" ng-model="login.password">
