@@ -33,13 +33,35 @@ angular.module('clonkspotNewsApp', [])
     }
     return auth
   }])
+
+  .factory('News', ['$http', 'Authenticator', 'language', 'dpd', function($http, Authenticator, language, dpd) {
+    return {
+      // Requests four news items.
+      get: function() {
+        return $http.get(dpd+'/news?' + JSON.stringify({lang: language, $limit: 4, $sort: {date: -1}}))
+      },
+      // Saves the given news item.
+      post: function(item) {
+        return $http.post(dpd+'/news', item)
+      },
+      // Returns a new news item with some default values.
+      create: function() {
+        return {
+          author: Authenticator.me ? Authenticator.me.username : '',
+          date: new Date().toISOString().slice(0, 10),
+          lang: language
+        }
+      }
+    }
+  }])
+
   .run(['Authenticator', function(Authenticator) {
     Authenticator.check()
   }])
-  .controller('NewsCtrl', ['$scope', '$http', 'Authenticator', 'language', 'dpd', function($scope, $http, Authenticator, lang, dpd) {
+
+  .controller('NewsCtrl', ['$scope', 'News', 'Authenticator', 'language', function($scope, News, Authenticator, lang) {
     // Load the news from the server.
-    $http.get(dpd+'/news?' + JSON.stringify({lang: lang, $limit: 4, $sort: {date: -1}}))
-      .success(function(news) {
+    News.get().success(function(news) {
         $scope.news = news
       })
 
@@ -64,18 +86,14 @@ angular.module('clonkspotNewsApp', [])
     // Adds another news item on top.
     $scope.addItem = function() {
       var n = $scope.news.slice(0, 3)
-      n.unshift({
-        author: $scope.me.username,
-        date: new Date().toISOString().slice(0, 10),
-        lang: lang
-      })
+      n.unshift(News.create())
       $scope.news = n
     }
 
     // Save the edited news items on the server.
     $scope.updateNewsItems = function() {
       $scope.news.forEach(function(item, index) {
-        $http.post(dpd+'/news', item)
+        News.post(item)
           .success(function(result) {
             $scope.news[index] = result
           })
