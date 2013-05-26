@@ -1,8 +1,8 @@
 /* Angular News Application */
 
 angular.module('clonkspotNewsApp', [])
-  .controller('NewsCtrl', ['$scope', '$http', function($scope, $http) {
-    var lang = document.documentElement.lang
+  .constant('language', document.documentElement.lang)
+  .controller('NewsCtrl', ['$scope', '$http', 'language', function($scope, $http, lang) {
     var dpd = '/dpd'
 
     // Load the news from the server.
