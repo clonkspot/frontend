@@ -80,9 +80,9 @@ angular.module('clonkspotNewsApp', [])
     }
 
     // Adds another news item on top.
-    $scope.addItem = function() {
+    $scope.addItem = function(item) {
       var n = $scope.news.slice(0, 3)
-      n.unshift(News.create())
+      n.unshift(item || News.create())
       $scope.news = n
     }
 
