@@ -105,16 +105,19 @@ angular.module('clonkspotNewsApp', [])
     $scope.authenticate = Authenticator.login
   }])
 
-  .factory('ImportSites', ['$http', 'language', function($http, language) {
-    var youtubeList = language == 'de' ? 'PLigNApmAXiiRp69Gw_2U1MN1vhiYLdkQH' : 'PLigNApmAXiiTBM7vXR0hwyBV2o61lqj0S'
-    var youtube = {
-      name: 'YouTube',
-      items: [],
-      getItems: function() {
-        $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/' + youtubeList + '?alt=json&callback=JSON_CALLBACK')
+  .factory('ImportYouTube', ['$http', 'language', function($http, language) {
+    function ImportYouTube(playlist) {
+      this.playlist = playlist
+      this.items = []
+    }
+
+    ImportYouTube.prototype.name = 'YouTube'
+    ImportYouTube.prototype.getItems = function() {
+      var self = this
+      $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/' + this.playlist + '?alt=json&callback=JSON_CALLBACK')
         .success(function(videos) {
           // Transform videos.
-          youtube.items = videos.feed.entry.map(function(video) {
+          self.items = videos.feed.entry.map(function(video) {
             return {
               title: video.title.$t,
               author: 'Nachtfalter',
@@ -125,10 +128,13 @@ angular.module('clonkspotNewsApp', [])
             }
           })
         })
-      }
     }
+    return ImportYouTube
+  }])
+  .factory('ImportSites', ['ImportYouTube', 'language', function(ImportYouTube, language) {
+    var youtubeList = language == 'de' ? 'PLigNApmAXiiRp69Gw_2U1MN1vhiYLdkQH' : 'PLigNApmAXiiTBM7vXR0hwyBV2o61lqj0S'
     return {
-      youtube: youtube
+      youtube: new ImportYouTube(youtubeList)
     }
   }])
   .controller('ImportCtrl', ['$scope', 'ImportSites', function($scope, ImportSites) {
