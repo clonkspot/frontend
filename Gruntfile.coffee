@@ -14,7 +14,7 @@ module.exports = (grunt) ->
         files: 'public/js/home.js': 'js/home.coffee'
     watch:
       stylus:
-        files: 'css/*.styl'
+        files: 'css/**/*.styl'
         tasks: 'stylus'
       browserify:
         files: 'js/**/*'
