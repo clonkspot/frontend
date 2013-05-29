@@ -105,6 +105,41 @@ angular.module('clonkspotNewsApp', [])
     $scope.authenticate = Authenticator.login
   }])
 
+  .factory('ImportSites', ['$http', 'language', function($http, language) {
+    var youtubeList = language == 'de' ? 'PLigNApmAXiiRp69Gw_2U1MN1vhiYLdkQH' : 'PLigNApmAXiiTBM7vXR0hwyBV2o61lqj0S'
+    var youtube = {
+      name: 'YouTube',
+      items: [],
+      getItems: function() {
+        $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/' + youtubeList + '?alt=json&callback=JSON_CALLBACK')
+        .success(function(videos) {
+          console.log(videos)
+          // Transform videos.
+          youtube.items = videos.feed.entry.map(function(video) {
+            return {
+              title: video.title.$t,
+              author: 'Nachtfalter',
+              link: video.link[0].href,
+              date: video.published.$t.slice(0, 10),
+              type: 'youtube',
+              lang: language
+            }
+          })
+        })
+      }
+    }
+    return {
+      youtube: youtube
+    }
+  }])
+  .controller('ImportCtrl', ['$scope', 'ImportSites', function($scope, ImportSites) {
+    $scope.importSites = ImportSites
+    $scope.selected = function(site) {
+      // Load the selected site's items.
+      ImportSites[site].getItems()
+    }
+  }])
+
   // Toggles a variable when pressing a certain key combination.
   .directive('keyToggle', function() {
     return function(scope, element, attrs) {

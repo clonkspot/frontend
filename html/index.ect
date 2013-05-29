@@ -178,6 +178,16 @@
           </select>
           <input type=submit>
         </form>
+
+        <div class="import" ng-controller="ImportCtrl">
+          <select ng-model="importSite" ng-change="selected(importSite)">
+            <option ng-repeat="(key, site) in importSites" value="{{ key }}">{{ site.name }}</option>
+          </select>
+          <h2>Import from: {{ importSite }}</h2>
+          <ul>
+            <li ng-repeat="item in importSites[importSite].items" ng-click="addItem(item)">{{ item.title }}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
