@@ -113,7 +113,6 @@ angular.module('clonkspotNewsApp', [])
       getItems: function() {
         $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/' + youtubeList + '?alt=json&callback=JSON_CALLBACK')
         .success(function(videos) {
-          console.log(videos)
           // Transform videos.
           youtube.items = videos.feed.entry.map(function(video) {
             return {
