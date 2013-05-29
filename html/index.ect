@@ -185,7 +185,7 @@
             <option ng-repeat="(key, site) in importSites" value="{{ key }}">{{ site.name }}</option>
           </select>
           <ul>
-            <li ng-repeat="item in importSites[importSite].items" ng-click="addItem(item)">{{ item.title }}</li>
+            <li ng-repeat="item in importSites[importSite].items" ng-click="addItem(item); changeEditItem(0)">{{ item.title }}</li>
           </ul>
         </div>
       </div>
