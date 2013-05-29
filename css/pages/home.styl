@@ -35,10 +35,24 @@
   }
 
   .news-admin {
+    position: relative
+    color: white
+
     label {
-      color: white
       display: block
       font-weight: bold
+    }
+
+    .import {
+      absolute: top 0 right 0
+      width: (sliderWidth / 2px)
+      height: sliderHeight
+      overflow: auto
+
+      ul {
+        margin: 0
+        padding-left: 20px
+      }
     }
   }
 
