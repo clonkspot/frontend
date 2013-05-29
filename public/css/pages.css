@@ -43,10 +43,28 @@
 #home [ng-cloak] {
   display: none !important;
 }
-#home .news-admin label {
+#home .news-admin {
+  position: relative;
   color: #fff;
+}
+#home .news-admin label {
   display: block;
   font-weight: bold;
+}
+#home .news-admin .import {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 310px;
+  height: 388px;
+  overflow: auto;
+}
+#home .news-admin .import ul {
+  margin: 0;
+  padding-left: 20px;
+}
+#home .news-admin .import li {
+  cursor: pointer;
 }
 #home .newsfeed {
   position: absolute;

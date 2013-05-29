@@ -439,6 +439,7 @@ require.define("/twitch.coffee",function(require,module,exports,__dirname,__file
 
   checkStream = function(data) {
     var _ref, _ref1;
+
     if (data != null ? (_ref = data.stream) != null ? (_ref1 = _ref.game) != null ? _ref1.match(/clonk/i) : void 0 : void 0 : void 0) {
       return $('header .twitch').slideDown().find('a').attr('href', data.stream.channel.url);
     }
@@ -463,7 +464,6 @@ require.define("/twitch.coffee",function(require,module,exports,__dirname,__file
 });
 
 require.define("/main.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
-
   require('./twitch');
 
 }).call(this);
