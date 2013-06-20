@@ -2,6 +2,9 @@
 
 module.exports =
   screenshots: [
+    link: 'http://clonkspot.org/blog/2013/06/19/sdm11-alltag-im-bunker/'
+    img: 'http://clonkspot.org/blog/wp-content/uploads/2013/06/monthly11-150x150.jpg'
+  ,
     link: 'http://clonkspot.org/blog/2013/05/21/sdm10-vom-winde-verweht/'
     img: 'http://clonkspot.org/blog/wp-content/uploads/2013/05/VomWindeverweht-150x150.jpg'
     x: 30
@@ -36,8 +39,5 @@ module.exports =
     img: 'http://clonkspot.org/blog/wp-content/uploads/2012/09/Weekly-15-Uboot-Verlader-150x150.png'
     x: 50
     y: 40
-  ,
-    link: 'http://clonkspot.org/blog/2012/09/01/sdw2-freiluft-akrobatik/'
-    img: 'http://clonkspot.org/blog/wp-content/uploads/2012/09/Weekly-9-Freiluft-Akrobatik-150x150.png'
   ,
   ]
