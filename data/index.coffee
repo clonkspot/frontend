@@ -2,12 +2,21 @@
 
 module.exports =
   nav:
-    blog: '/blog'
-    forums: '/cgi-bin/forum/forum.pl'
-    comic: '/comic'
-    clonkforge: 'http://clonkforge.net/'
-    official: 'http://clonk.de/'
-    openclonk: 'http://openclonk.org/'
+    blog:
+      url: '/blog'
+    forums:
+      url: '/cgi-bin/forum/forum.pl'
+      width: 130
+    comic:
+      url: '/comic'
+      width: 110
+    clonkforge:
+      url: 'http://clonkforge.net/'
+    official:
+      url: 'http://clonk.de/'
+      width: 175
+    openclonk:
+      url: 'http://openclonk.org/'
 
   home: require './home'
   comics: require './comics'

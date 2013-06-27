@@ -28,7 +28,9 @@
           <img src="/images/home<%- if @req.url is '/' then '_hl' else '' %>.png" alt="Home">
         </a>
         <% for key, item of @t.nav : %>
-        <a href="<%- @data.nav[key] %>" class="<%- if @req.url.startsWith(@data.nav[key]) then 'active' else '' %>">
+        <a href="<%- @data.nav[key].url %>"
+          class="<%- if @req.url.startsWith(@data.nav[key]) then 'active' else '' %>"
+          style="<%- if width = @data.nav[key].width then "width: #{width}px" else '' %>">
           <b><%= item[0] %></b>
           <small><%= item[1] %></small>
         </a>
