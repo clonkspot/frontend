@@ -167,6 +167,10 @@ header nav a:first-child {
 header nav a.active {
   color: #cf0401 !important;
 }
+header nav a b {
+  font-family: "Arial black", Arial, sans-serif;
+  font-size: 16px;
+}
 header nav a small {
   display: block;
   margin-top: -16px;
