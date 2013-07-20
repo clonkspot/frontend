@@ -7,6 +7,8 @@ express = require 'express'
 ECT = require 'ect'
 proxy = require 'proxy-middleware'
 
+cfg = require './cfg'
+
 require './lib/polyfill'
 
 # Initialize the application
@@ -26,8 +28,9 @@ if PRODUCTION
 else
   app.use express.logger 'dev'
 
-  # Proxy dpd requests to the online backend.
-  app.use '/dpd', proxy(url.parse('http://clonkspot.org/dpd'))
+  # Proxy api requests to the online backend.
+  app.use '/dpd', proxy(url.parse(cfg.get('proxy.dpd')))
+  app.use '/api', proxy(url.parse(cfg.get('proxy.api')))
 
 app.use express.static('public')
 app.use express.cookieParser()
