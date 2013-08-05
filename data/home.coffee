@@ -2,6 +2,11 @@
 
 module.exports =
   screenshots: [
+    link: 'http://clonkspot.org/blog/2013/08/05/sdm13-wheres-waldo/'
+    img: 'http://clonkspot.org/blog/wp-content/uploads/2013/08/waldo-150x150.jpg'
+    x: 50
+    y: 10
+  ,
     link: 'http://clonkspot.org/blog/2013/07/10/sdm12-dustere-harmonie/'
     img: 'http://clonkspot.org/blog/wp-content/uploads/2013/07/Screenshot230-150x150.jpg'
     y: 20
@@ -35,8 +40,5 @@ module.exports =
     link: 'http://clonkspot.org/blog/2012/10/01/sdm5-vulkangabel/'
     img: 'http://clonkspot.org/blog/wp-content/uploads/2012/09/Weekly-7-Vulkangabel-150x150.png'
     y: 20
-  ,
-    link: 'http://clonkspot.org/blog/2012/09/14/sdw4-lobbyismus/'
-    img: 'http://clonkspot.org/blog/wp-content/uploads/2012/09/Screenshot2-150x150.jpg'
   ,
   ]
