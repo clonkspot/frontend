@@ -436,47 +436,32 @@ require.define("/news.js",function(require,module,exports,__dirname,__filename,p
 
 angular.module('clonkspotNewsApp', [])
   .constant('language', document.documentElement.lang)
-  .constant('dpd', '/dpd')
+  .constant('api', '/api')
 
-  .factory('Authenticator', ['$rootScope', '$http', 'dpd', function($rootScope, $http, dpd) {
+  .factory('Authenticator', ['$rootScope', '$http', 'api', function($rootScope, $http, api) {
     var auth =  {
       // Check for authentication.
       check: function() {
-        $http.get(dpd+'/users/me').success(function(result) {
-          $rootScope.me = auth.me = result
+        $http.get(api+'/users/me').success(function(result) {
+          auth.me = result
+          // Only admins are allowed to change things.
+          if (result.admin)
+            $rootScope.authenticated = true
         })
-      },
-      login: function(credentials) {
-        $http.post(dpd+'/users/login', credentials)
-          .success(function(result) {
-            $rootScope.me = auth.me = result
-          })
-          .error(function(error) {
-            alert('Could not log in: ' + error.message)
-          })
-      },
-      logout: function() {
-        $http.post(dpd+'/users/logout')
-          .success(function() {
-            $rootScope.me = auth.me = null
-          })
-          .error(function(error) {
-            alert('Could not log out: ' + error.message)
-          })
       }
     }
     return auth
   }])
 
-  .factory('News', ['$http', 'Authenticator', 'language', 'dpd', function($http, Authenticator, language, dpd) {
+  .factory('News', ['$http', 'Authenticator', 'language', 'api', function($http, Authenticator, language, api) {
     return {
       // Requests four news items.
       get: function() {
-        return $http.get(dpd+'/news?' + JSON.stringify({lang: language, $limit: 4, $sort: {date: -1}}))
+        return $http.get(api+'/news?lang='+language)
       },
       // Saves the given news item.
       post: function(item) {
-        return $http.post(dpd+'/news', item)
+        return $http.post(api+'/news', item)
       },
       // Returns a new news item with some default values.
       create: function() {
@@ -501,9 +486,6 @@ angular.module('clonkspotNewsApp', [])
 
     // Whether the admin view or the slider is shown.
     $scope.adminView = false
-
-    // Logout
-    $scope.logout = Authenticator.logout
 
     // The item that is being edited.
     $scope.editItem = 1
@@ -532,11 +514,6 @@ angular.module('clonkspotNewsApp', [])
           })
       })
     }
-  }])
-
-  .controller('LoginCtrl', ['$scope', 'Authenticator', function($scope, Authenticator) {
-    $scope.login = {}
-    $scope.authenticate = Authenticator.login
   }])
 
   .factory('ImportYouTube', ['$http', 'language', function($http, language) {

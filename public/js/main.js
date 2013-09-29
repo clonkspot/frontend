@@ -463,7 +463,6 @@ require.define("/twitch.coffee",function(require,module,exports,__dirname,__file
 });
 
 require.define("/main.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
-
   require('./twitch');
 
 }).call(this);
