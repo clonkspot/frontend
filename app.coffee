@@ -79,9 +79,3 @@ unless PRODUCTION
 # 404 handler
 app.use (req, res, next) ->
   res.status(404).send renderer.render '404', loader.pageData(req)
-
-# Only run if invoked directly.
-if process.argv[1] is __filename
-  PORT = 3235
-  app.listen PORT
-  console.log "Running on port #{PORT}"
