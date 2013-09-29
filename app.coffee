@@ -7,6 +7,8 @@ express = require 'express'
 ECT = require 'ect'
 proxy = require 'proxy-middleware'
 
+cfg = require './cfg'
+
 require './lib/polyfill'
 
 # Initialize the application
@@ -26,8 +28,9 @@ if PRODUCTION
 else
   app.use express.logger 'dev'
 
-  # Proxy dpd requests to the online backend.
-  app.use '/dpd', proxy(url.parse('http://clonkspot.org/dpd'))
+  # Proxy api requests to the online backend.
+  app.use '/dpd', proxy(url.parse(cfg.get('proxy.dpd')))
+  app.use '/api', proxy(url.parse(cfg.get('proxy.api')))
 
 app.use express.static('public')
 app.use express.cookieParser()
@@ -76,9 +79,3 @@ unless PRODUCTION
 # 404 handler
 app.use (req, res, next) ->
   res.status(404).send renderer.render '404', loader.pageData(req)
-
-# Only run if invoked directly.
-if process.argv[1] is __filename
-  PORT = 3235
-  app.listen PORT
-  console.log "Running on port #{PORT}"

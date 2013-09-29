@@ -151,15 +151,12 @@
     <!--LayerSlider end-->
 
     <div class="news-admin" ng-cloak ng-hide="!adminView" key-toggle="adminView" keys="Ctrl+Shift+A">
-      <form class="news-login" ng-controller="LoginCtrl" ng-hide="me" ng-submit="authenticate(login)">
-        <label>Login</label>
-        <input type="text" placeholder="Username" ng-model="login.username">
-        <input type="password" placeholder="Password" ng-model="login.password">
-        <input type="submit">
-      </form>
-      <div ng-hide="!me">
+      <div class="news-login" ng-hide="authenticated">
+        <strong>You are not logged in or you're not allowed to make changes here.</strong><br>
+        <a href="/cgi-bin/forum/user_login.pl">Log in</a>
+      </div>
+      <div ng-hide="!authenticated">
         <button ng-click="addItem(); changeEditItem(0)">Add item...</button>
-        <button ng-click="logout()">Logout</button>
         <form class="news-form" ng-submit="updateNewsItems()">
           <label>Title</label>
           <input required type=text size=30 ng-model="news[editItem].title">
