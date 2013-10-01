@@ -2,7 +2,7 @@
 
 module.exports =
   screenshots: [
-    link: 'http://clonkspot.org/blog/2013/09/30/sdm13-gelber-schnee/'
+    link: 'http://clonkspot.org/blog/2013/09/30/sdm14-gelber-schnee/'
     img: 'http://clonkspot.org/blog/wp-content/uploads/2013/09/sdmdings-150x150.jpg'
     x: 50
     y: 10
