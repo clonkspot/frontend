@@ -7,29 +7,33 @@ module.exports = (grunt) ->
         files:
           'public/css/clonkspot.css': 'css/*.styl'
           'public/css/pages.css': 'css/pages/*.styl'
-    browserify:
-      main:
-        files: 'public/js/main.js': 'js/main.coffee'
-      home:
-        files: 'public/js/home.js': 'js/home.coffee'
+    coffee:
+      # Replicate structure in /js in /public/js/app.
+      compile:
+        expand: true
+        cwd: 'js'
+        src: ['**/*.coffee']
+        dest: 'public/js/app'
+        ext: '.js'
+    copy:
+      # Copy non-CS files in the respective folder.
+      js:
+        expand: true
+        cwd: 'js'
+        src: ['**/*.js']
+        dest: 'public/js/app'
     watch:
       stylus:
         files: 'css/**/*.styl'
         tasks: 'stylus'
-      browserify:
+      js:
         files: 'js/**/*'
-        tasks: 'browserify'
+        tasks: ['coffee', 'copy']
 
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['stylus', 'browserify']
+  grunt.registerTask 'default', ['stylus', 'coffee', 'copy']
 
-  grunt.registerMultiTask 'browserify', 'Runs browserify', ->
-    browserify = require 'browserify'
-    for file, i in @files
-      b = browserify(@options())
-      b.addEntry(f) for f in file.src
-      bundle = b.bundle()
-      grunt.file.write file.dest, bundle
-    return
