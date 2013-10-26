@@ -15,6 +15,7 @@ module.exports = (grunt) ->
         src: ['**/*.coffee']
         dest: 'public/js/app'
         ext: '.js'
+
     copy:
       # Copy non-CS files in the respective folder.
       js:
@@ -22,6 +23,14 @@ module.exports = (grunt) ->
         cwd: 'js'
         src: ['**/*.js']
         dest: 'public/js/app'
+
+    bower:
+      install:
+        options:
+          targetDir: './public/js/lib'
+          layout: (type, component) -> component
+          cleanTargetDir: true
+
     watch:
       stylus:
         files: 'css/**/*.styl'
@@ -30,6 +39,7 @@ module.exports = (grunt) ->
         files: 'js/**/*'
         tasks: ['coffee', 'copy']
 
+  grunt.loadNpmTasks 'grunt-bower-task'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-stylus'

@@ -1,4 +1,5 @@
 node_modules
+bower_components
 public/images
 public/layerslider
-public/js/bower_components
+public/js/lib
