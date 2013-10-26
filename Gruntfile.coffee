@@ -39,9 +39,21 @@ module.exports = (grunt) ->
         files: 'js/**/*'
         tasks: ['coffee', 'copy']
 
+    # Optimizer
+    requirejs:
+      compile:
+        options:
+          baseUrl: 'public/js'
+          mainConfigFile: 'public/js/app/main.js'
+          dir: 'build'
+          modules: [
+            name: 'app/home'
+          ]
+
   grunt.loadNpmTasks 'grunt-bower-task'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-requirejs'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
