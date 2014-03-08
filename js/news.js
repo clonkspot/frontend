@@ -10,8 +10,8 @@ angular.module('clonkspotNewsApp', [])
       check: function() {
         $http.get(api+'/users/me').success(function(result) {
           auth.me = result
-          // Only admins are allowed to change things.
-          if (result.admin)
+          // Only news editors are allowed to change things.
+          if (result.rights.edit_news)
             $rootScope.authenticated = true
         })
       }
