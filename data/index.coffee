@@ -5,7 +5,7 @@ module.exports =
     blog:
       url: '/blog'
     forums:
-      url: '/cgi-bin/forum/forum.pl'
+      url: '/forum/forum.pl'
       width: 130
     comic:
       url: '/comic'
