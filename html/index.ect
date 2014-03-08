@@ -191,7 +191,7 @@
 
   <aside class=newsfeed>
     <a href="{{ item.link }}" ng-cloak ng-repeat="item in news" ng-mouseenter="changeEditItem($index)">
-      <img ng-src="http://clonkspot.org/images/stream_{{ item.type }}.png" alt="{{ item.type }}">
+      <img ng-src="/images/stream_{{ item.type }}.png" alt="{{ item.type }}">
       <div>
         <b>{{ item.title }}</b>
         <small><%= @t.index.posted %> {{ item.author }} | {{ item.date | date:'longDate' }}</small>
