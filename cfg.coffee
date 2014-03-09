@@ -7,6 +7,12 @@ conf = convict
     default: 'development'
     env: 'NODE_ENV'
 
+  port:
+    doc: 'The port to bind.'
+    format: 'port'
+    default: 3235
+    env: 'PORT'
+
   proxy:
     dpd:
       doc: 'The dpd api url.'

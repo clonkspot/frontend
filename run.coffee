@@ -1,7 +1,8 @@
 # Run the application.
 
 {app} = require './app'
+cfg = require './cfg'
 
-PORT = 3235
+PORT = cfg.get 'port'
 app.listen PORT
 console.log "Running on port #{PORT}"
