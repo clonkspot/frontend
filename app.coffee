@@ -29,7 +29,6 @@ else
   app.use express.logger 'dev'
 
   # Proxy api requests to the online backend.
-  app.use '/dpd', proxy(url.parse(cfg.get('proxy.dpd')))
   app.use '/api', proxy(url.parse(cfg.get('proxy.api')))
 
 app.use express.static('public')
@@ -74,7 +73,7 @@ app.get '/comic/:id', (req, res, next) ->
 unless PRODUCTION
   # Get images from the production server.
   app.get '/images/*', (req, res) ->
-    res.redirect 'http://clonkspot.org/images/'+req.params[0]
+    res.redirect 'https://clonkspot.org/images/'+req.params[0]
 
 # 404 handler
 app.use (req, res, next) ->

@@ -14,15 +14,10 @@ conf = convict
     env: 'PORT'
 
   proxy:
-    dpd:
-      doc: 'The dpd api url.'
-      format: 'url'
-      default: 'http://clonkspot.org/dpd'
-      env: 'DPD_PROXY'
     api:
       doc: 'The backend api url.'
       format: 'url'
-      default: 'http://clonkspot.org/api'
+      default: 'https://clonkspot.org/api'
       env: 'API_PROXY'
 
 conf.validate()
