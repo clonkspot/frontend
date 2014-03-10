@@ -9,11 +9,11 @@ Setup
 -----
 
 ```
-npm install -g grunt-cli coffee-script supervisor
+npm install -g grunt-cli coffee-script nodemon
 npm install
 ```
 
-Then run the server with `coffee app.coffee` or `supervisor app.coffee`.
+Then run the server with `coffee app.coffee` or `nodemon app.coffee`.
 
 On Windows you can use the `run.cmd` as a shortcut.
 
