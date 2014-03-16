@@ -27,6 +27,11 @@ small {
   font-size: 12px;
   line-height: 18px;
 }
+.normaltext,
+normal {
+  font-size: 16px;
+  line-height: 24px;
+}
 h1 {
   font-family: Arial, sans-serif;
   font-size: 36px;
@@ -67,7 +72,8 @@ h5 {
   border: 1px solid #74a67b;
   display: inline-block;
   color: #fff;
-  font-family: Rockwell, Times New Roman, serif;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
   font-size: 16px;
   padding: 9px 33px;
   text-decoration: none;
@@ -75,6 +81,19 @@ h5 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.ExternalButton a:link {
+  color: #fff;
+  text-decoration: none;
+}
+.ExternalButton a:visited {
+  color: #fff;
+}
+.ExternalButton a:hover {
+  color: #fff;
+}
+.ExternalButton a:active {
+  color: #fff;
 }
 .ExternalButton:hover {
   background-color: #61b346;

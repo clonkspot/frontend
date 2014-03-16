@@ -6,17 +6,18 @@ module.exports =
       url: '/blog'
     forums:
       url: '/forum/forum.pl'
+    community:
+      url: '/community'
       width: 130
     comic:
-      url: '/comic'
+      url: '/comics'
       width: 110
-    clonkforge:
-      url: 'http://clonkforge.net/'
     official:
       url: 'http://clonk.de/'
       width: 175
     openclonk:
-      url: 'http://openclonk.org/'
+      url: 'http://clonk.de/'
+      width: 175
 
   home: require './home'
   comics: require './comics'

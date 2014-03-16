@@ -6,11 +6,12 @@ module.exports =
   langselect: 'I want English.'
   nav:
     blog: ['Blog', 'unsere Gedanken zu Clonk']
-    forums: ['Foren', 'Nuschelei frei Haus']
+    forums: ['Forum', 'test']
+    community: ['Community', 'die Beste wo gibt']
     comic: ['Comics', 'einfach Clonk']
     clonkforge: ['ClonkForge', 'stell dein Projekt vor']
     official: ['Offizielle Website', 'Clonks Heimat']
-    openclonk: ['OpenClonk', 'die OpenSource-Variante']
+    openclonk: ['test', 'test']
 
   twitch: 'Clonk Livestream auf Twitch.tv!'
 
