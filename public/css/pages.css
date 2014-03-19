@@ -18,6 +18,23 @@
   margin-left: 2em;
 }
 
+/* Community */
+#quota {
+  position: absolute;
+  top: 189px;
+  left: 720px;
+  background-color: #f4f4f4;
+}
+#projects {
+  width: 305px;
+}
+#projects2 {
+  width: 305px;
+  position: absolute;
+  bottom: 159px;
+  left: 370px;
+}
+
 /* Home page */
 #home {
   position: relative;
