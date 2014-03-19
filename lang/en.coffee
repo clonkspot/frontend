@@ -9,7 +9,6 @@ module.exports =
     forums: ['Forum', 'test']
     community: ['Community', 'the BEST']
     comic: ['Comics', 'simply Clonk']
-    clonkforge: ['ClonkForge', 'introduce your project']
     official: ['Official Website', 'the origin of Clonk']
     openclonk: ['test', 'test']
 
