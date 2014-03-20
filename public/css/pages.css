@@ -31,8 +31,39 @@
 #projects2 {
   width: 305px;
   position: absolute;
-  bottom: 159px;
+  bottom: 390px;
   left: 370px;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 100px;
+}
+li {
+  padding-left: 0px;
+  display: inline;
+}
+#externalLinks a:link,
+#externalLinks a:visited {
+  display: block;
+  font-weight: bold;
+  color: #000;
+  background-color: rgba(228,228,228,0.5);
+  width: 500px;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  margin-bottom: -2px;
+}
+#externalLinks a:hover,
+#externalLinks a:active {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #434343;
 }
 
 /* Home page */
