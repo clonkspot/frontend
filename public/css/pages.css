@@ -19,19 +19,22 @@
 }
 
 /* Community */
+.imgborder {
+  border: 1px solid #808080;
+}
 #quota {
   position: absolute;
   top: 189px;
   left: 720px;
   background-color: #f4f4f4;
 }
-#projects {
+#project1 {
   width: 305px;
 }
-#projects2 {
+#project2 {
   width: 305px;
   position: absolute;
-  bottom: 390px;
+  bottom: 339px;
   left: 370px;
 }
 ul {
