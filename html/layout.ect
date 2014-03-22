@@ -10,7 +10,7 @@
   <body>
     <header>
       <a href="/">
-        <img src="/images/header.jpg" alt="">
+        <img src="/images/header.jpg" alt="header">
         <div class="logo">
           <img src="/images/logo.png" alt="clonkspot - your hub for Clonk.">
         </div>
@@ -44,7 +44,13 @@
     </header>
     <% content %>
     <footer>
-      <a href="/impressum">Impressum</a>
+      <div class="navfooter"
+          <a href="/">Home</a>
+          <a href="/blog">Blog</a>
+          <a href="/community">Community</a>
+          <a href="/comics">Comics</a>
+          <a href="/impressum">Impressum</a>
+      </div>
     </footer>
 
     <% if PRODUCTION: %>

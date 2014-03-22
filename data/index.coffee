@@ -4,20 +4,15 @@ module.exports =
   nav:
     blog:
       url: '/blog'
+      width: 190
     forums:
       url: '/forum/forum.pl'
+      width: 185
     community:
       url: '/community'
-      width: 130
+      width: 180
     comic:
       url: '/comics'
-      width: 110
-    official:
-      url: 'http://clonk.de/'
-      width: 175
-    openclonk:
-      url: 'http://clonk.de/'
-      width: 175
 
   home: require './home'
   comics: require './comics'
