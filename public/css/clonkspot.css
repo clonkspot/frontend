@@ -22,6 +22,15 @@ img {
   margin-top: 42px;
   padding: 0 30px;
 }
+.content a:hover {
+  color: #fff;
+  background: #ce0400;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
 .smalltext,
 small {
   font-size: 12px;
@@ -111,9 +120,8 @@ h5 {
   position: relative;
   top: 2px;
 }
-#footer {
-  color: #f00;
-  letter-spacing: 150px;
+footer a {
+  margin-right: 50px;
 }
 ::selection {
   background: #fd9f28;
@@ -126,11 +134,6 @@ a:link {
 }
 a:visited {
   color: #ce0400;
-}
-a:hover {
-  color: #fff;
-  background: #ce0400;
-  padding: 2px;
 }
 a:active {
   color: #ce0400;
