@@ -115,6 +115,10 @@ h5 {
   color: #f00;
   letter-spacing: 150px;
 }
+::selection {
+  background: #fd9f28;
+  color: #fff;
+}
 /*Links*/
 a:link {
   color: #ce0400;
@@ -124,7 +128,9 @@ a:visited {
   color: #ce0400;
 }
 a:hover {
-  color: #e55a57;
+  color: #fff;
+  background: #ce0400;
+  padding: 2px;
 }
 a:active {
   color: #ce0400;
