@@ -38,7 +38,6 @@
   left: 370px;
 }
 ul {
-  list-style: none;
   padding: 0px;
   margin: 0px;
   width: 100px;
@@ -47,13 +46,24 @@ li {
   padding-left: 0px;
   display: inline;
 }
+/*.iconlist
+{
+margin: 0;
+padding: 0;
+}
+
+li.clonkde {
+  background-image: url(../images/community/icons/clonkde.png);
+  background-repeat: no-repeat;
+  padding: 0px 0 20px 20px;
+}*/
 #externalLinks a:link,
 #externalLinks a:visited {
   display: block;
   font-weight: bold;
   color: #000;
   background-color: rgba(228,228,228,0.5);
-  width: 500px;
+  width: 274px;
   text-align: center;
   padding: 14px;
   text-decoration: none;

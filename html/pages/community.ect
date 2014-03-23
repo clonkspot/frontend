@@ -1,53 +1,58 @@
 <% extend 'layout.ect' %>
 
 <div id="quota" class="content smalltext">
-      <h2>Ein Wort an die Community</h2>
-
-      <p>Clonk ist ein besonderes Spiel. Mindestens genauso besonders ist seine Community! Viele sind schon seit Jahren dabei – genauso wie wir.</p>
-      <p>Nach der für viele schockierenden <a href="http://www.clonk.de/forum/de/topic_show.pl?tid=10509">Ankündigung im Clonk Forum</a> wird es vermutlich bald keine offizielle Clonk Seite als Anlaufpunkt mehr geben.</p>
-      <p><b>Wir möchten euch allen hier ein neues zu Hause geben.</b></p>
-      <p>Damit es richtig gemütlich wird, basteln wir immer wieder an dieser Seite und sind für Vorschläge stets offen! Ebenfalls können Wünsche und Ideen im <a href="forum/forum.pl"><b>im Forum</b></a> geäußert werden.</p>
-      <p>Clonkspot ist unser Geschenk an euch!</p>
-  
-      <p>- Luchs, Nachtschatten, Nachtfalter</p>
+      <h2><%= @t.QuoteH2 %></h2>
+      <%= @t.Quote %></p>
 </div>
 
 <div id="projects" class="content normaltext">
     <h2>interessante Projekte</h2>
     <a href="http://lorry.beheh.de/"><img class="imgborder" src="/images/community/project lorry.jpg" alt="Project Lorry"></a>
     <div id="project1">
-        <p>Lorry soll zünftig <i>die</i> Plattform für Erweiterungen von Clonk werden – sozusagen CCAN 2.0!</p>
-        <p>Das Projekt ist noch in einer frühen Alpha-Phase. Diskussion und Statusupdates im <a href="https://clonkspot.org/forum/topic_show.pl?tid=30">Miniblog</a>!</p>
+        <p><%= @t.Lorry %></p>
     </div>
 
     
     <div id="project2">
         <a href="http://www.openclonk.org/"><img class="imgborder" src="/images/community/project openclonk.jpg" alt="Project OpenClonk"></a>
-        <p>OpenClonk ist der Nachfolger der Clonk-Reihe, auf OpenSource Basis. Der Titel soll für Spieler, wie auch Entwickler attraktiver gemacht werden. Dabei werden ganz neue Wege beschritten, wie Echtzeit-3D Modelle. Die Spielwelt bleibt aber weiterhin 2D!</p>
+        <p><%= @t.OpenClonk %></p>
     </div>
     
     <div id="externalLinks">
         <h2>externe Links</h2>
         <ul>
-            <li><div class="a:link"><a href="http://www.clonk.de/">ccan</a></div></li>
-            <li><div class="a:link"><a href="http://www.clonk.de/">clonk.de</a></div></li>
-            <li><div class="a:link"><a href="http://www.clonk.de/">clonkforge</a></div></li>
-            <li><div class="a:link"><a href="http://www.clonk.de/">clonk center</a></div></li>
+            <li><div class="a:link">
+                <a class="preview" data-hover="/images/community/preview ccan.jpg" href="https://ccan.de/">ccan 
+                    <img src="images/placeholder.png" alt="test" style="margin-left: 172px; margin-top: -14px; z-index: 100; position: absolute;" />
+                </a>
+            </div></li>
+
+            <li><div class="a:link">
+                <a class="preview" data-hover="/images/community/preview clonk.jpg" href="http://www.clonk.de/">clonk.de
+                    <img src="images/placeholder.png" alt="test" style="margin-left: 172px; margin-top: -14px; z-index: 100; position: absolute;" />
+                </a>
+            </div></li>
+
+            <li><div class="a:link">
+                <a class="preview" data-hover="/images/community/preview clonk.jpg" href="http://www.clonk.de/">clonk wiki
+                    <img src="images/placeholder.png" alt="test" style="margin-left: 172px; margin-top: -14px; z-index: 100; position: absolute;" />
+                </a>
+            </div></li>
+
+            <li><div class="a:link">
+                <a class="preview" data-hover="/images/community/preview clonk.jpg" href="http://www.clonk.de/">clonkforge
+                    <img src="images/placeholder.png" alt="test" style="margin-left: 172px; margin-top: -14px; z-index: 100; position: absolute;" />
+                </a>
+            </div></li>
+
+            <li><div class="a:link">
+                <a class="preview" data-hover="/images/community/preview clonk.jpg" href="http://www.clonk.de/">clonk center
+                    <img src="images/placeholder.png" alt="test" style="margin-left: 172px; margin-top: -14px; z-index: 100; position: absolute;" />
+                </a>
+            </div></li>
         </ul>
     </div>
 </div>
-
-<a class="preview" data-hover="http://img.ibtimes.com/www/data/images/full/2013/04/05/359346-funny-images-on-leader-kim-jong-un.jpg" href="#">
-  Testlink
-  <img src="images/placeholder.png" id="placeholder-1" alt="test" style="z-index: 100; position: absolute;" /></a>
-
-    <a class="preview" data-hover="http://img.ibtimes.com/www/data/images/full/2013/04/05/359346-funny-images-on-leader-kim-jong-un.jpg" href="#">
-  Testlink
-  <img src="images/placeholder.png" id="placeholder-1" alt="test" style="z-index: 100; position: absolute;" /></a>
-
-    <a class="preview" data-hover="http://img.ibtimes.com/www/data/images/full/2013/04/05/359346-funny-images-on-leader-kim-jong-un.jpg" href="#" style="position: relative">
-  Testlink
-  <img src="images/placeholder.png" id="placeholder-1" alt="test" style="z-index: 100; position: absolute; top: -100px;" /></a>
 
 <script src="/js/jquery.js" type="text/javascript"></script>
 <script>
