@@ -2,7 +2,7 @@
 
 <div id="quota" class="content smalltext">
       <h2><%= @t.QuoteH2 %></h2>
-      <%= @t.Quote %></p>
+      <p><%- @t.Quote.join("\n") %></p>
 </div>
 
 <div id="projects" class="content normaltext">
@@ -18,6 +18,10 @@
         <p><%= @t.OpenClonk %></p>
     </div>
     
+    <div id="Spotlight">
+        <h2>Spotlight</h2>
+    </div>
+
     <div id="externalLinks">
         <h2>externe Links</h2>
         <ul>

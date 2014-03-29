@@ -24,6 +24,9 @@
 }
 #quota {
   background-color: #f4f4f4;
+  position: absolute;
+  top: 189px;
+  left: 720px;
 }
 #project1 {
   width: 305px;
