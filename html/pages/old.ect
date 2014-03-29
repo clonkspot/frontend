@@ -1,0 +1,21 @@
+<% extend 'layout.ect' %>
+
+    <h2><%- @t.interestingProjectsH2 %></h2>
+
+<div class="normaltext">
+        <a href="http://lorry.beheh.de/"><img class="imgborder" src="/images/community/project lorry.jpg" alt="Project Lorry"></a>
+        <p><%- @t.Lorry %></p>
+    </div>
+
+    <div class="normaltext">
+        <a href="http://www.openclonk.org/"><img class="imgborder" src="/images/community/project openclonk.jpg" alt="Project OpenClonk"></a>
+        <p><%- @t.OpenClonk %></p>
+    </div>
+
+    <div id="quota" class="smalltext ">
+         <div id="boxpadding" class="boxpadding">
+            <h2><%- @t.QuoteH2 %></h2>
+            <p><%- @t.Quote.join("\n") %></p>
+         </div>
+    </div>
+
