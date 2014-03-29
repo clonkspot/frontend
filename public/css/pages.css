@@ -25,8 +25,19 @@
 #quota {
   background-color: #f4f4f4;
   position: absolute;
-  top: 189px;
+  top: 0px;
   left: 720px;
+  border: dashed 1px #c0c0c0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  top: 225px;
+  padding-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+}
+#projects {
+  position: relative;
 }
 #project1 {
   width: 305px;
@@ -34,8 +45,20 @@
 #project2 {
   width: 305px;
   position: absolute;
-  bottom: 393px;
-  left: 370px;
+  top: 0;
+  left: 335px;
+}
+#Linksection {
+  margin-top: 110px;
+  position: relative;
+}
+#Spotlight {
+  width: 305px;
+}
+#externalLinks {
+  position: absolute;
+  top: -16px;
+  left: 630px;
 }
 ul {
   padding: 0px;
