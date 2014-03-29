@@ -67,7 +67,7 @@ module.exports =
   # Community
   Lorry: [
     'Lorry soll zünftig die Plattform für Erweiterungen von Clonk werden – sozusagen CCAN 2.0!'
-    'Das Projekt ist noch in einer frühen Alpha-Phase. Diskussion und Statusupdates im <a href="https://clonkspot.org/forum/topic_show.pl?tid=30">Miniblog</a>!'
+    'Das Projekt ist noch in einer frühen Alpha-Phase. Diskussion und Statusupdates im href='https://clonkspot.org/forum/topic_show.pl?tid=30'>Miniblog</a>"!'
   ]
 
   OpenClonk:
