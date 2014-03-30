@@ -69,11 +69,15 @@ module.exports =
     'Interessante Projekte'
 
   Lorry: '''
-    Lorry soll zünftig die Plattform für Erweiterungen von Clonk werden – sozusagen CCAN 2.0!
-    Das Projekt ist noch in einer frühen Alpha-Phase. Diskussion und Statusupdates im <a href='https://clonkspot.org/forum/topic_show.pl?tid=30'>Miniblog</a>!'''
+    <p>Lorry soll zünftig <i>die</i> Plattform für Erweiterungen von Clonk werden – sozusagen CCAN 2.0!</p>
+    <p>Das Projekt ist noch in einer frühen Alpha-Phase. Diskussion und Statusupdates im <a href='https://clonkspot.org/forum/topic_show.pl?tid=30'>Miniblog</a>!</p>
+    '''
 
-  OpenClonk:
-    'OpenClonk ist der Nachfolger der Clonk-Reihe in einer OpenSource Variante. Dabei werden neue Wege werden beschritten: Echtzeit-3D Modelle ziehen ein, die Spielwelt bleibt aber weiterhin 2D! An der Engine wird auch fleißig geschraubt.'
+  OpenClonk: '''
+    <p>OpenClonk ist der Nachfolger der Clonk-Reihe in einer OpenSource Variante. Dabei werden neue Wege werden beschritten: Echtzeit-3D Modelle ziehen ein, die Spielwelt bleibt aber weiterhin 2D!</p>
+    <p>An der Engine wird auch fleißig geschraubt und optimiert.</p>
+    '''
+ 
 
   QuoteH2:
     'Ein Wort an die Community'

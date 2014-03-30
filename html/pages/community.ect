@@ -4,21 +4,21 @@
 
     <div id="quota" class="smalltext">
       <h4><%-@t.QuoteH2 %></h4>
-      <p><%-@t.Quote.join("\n") %></p>
+      <%-@t.Quote.join("\n") %>
     </div>
 
-<h2>interessante Projekte</h2>
+<h2><%-@t.interestingProjectsH2 %></h2>
 
     <div id="projects" class="normaltext">
         <div id="project1">
             <a href="http://lorry.beheh.de/"><img class="imgborder" src="/images/community/project lorry.jpg" alt="Project Lorry"></a>
-            <p><%-@t.Lorry %></p>
+            <%-@t.Lorry %>
         </div>
 
     
         <div id="project2">
             <a href="http://www.openclonk.org/"><img class="imgborder" src="/images/community/project openclonk.jpg" alt="Project OpenClonk"></a>
-            <p><%= @t.OpenClonk %></p>
+            <%-@t.OpenClonk %>
         </div>
     
     </div>
@@ -28,7 +28,7 @@
         <h2>Spotlight</h2>
 
         <div id="externalLinks">
-            <h2>externe Links</h2>
+            <h2><%-@t.externalLinksH2 %></h2>
             <ul>
                 <li><div class="a:link">
                     <a href="https://ccan.de/">ccan</a>
