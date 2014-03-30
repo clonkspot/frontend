@@ -214,6 +214,9 @@ header nav a small {
   font-size: 10px;
   line-height: inherit;
 }
+header nav a:hover {
+  color: #ce0400;
+}
 header .twitch {
   background-color: #cf0401;
   font-weight: bold;
