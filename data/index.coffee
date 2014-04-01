@@ -12,7 +12,7 @@ module.exports =
       url: '/community'
       width: 185
     comic:
-      url: '/comics'
+      url: '/comic'
 
   home: require './home'
   comics: require './comics'
