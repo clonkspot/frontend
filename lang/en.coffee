@@ -6,11 +6,9 @@ module.exports =
   langselect: 'Ich möchte Deutsch.'
   nav:
     blog: ['Blog', 'our thoughts about Clonk']
-    forums: ['Forums', 'join the mumbling']
+    forums: ['Forum', 'join the Diskussion']
+    community: ['Community', 'the BEST']
     comic: ['Comics', 'simply Clonk']
-    clonkforge: ['ClonkForge', 'introduce your project']
-    official: ['Official Website', 'the origin of Clonk']
-    openclonk: ['OpenClonk', 'meet the OpenSource variant']
 
   twitch: 'Clonk Livestream on Twitch.tv!'
 
@@ -64,3 +62,33 @@ module.exports =
     download:
       version: 'Choose version:'
       oc: 'in development'
+
+  # Community
+  interestingProjectsH2:
+    'Interesting projects'
+
+  Lorry: '''
+    <p>Lorry is to become <i>the</i> platform for Clonk add-ons - CCAN 2.0, so to say!</p>
+    <p>The project is still in an early alpha phase. See the <a href='https://clonkspot.org/forum/topic_show.pl?tid=30'>mini blog</a> for discussions and status updates!</p>
+    '''
+
+  OpenClonk: '''
+    <p>OpenClonk is the successor of the Clonk game series, developed as open source project. The team explores completely new avenues like real time 3D models.</p>
+    <p>But no worries, at its core the game remains our good old 2D platformer!</p>
+    '''
+ 
+
+  QuoteH2:
+    'A word to the community'
+    
+  Quote: [
+    '<p>Clonk is an exceptional game, with a community every bit as exceptional! Many of you are part of it for years by now - as are we.</p>'
+    '''<p>By the <a href='http://www.clonk.de/forum/de/topic_show.pl?tid=10509'>announcement at the Clonk forum</a>, which was a shock for many of us, the days of having an official Clonk page as meeting place will probably be over.</p>'''
+    '<p><b>Here, we want to provide a new home!</b></p>'
+    '''<p>To make it really comfy here, we frequently tinker about with this site and are always open to your suggestions! Your wishes and ideas are also welcome in <a href='https://clonkspot.org/forum/forum_show.pl'><b>our forum</b></a>.</p>'''
+    '<p>Clonkspot is our present to you!</p>'
+    '<p><i>- Luchs, Nachtschatten, Nachtfalter</i></p>'
+  ]
+
+  externalLinksH2:
+    'External links'

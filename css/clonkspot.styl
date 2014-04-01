@@ -29,6 +29,7 @@ img {
   margin: 20px auto
   margin-top: 42px
   padding: 0 30px
+  a:hover {color: white; background: #ce0400; transition: .3s}
 }
 
 .smalltext, small {
@@ -36,14 +37,22 @@ img {
   line-height: 18px
 }
 
+.normaltext, normal {
+  font-size: 16px
+  line-height: 24px
+}
+
 h1 {
-  font-family: Arial, sans-serif
+  font-family: Arial Black, sans-serif
   font-size: 36px
 }
 
 h2 {
   font-family: Arial Black, Arial, sans-serif
+  font-weight: bolder
   font-size: 20px
+  line-height: 26px
+  letter-spacing: -1px
 }
 
 h3 {
@@ -54,8 +63,10 @@ h3 {
 h4 {
   font-family: Arial, sans-serif
   font-size: 20px
+  line-height: 24px
   font-style: regular
   color: #515050
+  margin-bottom: 10px
 }
 
 h5 {
@@ -75,11 +86,16 @@ h5 {
   border: 1px solid #74a67b
   display: inline-block
   color: #ffffff
-  font-family: Rockwell, Times New Roman, serif
+  font-family: Arial, sans-serif
+  font-weight: bold
   font-size: 16px
   padding: 9px 33px
   text-decoration: none
   user-select: none
+  a:link {color: white; text-decoration: none;}
+  a:visited {color: white;}
+  a:hover {color: white;}
+  a:active {color: white;}
 
   &:hover {
     background-color: #61b346
@@ -92,10 +108,18 @@ h5 {
   }
 }
 
+footer a{
+  margin-right: 50px
+}
+
+::selection {
+  background: #FD9F28
+  color: white
+}
+
 /*Links*/
 a:link {color: #ce0400; text-decoration: none;}
 a:visited {color: #ce0400;}
-a:hover {color: #e55a57;}
 a:active {color: #ce0400;}
 
 a.buttonlink:link {color: white; text-decoration: none;}
