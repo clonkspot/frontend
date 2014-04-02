@@ -74,7 +74,7 @@ module.exports =
     '''
 
   OpenClonk: '''
-    <p>OpenClonk ist der Nachfolger der Clonk-Reihe in einer OpenSource Variante. Dabei werden neue Wege werden beschritten: Echtzeit-3D Modelle ziehen ein, die Spielwelt bleibt aber weiterhin 2D!</p>
+    <p>OpenClonk ist der Nachfolger der Clonk-Reihe in einer OpenSource Variante. Dabei werden neue Wege beschritten: Echtzeit-3D Modelle ziehen ein, die Spielwelt bleibt aber weiterhin 2D!</p>
     <p>An der Engine wird auch fleißig geschraubt und optimiert.</p>
     '''
  
