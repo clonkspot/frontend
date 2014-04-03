@@ -19,18 +19,23 @@
 }
 
 /* Community */
+.content {
+  position: relative;
+}
 .imgborder {
   border: 1px solid #808080;
 }
 #quota {
-  background-color: #f4f4f4;
+  width: 530px;
   position: absolute;
   top: 0px;
-  left: 720px;
+  left: 384px;
+  background-color: #ddd;
   border: dashed 1px #c0c0c0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  top: 225px;
+/*border-top-left-radius: 10px
+  border-bottom-left-radius: 10px*/
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   padding-top: 0px;
   padding-left: 30px;
   padding-right: 30px;
@@ -38,27 +43,18 @@
 }
 #projects {
   position: relative;
-}
-#project1 {
   width: 305px;
-}
-#project2 {
-  width: 305px;
-  position: absolute;
-  top: 0;
-  left: 335px;
-}
-#Linksection {
-  margin-top: 87px;
-  position: relative;
 }
 #Spotlight {
+  position: absolute;
+  top: 320px;
+  left: 384px;
   width: 305px;
 }
 #externalLinks {
   position: absolute;
-  top: -16px;
-  left: 630px;
+  top: 820px;
+  left: 384px;
 }
 ul {
   padding: 0px;
@@ -85,7 +81,7 @@ li.clonkde {
   display: block;
   font-weight: bold;
   color: #000;
-  background-color: rgba(228,228,228,0.5);
+  background-color: rgba(200,200,200,0.5);
   width: 274px;
   text-align: center;
   padding: 14px;

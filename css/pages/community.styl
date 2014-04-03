@@ -2,17 +2,22 @@
 
 @import "nib"
 
+.content {
+  position: relative
+}
+
 .imgborder {
   border: 1px solid grey;
 }
 
 #quota {
-  background-color: #f4f4f4
-  absolute: top 0px left 720px
+  width: 530px
+  absolute: top 0px left 384px
+  background-color: #dddddd
   border: dashed 1px silver
-  border-top-left-radius: 10px
-  border-bottom-left-radius: 10px
-  top: 225px
+  /*border-top-left-radius: 10px
+  border-bottom-left-radius: 10px*/
+  border-radius: 10px
   padding-top 0px
   padding-left: 30px
   padding-right: 30px
@@ -21,32 +26,16 @@
 
 #projects {
     position: relative
-}
-
-#project1 {
-  width: 305px
-}
-
-#project2 {
-  width: 305px
-  position: absolute
-  top: 0
-  left: 335px
-}
-
-#Linksection {
-  margin-top: 87px
-  position: relative
+    width: 305px
 }
 
 #Spotlight {
+  absolute: top 320px left 384px
   width: 305px
 }
 
 #externalLinks {
- position: absolute
- top: -16px
- left: 630px
+  absolute: top 820px left 384px
 }
 
 ul {
@@ -78,7 +67,7 @@ li.clonkde {
     display: block
     font-weight: bold
     color: black
-    background-color: rgba(228, 228, 228, 0.5)
+    background-color: rgba(200, 200, 200, 0.5)
     width: 274px
     text-align: center
     padding: 14px
