@@ -2,6 +2,11 @@
 
 module.exports =
   screenshots: [
+    link: '/blog/2014/04/04/sdm15-loaderkunst/'
+    img: '/blog/wp-content/uploads/2014/04/guess_it_3-150x150.jpg'
+    x: 50
+    y: 10
+  ,
     link: '/blog/2013/09/30/sdm14-gelber-schnee/'
     img: '/blog/wp-content/uploads/2013/09/sdmdings-150x150.jpg'
     x: 50
@@ -35,11 +40,6 @@ module.exports =
     link: '/blog/2012/12/01/sdm7-blitzkrieg/'
     img: '/blog/wp-content/uploads/2012/11/LightningChaos-150x150.png'
     x: 30
-    y: 50
-  ,
-    link: '/blog/2012/11/01/sdm6-adventure/'
-    img: '/blog/wp-content/uploads/2012/11/Screenshot3-150x150.jpg'
-    x: 10
     y: 50
   ,
   ]
