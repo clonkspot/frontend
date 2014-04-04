@@ -23,7 +23,6 @@
   position: relative;
 }
 #quota {
-  width: 306px;
   position: relative;
   top: 0px;
   ((null)): 0;
@@ -53,7 +52,7 @@
   width: 260px;
   height: 182px;
   position: absolute;
-  top: 42px;
+  top: 82px;
   left: 406px;
   background-color: #008000;
 }
@@ -61,7 +60,7 @@
   width: 260px;
   height: 182px;
   position: absolute;
-  top: 242px;
+  top: 282px;
   left: 406px;
   background-color: #00f;
 }
@@ -69,7 +68,7 @@
   width: 260px;
   height: 182px;
   position: absolute;
-  top: 42px;
+  top: 82px;
   left: 684px;
   background-color: #00f;
 }
@@ -77,7 +76,7 @@
   width: 260px;
   height: 182px;
   position: absolute;
-  top: 242px;
+  top: 282px;
   left: 684px;
   background-color: #00f;
 }
@@ -151,7 +150,7 @@
 }
 #Spotlight {
   position: absolute;
-  top: 0px;
+  top: 2100px;
   left: 430px;
 }
 #externalLinks {
