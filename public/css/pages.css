@@ -22,9 +22,6 @@
 .content {
   position: relative;
 }
-.imgborder {
-  border: 1px solid #808080;
-}
 #quota {
   width: 306px;
   position: relative;
@@ -43,52 +40,119 @@
 }
 #projects {
   position: relative;
-  background-color: #00f;
   margin-top: 30px;
 }
-.bigproject {
-  position: absolute;
-  top: 450px;
-  ((null)): 0;
+.bigprojectcontainer {
   width: 384px;
   height: 384px;
   background: #000;
+  position: relative;
 }
-.bigproject2 {
-  width: 384px;
+.smallprojectcontainer1 {
+  width: 260px;
+  height: 182px;
+  position: absolute;
+  top: 42px;
+  left: 406px;
+  background-color: #008000;
+}
+.smallprojectcontainer2 {
+  width: 260px;
+  height: 182px;
+  position: absolute;
+  top: 242px;
+  left: 406px;
+  background-color: #00f;
+}
+.smallprojectcontainer3 {
+  width: 260px;
+  height: 182px;
+  position: absolute;
+  top: 42px;
+  left: 684px;
+  background-color: #00f;
+}
+.smallprojectcontainer4 {
+  width: 260px;
+  height: 182px;
+  position: absolute;
+  top: 242px;
+  left: 684px;
+  background-color: #00f;
+}
+.bigprojectimg {
+  width: 100%;
+}
+#overlaybig {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 384px;
+  width: 384px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  display: table;
 }
-.smallproject1 {
-  width: 258px;
-  position: absolute;
-  top: 42px;
-  left: 400px;
-  background-color: #008000;
+#overlaybig:hover {
+  background: #ce0400;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  color: #fff;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
 }
-.smallproject2 {
-  width: 258px;
+#overlay {
   position: absolute;
-  top: 42px;
-  left: 688px;
-  background-color: #ff0;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 180px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  display: table;
 }
-.smallproject3 {
-  width: 258px;
-  position: absolute;
-  top: 442px;
-  left: 400px;
-  background-color: #008000;
+#overlay:hover {
+  background: #ce0400;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  color: #fff;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
 }
-.smallproject4 {
-  width: 258px;
-  position: absolute;
-  top: 442px;
-  left: 688px;
-  background-color: #ff0;
+#row {
+  display: table-row;
+  vertical-align: middle;
+}
+#cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+#cell a:link,
+#cell a:visited {
+  color: #fff;
+}
+#cell a:hover {
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+#cellbig {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 30px;
 }
 #Spotlight {
   position: absolute;
-  top: -30px;
+  top: 0px;
   left: 430px;
 }
 #externalLinks {

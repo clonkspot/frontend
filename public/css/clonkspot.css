@@ -68,6 +68,10 @@ h5 {
   font-family: Arial, sans-serif;
   font-size: 13px;
 }
+h6 {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
 .specialtext {
   line-height: 30px;
 }

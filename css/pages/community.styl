@@ -7,8 +7,9 @@
 }
 
 .imgborder {
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
 }
+
 
 #quota {
   width: 306px
@@ -26,48 +27,108 @@
 
 #projects {
     position: relative
-    background-color: blue
     margin-top: 30px
 }
 
-.bigproject {
-  absolute: top 450px
+.bigprojectcontainer {
   width: 384px
   height: 384px
   background: black
+  position: relative
 }
 
-.bigproject2 {
-  width: 384px
-  height: 384px
-}
-
-.smallproject1 {
-  width: 258px
-  absolute: top 42px left 400px
+.smallprojectcontainer1 {
+  width: 260px
+  height: 182px
+  absolute: top 42px left 406px
   background-color: green
 }
 
-.smallproject2 {
-  width: 258px
-  absolute: top 42px left 688px
-  background-color: yellow
+.smallprojectcontainer2 {
+  width: 260px
+  height: 182px
+  absolute: top 242px left 406px
+  background-color: blue
 }
 
-.smallproject3 {
-  width: 258px
-  absolute: top 442px left 400px
-  background-color: green
+.smallprojectcontainer3 {
+  width: 260px
+  height: 182px
+  absolute: top 42px left 684px
+  background-color: blue
 }
 
-.smallproject4 {
-  width: 258px
-  absolute: top 442px left 688px
-  background-color: yellow
+.smallprojectcontainer4 {
+  width: 260px
+  height: 182px
+  absolute: top 242px left 684px
+  background-color: blue
+}
+
+.bigprojectimg {
+  width: 100%
+}
+
+#overlaybig {
+    position: absolute
+    top: 0
+    left: 0
+    height: 384px
+    width: 384px
+    opacity: 0
+    display: table
+}
+
+#overlaybig:hover {
+    background: #ce0400
+    opacity: 1
+    color: white
+    transition: 0.1s
+}
+
+#overlay {
+    position: absolute
+    top: 0
+    left: 0
+    width: 260px
+    height: 180px
+    opacity: 0
+    display: table
+}
+
+#overlay:hover {
+    background: #ce0400
+    opacity: 1
+    color: white
+    transition: 0.1s
+}
+
+#row {
+    display: table-row
+    vertical-align: middle
+}
+
+#cell {
+  
+    display: table-cell
+    vertical-align: middle
+    padding: 10px
+    a:link, a:visited {
+      color: white
+    }
+    a:hover {
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    }
+}
+
+#cellbig {
+    display: table-cell
+    vertical-align: middle
+    padding: 30px
 }
 
 #Spotlight {
-  absolute: top -30px left 430px
+  absolute: top 0px left 430px
 }
 
 #externalLinks {
@@ -86,7 +147,6 @@ li {
 }
 
 #externalLinks{
-  
   a:link, a:visited {
     display: block
     font-weight: bold
@@ -103,4 +163,3 @@ li {
   background-color: #434343
   }
 }
-
