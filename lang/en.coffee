@@ -69,7 +69,6 @@ module.exports =
 
   Lorry: '''
     <p>Lorry is to become <i>the</i> platform for Clonk add-ons - CCAN 2.0, so to say!</p>
-    <p>The project is still in an early alpha phase. See the <a href='https://clonkspot.org/forum/topic_show.pl?tid=30'>mini blog</a> for discussions and status updates!</p>
     '''
 
   OpenClonk: '''

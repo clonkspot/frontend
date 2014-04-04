@@ -39,6 +39,7 @@
   padding-bottom: 15px;
 }
 #projects {
+/*img {border: 1px solid #101010}*/
   position: relative;
   margin-top: 30px;
 }
@@ -100,22 +101,27 @@
   -ms-filter: none;
   filter: none;
   color: #fff;
-  -webkit-transition: 0.1s;
-  -moz-transition: 0.1s;
-  -o-transition: 0.1s;
-  -ms-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
 #overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 260px;
-  height: 180px;
+  height: 182px;
   opacity: 0;
   filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   display: table;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
 #overlay:hover {
   background: #ce0400;
@@ -136,14 +142,7 @@
 #cell {
   display: table-cell;
   vertical-align: middle;
-  padding: 10px;
-}
-#cell a:link,
-#cell a:visited {
-  color: #fff;
-}
-#cell a:hover {
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+  padding: 15px;
 }
 #cellbig {
   display: table-cell;
@@ -189,6 +188,44 @@ li {
   -ms-transition: 0.2s;
   transition: 0.2s;
   background-color: #434343;
+}
+.aWebsite,
+.aWebsite_alone,
+.aMiniblog,
+.aMiniblog_alone {
+  font-weight: bold;
+  background-color: #fff;
+  padding: 6px 15px;
+  color: #fff;
+  display: inline-block;
+  -webkit-box-shadow: 0px 2px 0px 0px #910000;
+  -moz-box-shadow: 0px 2px 0px 0px #910000;
+  -webkit-box-shadow: 0px 2px 0px 0px #910000;
+  box-shadow: 0px 2px 0px 0px #910000;
+}
+.aWebsite {
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.aMiniblog {
+  margin-left: 2px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.aMiniblog_alone,
+.aWebsite_alone {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /* Home page */

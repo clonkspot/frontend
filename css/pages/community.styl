@@ -6,11 +6,6 @@
   position: relative
 }
 
-.imgborder {
-  /*border: 1px solid grey;*/
-}
-
-
 #quota {
   width: 306px
   relative: top 0px
@@ -26,6 +21,7 @@
 }
 
 #projects {
+    /*img {border: 1px solid #101010}*/
     position: relative
     margin-top: 30px
 }
@@ -83,7 +79,7 @@
     background: #ce0400
     opacity: 1
     color: white
-    transition: 0.1s
+    transition: 0.5s
 }
 
 #overlay {
@@ -91,9 +87,10 @@
     top: 0
     left: 0
     width: 260px
-    height: 180px
+    height: 182px
     opacity: 0
     display: table
+    transition: 0.5s
 }
 
 #overlay:hover {
@@ -109,16 +106,9 @@
 }
 
 #cell {
-  
     display: table-cell
     vertical-align: middle
-    padding: 10px
-    a:link, a:visited {
-      color: white
-    }
-    a:hover {
-        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-    }
+    padding: 15px
 }
 
 #cellbig {
@@ -162,4 +152,41 @@ li {
   transition:.2s;
   background-color: #434343
   }
+}
+
+.aWebsite, .aWebsite_alone, .aMiniblog, .aMiniblog_alone {
+  font-weight: bold
+  background-color: white
+  padding: 6px 15px
+  color: white
+  display: inline-block
+
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(145, 0, 0, 1);
+  -moz-box-shadow:    0px 2px 0px 0px rgba(145, 0, 0, 1);
+  box-shadow:         0px 2px 0px 0px rgba(145, 0, 0, 1);
+}
+
+.aWebsite {
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.aMiniblog {
+  margin-left: 2px
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.aMiniblog_alone, .aWebsite_alone {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
