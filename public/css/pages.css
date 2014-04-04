@@ -26,10 +26,10 @@
   border: 1px solid #808080;
 }
 #quota {
-  width: 530px;
-  position: absolute;
+  width: 306px;
+  position: relative;
   top: 0px;
-  left: 384px;
+  ((null)): 0;
   background-color: #ddd;
   border: dashed 1px #c0c0c0;
 /*border-top-left-radius: 10px
@@ -43,17 +43,57 @@
 }
 #projects {
   position: relative;
-  width: 305px;
+  background-color: #00f;
+  margin-top: 30px;
+}
+.bigproject {
+  position: absolute;
+  top: 450px;
+  ((null)): 0;
+  width: 384px;
+  height: 384px;
+  background: #000;
+}
+.bigproject2 {
+  width: 384px;
+  height: 384px;
+}
+.smallproject1 {
+  width: 258px;
+  position: absolute;
+  top: 42px;
+  left: 400px;
+  background-color: #008000;
+}
+.smallproject2 {
+  width: 258px;
+  position: absolute;
+  top: 42px;
+  left: 688px;
+  background-color: #ff0;
+}
+.smallproject3 {
+  width: 258px;
+  position: absolute;
+  top: 442px;
+  left: 400px;
+  background-color: #008000;
+}
+.smallproject4 {
+  width: 258px;
+  position: absolute;
+  top: 442px;
+  left: 688px;
+  background-color: #ff0;
 }
 #Spotlight {
   position: absolute;
-  top: 320px;
-  left: 384px;
-  width: 305px;
+  top: -30px;
+  left: 430px;
 }
 #externalLinks {
-  position: absolute;
-  top: 820px;
+  position: relative;
+  top: 1020px;
   left: 384px;
 }
 ul {
@@ -65,17 +105,6 @@ li {
   padding-left: 0px;
   display: inline;
 }
-/*.iconlist
-{
-margin: 0;
-padding: 0;
-}
-
-li.clonkde {
-  background-image: url(../images/community/icons/clonkde.png);
-  background-repeat: no-repeat;
-  padding: 0px 0 20px 20px;
-}*/
 #externalLinks a:link,
 #externalLinks a:visited {
   display: block;

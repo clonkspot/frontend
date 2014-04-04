@@ -65,7 +65,7 @@ module.exports =
 
   # Community
   interestingProjectsH2:
-    'Interesting projects'
+    'Community Projects'
 
   Lorry: '''
     <p>Lorry is to become <i>the</i> platform for Clonk add-ons - CCAN 2.0, so to say!</p>
