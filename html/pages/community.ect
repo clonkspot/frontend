@@ -1,19 +1,19 @@
 <% extend 'layout.ect' %> 
 
 <div class="content">
-    todo: schönes Bildchen noch (vor allem damit es etwas gestaucht wird) 
+
 <div id="quota" class="smalltext">
-    <h4><%-@t.QuoteH2 %></h4>
-    <%-@t.Quote.join("\n") %>
+    <div id="quotatext"><h4>
+        <%-@t.QuoteH2 %></h4>
+        <%-@t.Quote.join("\n") %>
+     </div>
+    <div id="imgcommunity"><img src="https://dl.dropboxusercontent.com/u/7324949/clonkspot2/tmp/planet.png" title="original image created by Matthes Bender"alt="community image"></div>
 </div>
-
-
-
-
 
 <div id="projects" class="normaltext">
     <h2><%-@t.interestingProjectsH2 %></h2>
-    <p>Unsere Community macht klasse Projekte! Hier einige davon:</p>
+    <%-@t.SneakPeak %>
+
     <div class="bigprojectcontainer">
         <img class="bigprojectimg" src="/images/community/project openclonk big.jpg" alt="Project OpenClonk"></a>
         <div id="overlaybig">
@@ -34,7 +34,7 @@
             <div id="overlay">
                 <div id="row">
                     <div id="cell" class="smalltext">
-                        <p><p>In der Online Version von Eke kann man das bewährte Spielgefühl der Clonk-Erweiterung wiedererleben. Und das <i>im Browser</i>!</p>
+                        <%-@t.Eke %>
                         <a class="aWebsite" href="http://eke.stereocrown.com/">Website</a><a class="aMiniblog" href="/forum/topic_show.pl?tid=166">Miniblog</a>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
             <div id="overlay">
                 <div id="row">
                     <div id="cell" class="smalltext">
-                        <p>WebClonk ist eine Variante von Clonk, die ebenfalls im Browser läuft. Das Ziel soll sein die ganze Clonk Welt nachzubauen, in der sogar dutzende Spieler gleichzeitig in einer Welt zusammen spielen sollen.</p>
+                        <%-@t.WebClonk %>
                         <a class="aMiniblog_alone" href="/forum/topic_show.pl?tid=152">Miniblog</a>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
             <div id="overlay">
                 <div id="row">
                     <div id="cell" class="smalltext">
-                        <p>devcom-Clonk möchte eine Developer Community werden, in der Tutorials rund um das Thema Scripten in Clonk in ansprechender Form bereitgestellt werden.</p>
+                        <%-@t.Devcom %>
                         <a class="aMiniblog_alone" href="/forum/topic_show.pl?tid=140">Miniblog</a>
                     </div>
                 </div>
@@ -85,17 +85,16 @@
         </div>
     </div>
     
-    <p>Natürlich gibt es noch so viel mehr zu entdecken! Unsere Community hat im Laufe der Jahre einen ganz Berg an tollen Erweiterungen geschaffen. Viele davon orientieren sich sogar an [... irgendwas mit Chronlogie/ Weltgeschichte/ bla?]. Todo: Besserer Text, images alle auf unseren Server laden, tote Links ersetzen, Datum ist etwas doof eventuell Downloadbutton?</p>
-    <iframe src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=en&height=650' width='100%' height='650' frameborder='0'></iframe>
-     
+    <div id="Timeline">
+        <%-@t.Timeline %>    
+    </div>
 </div>
 
 <div id="Spotlight">
     <h2>Spotlight</h2>
-    <iframe width="520" height="380" src="//www.youtube.com/embed/AOZm6hKuFYs" frameborder="0" allowfullscreen></iframe>
-</div>
+    <iframe width="600" height="295" src="//www.youtube.com/embed/AOZm6hKuFYs" frameborder="0" allowfullscreen></iframe>
 
-<div id="externalLinks">
+    <div id="externalLinks">
     <h2><%-@t.externalLinksH2 %></h2>
     <ul>
         <li><div class="a:link">
@@ -121,6 +120,8 @@
     </div>
 
 </div>
+
+</div> <!-- END OF THE LINE -->
 
 <!--<script src="/js/jquery.js" type="text/javascript"></script>
 <script>

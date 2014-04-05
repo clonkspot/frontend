@@ -68,6 +68,10 @@ module.exports =
   interestingProjectsH2:
     'Community Projekte'
 
+  SneakPeak: '''
+  <p>Unsere Community macht klasse Projekte! Hier einige davon:</p>
+  '''
+
   Lorry: '''
     <p>Lorry soll zünftig <i>die</i> Plattform für Erweiterungen von Clonk werden – sozusagen CCAN 2.0!</p>
     '''
@@ -76,7 +80,17 @@ module.exports =
     <p>OpenClonk ist der Nachfolger der Clonk-Reihe in einer OpenSource Variante. Dabei werden neue Wege beschritten: Echtzeit-3D Modelle ziehen ein, die Spielwelt bleibt aber weiterhin 2D!</p>
     <p>An der Engine wird auch fleißig geschraubt und optimiert.</p>
     '''
- 
+  
+  Eke: '''
+  <p>In der Online Version von Eke kann man das bewährte Spielgefühl der Clonk-Erweiterung wiedererleben. Und das <i>im Browser</i>!</p>
+  '''
+
+  WebClonk: '''
+  <p>WebClonk ist eine Variante von Clonk, die ebenfalls im Browser läuft. Das Ziel soll sein die ganze Clonk Welt nachzubauen, in der sogar dutzende Spieler gleichzeitig in einer Welt zusammen spielen sollen.</p>
+  '''
+  Devcom: '''
+  <p>devcom-Clonk möchte eine Developer Community werden, in der Tutorials rund um das Thema Scripten in Clonk in ansprechender Form bereitgestellt werden.</p>
+  '''
 
   QuoteH2:
     'Ein Wort an die Community'
@@ -89,6 +103,10 @@ module.exports =
     '<p>Clonkspot ist unser Geschenk an euch!</p>'
     '<p><i>- Luchs, Nachtschatten, Nachtfalter</i></p>'
   ]
+
+  Timeline: '''
+  <iframe src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=de&start_zoom_adjust=-5&height=650' width='100%' height='650' frameborder='0'></iframe>
+  '''
 
   externalLinksH2:
     'externe Links'

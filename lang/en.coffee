@@ -67,6 +67,10 @@ module.exports =
   interestingProjectsH2:
     'Community Projects'
 
+  SneakPeak: '''
+  <p>Our community does a great job to develop new content! Here's a sneak peak:</p>
+  '''
+
   Lorry: '''
     <p>Lorry is to become <i>the</i> platform for Clonk add-ons - CCAN 2.0, so to say!</p>
     '''
@@ -75,7 +79,17 @@ module.exports =
     <p>OpenClonk is the successor of the Clonk game series, developed as open source project. The team explores completely new avenues like real time 3D models.</p>
     <p>But no worries, at its core the game remains our good old 2D platformer!</p>
     '''
- 
+   
+  Eke: '''
+  <p>Re-experience the tried and true game feeling of Eke. This time <i>inside your browser</i> with the online version!</p>
+  '''
+  WebClonk: '''
+  <p>Another variant of Clonk for the browser. The ambitious goal: The entire world of Clonk, rebuilt for the web, with even dozens of people playing together in one map!</p>
+  '''
+
+  Devcom: '''
+  <p>devcom-Clonk is an upcoming platform by developers for developers. Here you will find tutorials about everything related to scripting in Clonk. It focuses on bringing people together and giving newcomers a good start into development.</p>
+  '''
 
   QuoteH2:
     'A word to the community'

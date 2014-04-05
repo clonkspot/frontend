@@ -37,6 +37,14 @@
   padding-right: 30px;
   padding-bottom: 15px;
 }
+#quotatext {
+  width: 480px;
+}
+#imgcommunity {
+  position: absolute;
+  top: 15px;
+  left: 590px;
+}
 #projects {
 /*img {border: 1px solid #101010}*/
   position: relative;
@@ -54,7 +62,6 @@
   position: absolute;
   top: 82px;
   left: 406px;
-  background-color: #008000;
 }
 .smallprojectcontainer2 {
   width: 260px;
@@ -62,7 +69,6 @@
   position: absolute;
   top: 282px;
   left: 406px;
-  background-color: #00f;
 }
 .smallprojectcontainer3 {
   width: 260px;
@@ -70,7 +76,6 @@
   position: absolute;
   top: 82px;
   left: 684px;
-  background-color: #00f;
 }
 .smallprojectcontainer4 {
   width: 260px;
@@ -78,7 +83,6 @@
   position: absolute;
   top: 282px;
   left: 684px;
-  background-color: #00f;
 }
 .bigprojectimg {
   width: 100%;
@@ -148,15 +152,17 @@
   vertical-align: middle;
   padding: 30px;
 }
+#Timeline {
+  margin-top: 50px;
+  position: relative;
+}
 #Spotlight {
-  position: absolute;
-  top: 2100px;
-  left: 430px;
+  position: relative;
 }
 #externalLinks {
-  position: relative;
-  top: 1020px;
-  left: 384px;
+  position: absolute;
+  top: -14px;
+  left: 644px;
 }
 ul {
   padding: 0px;
