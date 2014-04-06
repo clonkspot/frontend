@@ -70,6 +70,12 @@ app.get '/comic/:id', (req, res, next) ->
     # Pass through to the 404 handler
     next()
 
+# Header/footer in JSON for the blog
+app.get '/_layout', (req, res) ->
+  header = renderer.render 'header', loader.pageData(req)
+  footer = renderer.render 'footer', loader.pageData(req)
+  res.send {header, footer}
+
 unless PRODUCTION
   # Get images from the production server.
   app.get '/images/*', (req, res) ->
