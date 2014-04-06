@@ -99,8 +99,8 @@
   height: 384px;
   width: 384px;
   opacity: 0;
-  filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   display: table;
 }
 #overlaybig:hover {
@@ -122,8 +122,8 @@
   width: 260px;
   height: 182px;
   opacity: 0;
-  filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   display: table;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
