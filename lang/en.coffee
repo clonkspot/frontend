@@ -1,4 +1,4 @@
-# German strings
+# English strings
 
 module.exports =
   lang: 'en'
@@ -103,6 +103,11 @@ module.exports =
     '<p>Clonkspot is our present to you!</p>'
     '<p><i>- Luchs, Nachtschatten, Nachtfalter</i></p>'
   ]
+
+  Timeline: '''
+  <p>Unfortunately, the timeline wasn't translated in time. Below is the German version - translation coming soon!</p>
+  <iframe src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=de&start_zoom_adjust=-5&height=650' width='100%' height='650' frameborder='0'></iframe>
+  '''
 
   externalLinksH2:
     'External links'
