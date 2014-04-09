@@ -99,8 +99,8 @@
   height: 384px;
   width: 384px;
   opacity: 0;
-  filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   display: table;
 }
 #overlaybig:hover {
@@ -122,8 +122,8 @@
   width: 260px;
   height: 182px;
   opacity: 0;
-  filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   display: table;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -162,6 +162,7 @@
   position: relative;
 }
 #Spotlight {
+  margin-top: 40px;
   position: relative;
 }
 #externalLinks {
@@ -178,15 +179,24 @@ li {
   padding-left: 0px;
   display: inline;
 }
+#externalLinks {
+  position: absolute;
+  left: 714px;
+  ((null)): 0;
+  margin-top: 862px;
+}
 #externalLinks a:link,
 #externalLinks a:visited {
   display: block;
   font-weight: bold;
   color: #000;
   background-color: rgba(200,200,200,0.5);
-  width: 274px;
+  width: 214px;
   text-align: center;
-  padding: 14px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-decoration: none;
   margin-bottom: -2px;
 }
@@ -459,4 +469,13 @@ li {
   position: absolute;
   top: 67px;
   left: 250px;
+}
+
+#Timeline {
+  position: relative;
+  top: -22px;
+  ((null)): 0;
+  width: 946px;
+  margin: 0px auto;
+  background-image: #f00;
 }

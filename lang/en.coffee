@@ -8,6 +8,7 @@ module.exports =
     blog: ['Blog', 'our thoughts about Clonk']
     forums: ['Forum', 'join the Diskussion']
     community: ['Community', 'the BEST']
+    timeline: ['Timeline', 'pure nostalgia']
     comic: ['Comics', 'simply Clonk']
 
   twitch: 'Clonk Livestream on Twitch.tv!'

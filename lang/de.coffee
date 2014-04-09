@@ -6,8 +6,9 @@ module.exports =
   langselect: 'I want English.'
   nav:
     blog: ['Blog', 'unsere Gedanken zu Clonk']
-    forums: ['Forum', 'die Plattform zum Austausch']
+    forums: ['Forum', 'Plattform zum Austausch']
     community: ['Community', 'die Beste wo gibt']
+    timeline: ['Zeitreise', 'Nostalgie pur']
     comic: ['Comics', 'einfach Clonk']
 
   twitch: 'Clonk Livestream auf Twitch.tv!'
