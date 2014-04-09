@@ -8,50 +8,9 @@
     <link rel="stylesheet" href="/css/pages.css" type="text/css" charset="utf-8">
   </head>
   <body>
-    <header>
-      <a href="/">
-        <img src="/images/header.jpg" alt="header">
-        <div class="logo">
-          <img src="/images/logo.png" alt="clonkspot - your hub for Clonk.">
-        </div>
-      </a>
-
-      <a class="language" href="javascript:void(0)" onclick="document.cookie='language=<%= @t.otherlang %>';location.reload(true)">
-        <%= @t.langselect %> <img src="/images/flag_<%= @t.otherlang %>.png" alt="">
-      </a>
-
-      <a class="icon twitter" href="https://twitter.com/clonkspot"><img src="/images/twitter.png" alt="Twitter"></a>
-      <a class="icon youtube" href="http://youtube.com/user/clonkspot"><img src="/images/youtube.png" alt="YouTube"></a>
-
-      <nav>
-        <a href="/">
-          <img src="/images/home<%- if @req.url is '/' then '_hl' else '' %>.png" alt="Home">
-        </a>
-        <% for key, dataitem of @data.nav : %>
-        <a href="<%- dataitem.url %>"
-          class="<%- if @req.url.startsWith(dataitem.url) then 'active' else '' %>"
-          style="<%- if width = dataitem.width then "width: #{width}px" else '' %>">
-          <b><%= @t.nav[key][0] %></b>
-          <small><%= @t.nav[key][1] %></small>
-        </a>
-        <% end %>
-      </nav>
-
-      <!-- Twitch stream notification shown via JS -->
-      <div class="twitch">
-        <a href="#"><%= @t.twitch %></a>
-      </div>
-    </header>
+    <% include 'header.ect' %>
     <% content %>
-    <footer>
-      <div class="navfooter">
-          <a href="/">Home</a>
-          <a href="/blog">Blog</a>
-          <a href="/community">Community</a>
-          <a href="/comics">Comics</a>
-          <a href="/impressum">Impressum</a>
-      </div>
-    </footer>
+    <% include 'footer.ect' %>
 
     <% if PRODUCTION: %>
       <!-- Piwik --> 
