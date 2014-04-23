@@ -3,7 +3,7 @@
 module.exports =
   screenshots: [
     link: '/blog/2014/04/23/sdm16-goldsuche/'
-    img: '/blog/wp-content/uploads/2014/04/gze.jpg-150x150.jpg'
+    img: '/blog/wp-content/uploads/2014/04/gze-150x150.jpg'
     x: 50
   ,
     link: '/blog/2014/04/04/sdm15-loaderkunst/'
