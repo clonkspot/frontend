@@ -2,8 +2,8 @@
 
 module.exports =
   screenshots: [
-    link: '/blog/2014/04/04/sdm15-loaderkunst/'
-    img: '/blog/wp-content/uploads/2014/04/guess_it_3-150x150.jpg'
+    link: '/blog/2014/04/23/sdm16-goldsuche/'
+    img: '/blog/wp-content/uploads/2014/04/gze.jpg-150x150.jpg'
     x: 50
   ,
     link: '/blog/2014/04/04/sdm15-loaderkunst/'
