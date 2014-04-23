@@ -2,174 +2,174 @@
 
 @import "nib"
 
-.content {
+#community {
+
   position: relative
-}
 
-#quota {
-  relative: top 0px
-  background-color: #dddddd
-  border: dashed 1px silver
-  /*border-top-left-radius: 10px
-  border-bottom-left-radius: 10px*/
-  border-radius: 10px
-  padding-top 0px
-  padding-left: 30px
-  padding-right: 30px
-  padding-bottom: 15px
-}
+  #quota {
+    relative: top 0px
+    background-color: #dddddd
+    border: dashed 1px silver
+    /*border-top-left-radius: 10px
+    border-bottom-left-radius: 10px*/
+    border-radius: 10px
+    padding-top 0px
+    padding-left: 30px
+    padding-right: 30px
+    padding-bottom: 15px
+  }
 
-#quotatext {
-  width: 480px
-}
+  #quotatext {
+    width: 480px
+  }
 
-#imgcommunity {
-  absolute: top 15px left 590px
-  animation:spin 550s linear infinite;
-}
+  #imgcommunity {
+    absolute: top 15px left 590px
+    animation:spin 550s linear infinite;
+  }
 
-@keyframes spin { 100% { transform:rotate(360deg); } }
+  #projects {
+      /*img {border: 1px solid #101010}*/
+      position: relative
+      margin-top: 30px
+  }
 
-#projects {
-    /*img {border: 1px solid #101010}*/
-    position: relative
-    margin-top: 30px
-}
-
-.bigprojectcontainer {
-  width: 384px
-  height: 384px
-  background: black
-  position: relative
-}
-
-.smallprojectcontainer1 {
-  width: 260px
-  height: 182px
-  absolute: top 82px left 406px
-}
-
-.smallprojectcontainer2 {
-  width: 260px
-  height: 182px
-  absolute: top 282px left 406px
-}
-
-.smallprojectcontainer3 {
-  width: 260px
-  height: 182px
-  absolute: top 82px left 684px
-}
-
-.smallprojectcontainer4 {
-  width: 260px
-  height: 182px
-  absolute: top 282px left 684px
-}
-
-.bigprojectimg {
-  width: 100%
-}
-
-#overlaybig {
-    position: absolute
-    top: 0
-    left: 0
-    height: 384px
+  .bigprojectcontainer {
     width: 384px
-    opacity: 0
-    display: table
-}
+    height: 384px
+    background: black
+    position: relative
+  }
 
-#overlaybig:hover {
-    background: #ce0400
-    opacity: 1
-    color: white
-    transition: 0.5s
-}
-
-#overlay {
-    position: absolute
-    top: 0
-    left: 0
+  .smallprojectcontainer1 {
     width: 260px
     height: 182px
-    opacity: 0
-    display: table
-    transition: 0.5s
-}
-
-#overlay:hover {
-    background: #ce0400
-    opacity: 1
-    color: white
-    transition: 0.1s
-}
-
-#row {
-    display: table-row
-    vertical-align: middle
-}
-
-#cell {
-    display: table-cell
-    vertical-align: middle
-    padding: 15px
-}
-
-#cellbig {
-    display: table-cell
-    vertical-align: middle
-    padding: 30px
-}
-
-#Timeline {
-  margin-top: 50px
-  position: relative
-}
-
-#Spotlight {
-  margin-top: 40px
-  position: relative
-}
-
-#externalLinks {
-  absolute: top -14px left 644px
-}
-
-ul {
-  padding 0px
-  margin 0px
-  width: 100px
-}
-
-li {
-  padding-left: 0px
-  display: inline
-}
-
-#externalLinks {
-  absolute: left 714px
-  margin-top: 862px
-  a:link, a:visited {
-    display: block
-    font-weight: bold
-    color: black
-    background-color: rgba(200, 200, 200, 0.5)
-    width: 214px
-    text-align: center
-    padding-left: 24px
-    padding-right: 24px
-    padding-top: 25px
-    padding-bottom: 25px
-
-    text-decoration:none
-    margin-bottom: -2px
-  }  
-  a:hover, a:active {
-  transition:.2s;
-  background-color: #434343
+    absolute: top 82px left 406px
   }
+
+  .smallprojectcontainer2 {
+    width: 260px
+    height: 182px
+    absolute: top 282px left 406px
+  }
+
+  .smallprojectcontainer3 {
+    width: 260px
+    height: 182px
+    absolute: top 82px left 684px
+  }
+
+  .smallprojectcontainer4 {
+    width: 260px
+    height: 182px
+    absolute: top 282px left 684px
+  }
+
+  .bigprojectimg {
+    width: 100%
+  }
+
+  #overlaybig {
+      position: absolute
+      top: 0
+      left: 0
+      height: 384px
+      width: 384px
+      opacity: 0
+      display: table
+  }
+
+  #overlaybig:hover {
+      background: #ce0400
+      opacity: 1
+      color: white
+      transition: 0.5s
+  }
+
+  #overlay {
+      position: absolute
+      top: 0
+      left: 0
+      width: 260px
+      height: 182px
+      opacity: 0
+      display: table
+      transition: 0.5s
+  }
+
+  #overlay:hover {
+      background: #ce0400
+      opacity: 1
+      color: white
+      transition: 0.1s
+  }
+
+  #row {
+      display: table-row
+      vertical-align: middle
+  }
+
+  #cell {
+      display: table-cell
+      vertical-align: middle
+      padding: 15px
+  }
+
+  #cellbig {
+      display: table-cell
+      vertical-align: middle
+      padding: 30px
+  }
+
+  #Timeline {
+    margin-top: 50px
+    position: relative
+  }
+
+  #Spotlight {
+    margin-top: 40px
+    position: relative
+  }
+
+  #externalLinks {
+    absolute: top -14px left 644px
+  }
+
+  ul {
+    padding 0px
+    margin 0px
+    width: 100px
+  }
+
+  li {
+    padding-left: 0px
+    display: inline
+  }
+
+  #externalLinks {
+    absolute: left 714px
+    margin-top: 862px
+    a:link, a:visited {
+      display: block
+      font-weight: bold
+      color: black
+      background-color: rgba(200, 200, 200, 0.5)
+      width: 214px
+      text-align: center
+      padding-left: 24px
+      padding-right: 24px
+      padding-top: 25px
+      padding-bottom: 25px
+
+      text-decoration:none
+      margin-bottom: -2px
+    }  
+    a:hover, a:active {
+    transition:.2s;
+    background-color: #434343
+    }
+  }
+
 }
 
 .aWebsite, .aWebsite_alone, .aMiniblog, .aMiniblog_alone {
@@ -208,3 +208,6 @@ li {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
