@@ -479,3 +479,16 @@ li {
   margin: 0px auto;
   background-image: #f00;
 }
+#Sidebar {
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #ff0;
+  width: 270px;
+  position: absolute;
+  right: 0px;
+  top: -42px;
+}
+#Dev {
+  width: 650px;
+  background-color: #008000;
+}
