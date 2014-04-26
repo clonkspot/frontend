@@ -17,6 +17,9 @@ body {
 img {
   border: none;
 }
+.imgborder {
+  border: solid 1px #f00;
+}
 .content {
   margin: 20px auto;
   margin-top: 42px;
@@ -54,8 +57,10 @@ h2 {
   letter-spacing: -1px;
 }
 h3 {
+  color: #100303;
   font-family: Arial, sans-serif;
   font-size: 20px;
+  margin-bottom: -10px;
 }
 h4 {
   font-family: Arial, sans-serif;

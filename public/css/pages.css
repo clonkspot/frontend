@@ -488,6 +488,44 @@ li {
   left: 30px;
   top: 18px;
 }
+#GraphicsPic {
+  width: 200px;
+  position: absolute;
+  top: 23px;
+  ((null)): 0;
+}
+#ScriptPic {
+  width: 200px;
+  position: relative;
+  top: 23px;
+  left: 420px;
+}
+#GraphicsText {
+  position: absolute;
+  top: 0px;
+  ((null)): 0;
+  left: 215px;
+  width: 405px;
+}
+#ScriptText {
+  position: absolute;
+  top: 0px;
+  ((null)): 0;
+  width: 405px;
+}
+#Graphics {
+  width: 620px;
+  height: 200px;
+  position: relative;
+}
+#Script {
+  width: 620px;
+  height: 200px;
+  position: relative;
+}
+#Chat {
+  width: 620px;
+}
 #Sidebar {
   padding-left: 30px;
   padding-right: 30px;
@@ -502,20 +540,4 @@ li {
   -moz-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
   -o-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
   border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
-}
-#Dev {
-  width: 620px;
-  background-color: #008000;
-}
-#Graphics {
-  width: 305px;
-  position: relative;
-  background-color: #f00;
-}
-#Script {
-  position: absolute;
-  left: 345px;
-  top: 100px;
-  width: 305px;
-  background-color: #800080;
 }
