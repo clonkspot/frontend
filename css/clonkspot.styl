@@ -26,14 +26,28 @@ img {
 }
 
 .imgborder {
-  border: solid 1px red
+  border: solid 1px #b1b1b1
+}
+
+hr {
+  width: 80%
+  height: 1px
+  background-color: #b1b1b1
+  border: none
+  margin-top: 30px
+  margin-bottom: 30px
 }
 
 .content {
   margin: 20px auto
   margin-top: 42px
   padding: 0 30px
-  a:hover {color: white; background: #ce0400; transition: .3s}
+  
+  a:hover {
+  border-bottom: 2px solid #ce0400
+  padding-bottom: -1px
+  transition: .3s
+  }
 }
 
 .smalltext, small {
@@ -45,6 +59,17 @@ img {
   font-size: 16px
   line-height: 24px
 }
+
+.splash {
+  color: #F8E5D1
+  text-shadow: 2px 2px #1F1E1D
+  z-index: 1
+}
+
+li {
+  list-style-image: url(../images/ulicon.png);
+}
+
 
 h1 {
   //todo: include font
@@ -87,7 +112,7 @@ h6 {
   font-size: 16px
   line-height: 20px
   margin-before: 0px
-  margin-after: 0px
+  margin-bottom: -10px
 }
 
 .specialtext {

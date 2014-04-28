@@ -13,7 +13,16 @@
 
 #Splash {
   width: 300px
-  absolute: left 30px top 18px
+  absolute: left 690px top 20px
+}
+
+#Gif {
+  absolute: top 61px left 210px
+}
+
+#Shorttext {
+  margin-top: -30px
+  width: 620px
 }
 
 #GraphicsPic {
@@ -33,7 +42,7 @@
 }
 
 #ScriptText {
-  absolute: top 0px
+  absolute: top 15px
   width: 405px
 }
 
@@ -54,12 +63,56 @@
 }
 
 #Sidebar {
-  padding-left: 30px
-  padding-right: 30px
+  margin-top: 45px
   width: 250px
   absolute: right 0px top -42px
   background-color: #E9DDD1
   border-style: solid
   border-width: 12px 12px 12px 12px 
   border-image: url(/images/dev/border.png) 12 12 12 12 fill repeat
- }
+
+  li {
+    margin: 0px
+  }
+
+  ul, li { 
+    list-style: none
+    padding: 0px
+  }
+}
+
+.buttonsidebar {
+  display: inline-block
+  margin: 5px
+  padding: 6px 20px
+  text-align: center
+  border-radius: 5px
+  box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec
+  background-color: #916453
+  z-index: 2
+
+  a:link, a:visited, a:active {
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 700
+    color: white
+    text-shadow: 1px 1px 1px #20130e;
+    border-bottom: 0px
+  }
+
+  &:hover {
+    background-color: #87d969
+    box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a
+    transition: all 0.2s ease-out
+    -webkit-transition: all 0.2s ease-out
+  }
+}
+
+#Tutorials {
+  margin-left: 15px
+}
+
+#sidebarbg {
+  position: absolute
+  z-index: 0
+}

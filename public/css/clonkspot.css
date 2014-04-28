@@ -18,7 +18,15 @@ img {
   border: none;
 }
 .imgborder {
-  border: solid 1px #f00;
+  border: solid 1px #b1b1b1;
+}
+hr {
+  width: 80%;
+  height: 1px;
+  background-color: #b1b1b1;
+  border: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .content {
   margin: 20px auto;
@@ -26,8 +34,8 @@ img {
   padding: 0 30px;
 }
 .content a:hover {
-  color: #fff;
-  background: #ce0400;
+  border-bottom: 2px solid #ce0400;
+  padding-bottom: -1px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -43,6 +51,14 @@ small {
 normal {
   font-size: 16px;
   line-height: 24px;
+}
+.splash {
+  color: #f8e5d1;
+  text-shadow: 2px 2px #1f1e1d;
+  z-index: 1;
+}
+li {
+  list-style-image: url("../images/ulicon.png");
 }
 h1 {
   font-family: PT Sans Bold, Arial Black, sans-serif;
@@ -79,7 +95,7 @@ h6 {
   font-size: 16px;
   line-height: 20px;
   margin-before: 0px;
-  margin-after: 0px;
+  margin-bottom: -10px;
 }
 .specialtext {
   line-height: 30px;

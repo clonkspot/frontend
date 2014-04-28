@@ -1,21 +1,20 @@
 <% extend 'layout.ect' %> 
 
-    Todo: Splash Clonkszene, die was bauen (Kran?) mit festen Platz für Doku Knopf oder sowas<br>
-    Grafik und Script schön formatieren (s. YNAB)<br>
-    Chat klappbar und sinnvoll platzieren<br>
-    Sidebar Rahmen und Content
-
 <div id="Header">
-    <div id="Splash" class="normaltext">
+    <div id="Splash" class="splash normaltext">
         <h1>Alle Wege führen<br>zu Clonk.</h1>
-        <p><i>Clonk ist Bestens geeignet um zusätzlichen Content zu entwickeln. Doch wo anfangen? Hier wird dir geholfen!</i></p>
+        <p><i>Clonk ist Bestens geeignet um zusätzlichen Content zu entwickeln. <br>Doch wo anfangen? Hier wird dir geholfen!</i></p>
     </div>
-
+    <img id="Gif" src="../images/dev/water.gif" alt="header">
     <img src="../images/dev/devbg.jpg" alt="header">
 </div>
 
 
 <div class="content normaltext">
+
+<div id="Shorttext">
+
+<p>In diesen Bereichen lässt sich Clonk modden:</p>
 
 <div id="Graphics">
     <div id="GraphicsPic" class="imgborder">
@@ -28,10 +27,9 @@
     </div>
 </div>
 
-
+<hr>
 
 <div id="Script">
-    <hr>
     <div id="ScriptPic" class="imgborder">
         <img src="../images/dev/script.jpg" alt="script example">
     </div>
@@ -42,6 +40,22 @@
     </div>
 </div>
 
+<hr>
+
+<div id="Graphics">
+    
+    <div id="GraphicsPic" class="imgborder">
+        <img src="../images/dev/hut.jpg" alt="graphics example">
+    </div>
+    
+    <div id="GraphicsText">
+        <h3>Musik & Sound</h3>
+        <p>Auch hier kann alles erdenkliche modifiziert werden. Clonk benötigt dafür, dass alle Dateien im <a href="http://de.wikipedia.org/wiki/Wav">Wave-Format</a> abgespeichert werden (bei Musik wäre auch mid, xm, it, s3m, mod und <a href="http://de.wikipedia.org/wiki/Ogg">ogg</a> möglich). Als mächtiges und kostenloses Verarbeitungsprogramm ist <a href=#>Audacity</a> sehr zu empfehlen.</p>
+    </div>
+</div>
+
+</div>
+
 <div id="Chat">
     <h2>Chathilfe</h2>
     <iframe src="https://kiwiirc.com/client/irc.euirc.net/#clonkscript" style="border:0; width:100%; height:600px;"></iframe>
@@ -49,39 +63,42 @@
 
 
 <div id="Sidebar">
-    <h6>Entwicklerdokumentation</h6>
+    <div id="sidebarbg"><img src="/images/dev/sidebarbg.png"></div>
+    Online Doku | Download Doku
 
+<div id="Tutorials">
     <h6>Scripttutorials</h6>
     <ul>
-        <li><a href="#">Tutorial 1</a></li>
-        <li><a href="#">Tutorial 2</a></li>
-        <li><a href="#">Tutorial 3</a></li>
-        <li><a href="#">Tutorial 4</a></li>
+        <li><div class="buttonsidebar"><a href="#">Tutorial 1</a></div></li>
+        <li><div class="buttonsidebar"><a href="#">Tutorial 2</a></div></li>
+        <li><div class="buttonsidebar"><a href="#">Tutorial 3</a></div></li>
+        <li><div class="buttonsidebar"><a href="#">Tutorial 4</a></div></li>
     </ul>
 
     <h6>Grafiktutorials</h6>
     <ul>
-        <li><a href="#">Tutorial 1</a></li>
-        <li><a href="#">Tutorial 2</a></li>
-        <li><a href="#">Tutorial 3</a></li>
-        <li><a href="#">Tutorial 4</a></li>
+        <li><div class="buttonsidebar"><a href="#">Tutorial 1</a></div></li>
+        <li><div class="buttonsidebar"><a href="#">Tutorial 2</a></div></li>
+        <li><div class="buttonsidebar"><a href="#">Tutorial 3</a></div></li>
+        <li><div class="buttonsidebar"><a href="#">Tutorial 4</a></div></li>
     </ul>
 
     <h6>Inspiration</h6>
     <ul>
-        <li><a href="#">Community-Seite</a></li>
-        <li><a href="#">Clonkforge</a></li>
-        <li><a href="#">Ideenliste Clonk-Center</a></li>
+        <li><div class="buttonsidebar"><a href="#">Community-Seite</a></div></li>
+        <li><div class="buttonsidebar"><a href="#">Clonkforge</a></div></li>
+        <li><div class="buttonsidebar"><a href="#">Ideenliste Clonk-Center</a></div></li>
     </ul>
 
-    <h6>nützliche Tools</h6>
+    <h6>nützliche Tools und Links</h6>
     <ul>
-        <li><a href="#">Tutorial 1</a></li>
-        <li><a href="#">Tutorial 2</a></li>
-        <li><a href="#">Tutorial 3</a></li>
-        <li><a href="#">Tutorial 4</a></li>
+        <li><div class="buttonsidebar"><a href="http://wiki.nosebud.de/wiki/CR-Tutorial">Einstieg in die Entwicklung</a></div></li>
+        <li><div class="buttonsidebar"><a href="http://wiki.nosebud.de/wiki/Scripte">Scriptsammlung</a></div></li>
+        <li><div class="buttonsidebar"><a href="/download/c4scripter-0.9.13.zip">c4scripter</a></div></li>
+        <li><div class="buttonsidebar"><a href="/download/mapebin134.zip">Mape</a></div></li>
+        <li><div class="buttonsidebar"><a href="/download/CRTools.zip">CRTools</a></div></li>
     </ul>
-
+</div>
 </div>
 
 </div> <!-- End of the Line -->

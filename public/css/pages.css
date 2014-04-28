@@ -170,15 +170,6 @@
   top: -14px;
   left: 644px;
 }
-ul {
-  padding: 0px;
-  margin: 0px;
-  width: 100px;
-}
-li {
-  padding-left: 0px;
-  display: inline;
-}
 #externalLinks {
   position: absolute;
   left: 714px;
@@ -209,6 +200,15 @@ li {
   transition: 0.2s;
   background-color: #434343;
 }
+#externalLinks ul {
+  padding: 0px;
+  margin: 0px;
+  width: 100px;
+}
+#externalLinks li {
+  padding-left: 0px;
+  display: inline;
+}
 .aWebsite,
 .aWebsite_alone,
 .aMiniblog,
@@ -218,8 +218,6 @@ li {
   padding: 6px 15px;
   color: #fff;
   display: inline-block;
-  -webkit-box-shadow: 0px 2px 0px 0px #910000;
-  -moz-box-shadow: 0px 2px 0px 0px #910000;
   -webkit-box-shadow: 0px 2px 0px 0px #910000;
   box-shadow: 0px 2px 0px 0px #910000;
 }
@@ -485,8 +483,17 @@ li {
 #Splash {
   width: 300px;
   position: absolute;
-  left: 30px;
-  top: 18px;
+  left: 690px;
+  top: 20px;
+}
+#Gif {
+  position: absolute;
+  top: 61px;
+  left: 210px;
+}
+#Shorttext {
+  margin-top: -30px;
+  width: 620px;
 }
 #GraphicsPic {
   width: 200px;
@@ -509,7 +516,7 @@ li {
 }
 #ScriptText {
   position: absolute;
-  top: 0px;
+  top: 15px;
   ((null)): 0;
   width: 405px;
 }
@@ -527,8 +534,7 @@ li {
   width: 620px;
 }
 #Sidebar {
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-top: 45px;
   width: 250px;
   position: absolute;
   right: 0px;
@@ -540,4 +546,52 @@ li {
   -moz-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
   -o-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
   border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
+}
+#Sidebar li {
+  margin: 0px;
+}
+#Sidebar ul,
+#Sidebar li {
+  list-style: none;
+  padding: 0px;
+}
+.buttonsidebar {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 20px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec;
+  box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec;
+  background-color: #916453;
+  z-index: 2;
+}
+.buttonsidebar a:link,
+.buttonsidebar a:visited,
+.buttonsidebar a:active {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 1px #20130e;
+  border-bottom: 0px;
+}
+.buttonsidebar:hover {
+  background-color: #87d969;
+  -webkit-box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a;
+  box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+#Tutorials {
+  margin-left: 15px;
+}
+#sidebarbg {
+  position: absolute;
+  z-index: 0;
 }
