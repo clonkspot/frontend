@@ -92,7 +92,7 @@ module.exports =
   <p>devcom-Clonk is an upcoming platform by developers for developers. Here you will find tutorials about everything related to scripting in Clonk. It focuses on bringing people together and giving newcomers a good start into development.</p>
   '''
 
-  QuoteH2:
+  QuoteH1:
     'A word to the community'
     
   Quote: [

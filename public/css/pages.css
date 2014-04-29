@@ -24,21 +24,22 @@
 }
 #quota {
   position: relative;
-  top: 0px;
+  top: -24px;
   ((null)): 0;
   background-color: #ddd;
-  border: dashed 1px #c0c0c0;
-/*border-top-left-radius: 10px
-  border-bottom-left-radius: 10px*/
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  padding-top: 0px;
+  background-image: url("../images/community/combg.jpg");
+  background-repeat: no-repeat;
+  width: 1006px;
+  height: 363px;
+  padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 15px;
 }
 #quotatext {
+  position: absolute;
   width: 480px;
+  z-index: 3;
 }
 #imgcommunity {
   position: absolute;
@@ -49,11 +50,17 @@
   -o-animation: spin 550s linear infinite;
   -ms-animation: spin 550s linear infinite;
   animation: spin 550s linear infinite;
+  z-index: 2;
+}
+#combg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 #projects {
 /*img {border: 1px solid #101010}*/
   position: relative;
-  margin-top: 30px;
 }
 .bigprojectcontainer {
   width: 384px;

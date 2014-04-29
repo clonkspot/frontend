@@ -93,7 +93,7 @@ module.exports =
   <p>devcom-Clonk möchte eine Developer Community werden, in der Tutorials rund um das Thema Scripten in Clonk in ansprechender Form bereitgestellt werden.</p>
   '''
 
-  QuoteH2:
+  QuoteH1:
     'Ein Wort an die Community'
     
   Quote: [
