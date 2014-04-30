@@ -556,6 +556,9 @@
   -moz-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
   -o-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
   border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
+  background-image: url("/images/dev/sidebarbg.png");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
 }
 #Sidebar li {
   margin: 0px;
@@ -600,8 +603,4 @@
 }
 #Tutorials {
   margin-left: 15px;
-}
-#sidebarbg {
-  position: absolute;
-  z-index: 0;
 }
