@@ -24,9 +24,8 @@
 }
 #quota {
   position: relative;
-  top: -24px;
+  top: -32px;
   ((null)): 0;
-  background-color: #ddd;
   background-image: url("../images/community/combg.jpg");
   background-repeat: no-repeat;
   width: 1006px;
@@ -37,14 +36,17 @@
   padding-bottom: 15px;
 }
 #quotatext {
+  color: #0f1b4b;
   position: absolute;
+  top: 2px;
+  ((null)): 0;
   width: 480px;
   z-index: 3;
 }
 #imgcommunity {
   position: absolute;
-  top: 15px;
-  left: 590px;
+  top: 20px;
+  left: 610px;
   -webkit-animation: spin 550s linear infinite;
   -moz-animation: spin 550s linear infinite;
   -o-animation: spin 550s linear infinite;
@@ -59,8 +61,8 @@
   z-index: 1;
 }
 #projects {
-/*img {border: 1px solid #101010}*/
   position: relative;
+  margin-top: -90px;
 }
 .bigprojectcontainer {
   width: 384px;
@@ -181,7 +183,7 @@
   position: absolute;
   left: 714px;
   ((null)): 0;
-  margin-top: 862px;
+  margin-top: 1164px;
 }
 #externalLinks a:link,
 #externalLinks a:visited {
@@ -206,6 +208,7 @@
   -ms-transition: 0.2s;
   transition: 0.2s;
   background-color: #434343;
+  border-bottom: 0px;
 }
 #externalLinks ul {
   padding: 0px;
@@ -229,26 +232,16 @@
   box-shadow: 0px 2px 0px 0px #910000;
 }
 .aWebsite {
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 .aMiniblog {
   margin-left: 2px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 .aMiniblog_alone,
 .aWebsite_alone {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -527,12 +520,12 @@
   ((null)): 0;
   width: 405px;
 }
-#Graphics {
+#BlockLeft {
   width: 620px;
   height: 200px;
   position: relative;
 }
-#Script {
+#BlockRight {
   width: 620px;
   height: 200px;
   position: relative;

@@ -100,7 +100,7 @@ module.exports =
     '<p>Clonk ist ein besonderes Spiel. Mindestens genauso besonders ist seine Community! Viele sind schon seit Jahren dabei – genauso wie wir.</p>'
     '''<p>Nach der für viele schockierenden <a href='http://www.clonk.de/forum/de/topic_show.pl?tid=10509'>Ankündigung im Clonk Forum</a> wird es vermutlich bald keine offizielle Clonk Seite als Anlaufpunkt mehr geben.</p>'''
     '<p><b>Wir möchten euch allen hier ein neues zu Hause geben.</b></p>'
-    '''<p>Damit es richtig gemütlich wird, basteln wir immer wieder an dieser Seite und sind für Vorschläge stets offen! Ebenfalls können Wünsche und Ideen im <a href='https://clonkspot.org/forum/forum_show.pl'><b>im Forum</b></a> geäußert werden.</p>'''
+    '''<p>Damit es richtig gemütlich wird, basteln wir immer wieder an dieser Seite und sind für Vorschläge stets offen! Ebenfalls können Wünsche und Ideen im <a href='..//forum/forum_show.pl'><b>im Forum</b></a> geäußert werden.</p>'''
     '<p>Clonkspot ist unser Geschenk an euch!</p>'
     '<p><i>- Luchs, Nachtschatten, Nachtfalter</i></p>'
   ]

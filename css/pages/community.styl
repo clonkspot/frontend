@@ -7,8 +7,7 @@
 }
 
 #quota {
-  relative: top -24px
-  background-color: #dddddd
+  relative: top -32px
   background-image: url(../images/community/combg.jpg)
   background-repeat: no-repeat; 
   width: 1006px
@@ -20,13 +19,14 @@
 }
 
 #quotatext {
-  position: absolute
+  color: #0F1B4B
+  absolute: top 2px
   width: 480px
   z-index: 3
 }
 
 #imgcommunity {
-  absolute: top 15px left 590px
+  absolute: top 20px left 610px
   animation:spin 550s linear infinite;
   z-index: 2
 }
@@ -39,8 +39,8 @@
 @keyframes spin { 100% { transform:rotate(360deg); } }
 
 #projects {
-    /*img {border: 1px solid #101010}*/
-    position: relative
+  position: relative
+  margin-top: -90px
 }
 
 .bigprojectcontainer {
@@ -146,7 +146,7 @@
 
 #externalLinks {
   absolute: left 714px
-  margin-top: 862px
+  margin-top: 1164px
   a:link, a:visited {
     display: block
     font-weight: bold
@@ -166,6 +166,7 @@
   a:hover, a:active {
   transition:.2s;
   background-color: #434343
+  border-bottom: 0px
   }
 
   ul {
@@ -190,26 +191,17 @@
 }
 
 .aWebsite {
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 
 .aMiniblog {
   margin-left: 2px
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
+
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
 .aMiniblog_alone, .aWebsite_alone {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
