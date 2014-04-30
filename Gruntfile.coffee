@@ -33,3 +33,16 @@ module.exports = (grunt) ->
       bundle = b.bundle()
       grunt.file.write file.dest, bundle
     return
+
+  grunt.registerTask 'layout', 'Create the static layout files', ->
+    done = @async()
+    request = require('supertest')(require('./app').app)
+    ['de', 'en'].forEach (lang) ->
+      request.get('/_layout')
+        .set('Accept-Language', lang)
+        .expect(200)
+        .end (err, res) ->
+          throw err if err
+          for key, content of res.body
+            grunt.file.write "public/layout/#{key}-#{lang}.html", content
+          done()
