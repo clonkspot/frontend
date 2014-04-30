@@ -27,6 +27,18 @@
     <% end %>
   </nav>
 
+  <% if @req.url is '/_layout': %>
+  <script>
+	(function() {
+	  var url, el;
+	  url = location.pathname + '/';
+	  url = url.slice(0, url.indexOf('/', 1));
+	  el = document.querySelector('nav a[href^="' + url + '"]')
+	  el && el.classList.add('active');
+	})();
+  </script>
+  <% end %>
+
   <!-- Twitch stream notification shown via JS -->
   <div class="twitch">
     <a href="#"><%= @t.twitch %></a>
