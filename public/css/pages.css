@@ -540,6 +540,9 @@
 #Chat {
   width: 620px;
 }
+#Chat h2 {
+  cursor: pointer;
+}
 #Sidebar {
   margin-top: 45px;
   width: 250px;

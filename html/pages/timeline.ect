@@ -57,9 +57,17 @@
 </div>
 
 <div id="Chat">
-    <h2>Chathilfe</h2>
-    <iframe src="https://kiwiirc.com/client/irc.euirc.net/#clonkscript" style="border:0; width:100%; height:600px;"></iframe>
+    <h2>Chathilfe ▼</h2>
+    <iframe src="https://kiwiirc.com/client/irc.euirc.net/?theme=mini#clonkscript" style="border:0; width:100%; height:600px; display: none;"></iframe>
 </div>
+
+<% block 'script': %>
+<script>
+$('#Chat h2').click(function() {
+    $(this).next().slideToggle();
+});
+</script>
+<% end %>
 
 
 <div id="Sidebar">
