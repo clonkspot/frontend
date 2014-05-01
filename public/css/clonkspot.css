@@ -163,9 +163,20 @@ a:buttonlink:active {
 }
 
 /* Layout */
+header .topimg,
+header nav > div {
+  width: 1006px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+header .topimg {
+  margin-bottom: -12px;
+}
 header .logo {
-  margin-top: -100px;
-  margin-left: 20px;
+  position: absolute;
+  top: 27px;
+  left: 20px;
 }
 header .icon {
   position: absolute;
@@ -189,10 +200,16 @@ header a:visited {
   text-decoration: none;
 }
 header nav {
-  background: #d4d4d4;
-  white-space: nowrap;
   height: 75px;
-  padding-top: 25px;
+  padding-top: 14px;
+  background: #d4d4d4;
+  border-top: 2px solid #696969;
+  white-space: nowrap;
+}
+header nav > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding-left: 30px;
 }
 header nav a {

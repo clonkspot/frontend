@@ -4,9 +4,19 @@
 @import "lib/variables"
 
 header {
+  .topimg, nav > div {
+    width: mainWidth
+    margin-left: auto
+    margin-right: auto
+    position: relative
+  }
+
+  .topimg {
+    margin-bottom: -12px
+  }
+
   .logo {
-    margin-top: -100px
-    margin-left: 20px
+    absolute: top 27px left 20px
   }
 
   .icon {
@@ -33,12 +43,20 @@ header {
   }
 
   nav {
-    background: #D4D4D4
-    white-space: nowrap
-    padding = 25px
-    height: 100px - padding
+    padding = 14px
+    height: 89px - padding
     padding-top: padding
-    padding-left: 30px
+
+    background: #D4D4D4
+    border-top: 2px solid #696969
+
+    white-space: nowrap
+
+    > div {
+      box-sizing: border-box
+      padding-left: 30px
+    }
+
     a {
       display: inline-block
       width: 144px
