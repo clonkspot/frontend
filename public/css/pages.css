@@ -24,7 +24,7 @@
 }
 #quota {
   position: relative;
-  top: -32px;
+  top: 0px;
   ((null)): 0;
   background-image: url("../images/community/combg.jpg");
   background-repeat: no-repeat;
@@ -62,7 +62,7 @@
 }
 #projects {
   position: relative;
-  margin-top: -90px;
+  margin-top: -52px;
 }
 .bigprojectcontainer {
   width: 384px;
@@ -492,42 +492,45 @@
   left: 210px;
 }
 #Shorttext {
-  margin-top: -30px;
-  width: 620px;
+  position: relative;
+  width: 660px;
 }
 #GraphicsPic {
   width: 200px;
-  position: absolute;
-  top: 23px;
-  ((null)): 0;
-}
-#ScriptPic {
-  width: 200px;
-  position: relative;
-  top: 23px;
-  left: 420px;
 }
 #GraphicsText {
   position: absolute;
   top: 0px;
-  ((null)): 0;
-  left: 215px;
-  width: 405px;
+  left: 315px;
+  width: 350px;
+}
+#ScriptPic {
+  position: relative;
+  top: 0px;
+  left: 380px;
 }
 #ScriptText {
   position: absolute;
-  top: 15px;
+  top: 0px;
   ((null)): 0;
-  width: 405px;
+  width: 365px;
 }
-#BlockLeft {
-  width: 620px;
-  height: 200px;
-  position: relative;
+#ScenarioText {
+  position: absolute;
+  top: -20px;
+  left: 235px;
 }
-#BlockRight {
-  width: 620px;
-  height: 200px;
+#ScenarioPic {
+  position: relative top 0px;
+  height: 500px;
+}
+#ScenarioText2 {
+  position: absolute;
+  top: 220px;
+  ((null)): 0;
+  width: 210px;
+}
+.Block {
   position: relative;
 }
 #Chat {

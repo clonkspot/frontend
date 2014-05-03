@@ -2,8 +2,8 @@
 
 <div id="Header">
     <div id="Splash" class="splash normaltext">
-        <h1>Alle Wege führen<br>zu Clonk.</h1>
-        <p><i>Clonk ist Bestens geeignet um zusätzlichen Content zu entwickeln. <br>Doch wo anfangen? Hier wird dir geholfen!</i></p>
+        <h1><%-@t.Heading %></h1>
+        <p><i><%-@t.Intro %></i></p>
     </div>
     <img id="Gif" src="../images/dev/water.gif" alt="header">
     <img src="../images/dev/devbg.jpg" alt="header">
@@ -12,54 +12,55 @@
 
 <div class="content normaltext">
 
+<p><%-@t.Mod %></p>
+
 <div id="Shorttext">
 
-<p>In diesen Bereichen lässt sich Clonk modden:</p>
-
-<div id="BlockLeft">
-    <div id="GraphicsPic" class="imgborder">
-        <img src="../images/dev/hut.jpg" alt="graphics example">
-    </div>
+    <div class="Block">
+        <div id="GraphicsPic">
+             <img src="../images/dev/dev_gfx.jpg" alt="graphics example">
+        </div>
     
-    <div id="GraphicsText">
-        <h3>Grafik</h3>
-        <p>Clonk Rage kann Ingame-Grafiken nur als Sprites (Bilder im PNG-Format) verarbeiten. Animationen werden als Teilausschnitt mit in die Datei gerendert und später per Koordinaten aus einer Textdatei zusammengefügt.</p>
+        <div id="GraphicsText">
+            <%-@t.Graphics %>
+        </div>
     </div>
-</div>
 
-<hr>
+    <hr>
 
-<div id="BlockRight">
-    <div id="ScriptPic" class="imgborder">
-        <img src="../images/dev/script.jpg" alt="script example">
-    </div>
+    <div class="Block">
+        <div id="ScriptPic">
+            <img src="../images/dev/dev_script.jpg" alt="script example">
+        </div>
     
-    <div id="ScriptText">
-        <h3>Script</h3>
-        <p>Basierend auf C ist die Scriptsprache von Clonk c4script. Darin wird der Quellcode für ein Objekt oder ein Szenario geschrieben, welcher dann von der Engine gelesen wird. Viele Funktionen sind bereits vorhanden, es können aber auch eigene geschrieben werden.</p>
+        <div id="ScriptText">
+            <%-@t.Script %>
+        </div>
     </div>
-</div>
 
-<hr>
+    <hr>
 
-<div id="BlockLeft">
+    <div class="Block">
+        <div id="ScenarioPic">
+            <img src="../images/dev/dev_draw.gif" alt="example landscape drawing">
+            <img src="../images/dev/dev_overlay.png" alt="overlay" style="position: absolute; top: 0px; left: 0px; z-index: 2">
+        </div>
     
-    <div id="GraphicsPic" class="imgborder">
-        <img src="../images/dev/hut.jpg" alt="graphics example">
+        <div id="ScenarioText">
+            <%-@t.Scenario %>
+        </div>
+
+        <img src="../images/dev/dev_textures.jpg" alt="example landscape drawing" style="position: absolute; top: 225px; left: 240px">
+
+        <div id="ScenarioText2">
+            <%-@t.Scenario2 %>
+        </div>
     </div>
-    
-    <div id="GraphicsText">
-        <h3>Szenarien</h3>
-        <p>Mittels einfacher Grundkentnisse in Script können neue Szenarien entworfen werden (z.B. neue Missionen). Für statische Karten kann Clonk Bitmaps einlesen oder man verwendet direkt die internen Tools und kann Live eine Karte malen und per Drag and Drop Objekte reinziehen. Die Materialtexturen können ebenfalls komplett gemoddet werden.</p>
-        
-    </div>
-</div>
 
-<hr>
+    <hr>
 
-<div id="BlockRight">
-    
-    <div id="GraphicsPic" class="imgborder">
+    <div class="Block">
+        <div id="">
         <img src="../images/dev/hut.jpg" alt="graphics example">
     </div>
     
@@ -68,6 +69,16 @@
         <p>Auch hier kann alles erdenkliche modifiziert werden. Clonk benötigt dafür, dass alle Dateien im <a href="http://de.wikipedia.org/wiki/Wav">Wave-Format</a> abgespeichert werden (bei Musik wäre auch mid, xm, it, s3m, mod und <a href="http://de.wikipedia.org/wiki/Ogg">ogg</a> möglich). Als mächtiges und kostenloses Verarbeitungsprogramm ist <a href=#>Audacity</a> sehr zu empfehlen.</p>
     </div>
 </div>
+
+</div> <!-- End Shorttext -->
+
+    <!--
+
+
+<hr>
+
+
+
 
 </div>
 
@@ -83,7 +94,7 @@ $('#Chat h2').click(function() {
 });
 </script>
 <% end %>
-
+    -->
 
 <div id="Sidebar">
     Online Doku | Download Doku

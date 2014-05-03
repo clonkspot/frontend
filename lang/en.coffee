@@ -111,3 +111,34 @@ module.exports =
 
   externalLinksH2:
     'External links'
+  
+ 
+  # Development  
+  
+  Heading:
+    'All roads lead to Clonk.'
+  
+  Intro:
+    '''Clonk's strength is its openness for modding and additional content. But where to begin? Here! Let's get started.'''
+  
+  Mod:
+    'These are the areas of modding for Clonk:'
+
+  Graphics: '''
+    <h3>Graphics</h3>
+    <p>For ingame graphics, Clonk Rage only supports sprites (with images in PNG format). Animations are included with the regular graphics in the same file, and get overlaid ingame according to coordinates specified in a text file.
+  '''
+
+  Script: '''
+    <h3>Script</h3>
+    <p>The scripting language of Clonk, based on C, is called "C4Script". Used for all objects and scenarios, the engine interprets it to create all the wonderful behaviour you can see. Many functions are at your fingertips, but of course you're free to write your own.</p>
+  '''
+
+  Scenario: '''
+    <h3>Levels</h3>
+    <p>With only basic knowledge you're ready to build new levels! For static maps, Clonk reads bitmap graphics, or you draw them live ingame with the built-in tools. They also allow placing objects via drag'n'drop. Dynamic maps use a generator that reads map specifications from text files.</p>
+  '''
+  
+  Scenario2: '''
+    <p>By adding or replacing material textures, you can change the look to anything you want. Finally, with a scenario script you can create extensive worlds and stories!</p>
+  '''

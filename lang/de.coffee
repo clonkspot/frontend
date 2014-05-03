@@ -111,3 +111,33 @@ module.exports =
 
   externalLinksH2:
     'externe Links'
+
+  # Development  
+  
+  Heading:
+    'Alle Wege führen zu Clonk'
+
+  Intro:
+    'Clonk ist Bestens geeignet um zusätzlichen Content zu entwickeln. Doch wo anfangen? Hier wird dir geholfen!'
+
+  Mod:
+    'In diesen Bereichen lässt sich Clonk modden:'
+
+  Graphics: '''
+    <h3>Grafik</h3>
+    <p>Clonk Rage kann Ingame-Grafiken nur als Sprites (Bilder im PNG-Format) verarbeiten. Animationen werden als Teilausschnitt mit in die Datei gerendert und später per Koordinaten aus einer Textdatei zusammengefügt.</p>'''
+
+  Script: '''
+    <h3>Script</h3>
+    <p>Basierend auf C ist die Scriptsprache von Clonk c4script. Darin wird der Quellcode für ein Objekt oder ein Szenario geschrieben, welcher dann von der Engine gelesen wird. Viele Funktionen sind bereits vorhanden, es können aber auch eigene geschrieben werden.</p>
+  '''
+
+  Scenario: '''
+   <h3>Szenarien</h3>
+   <p>Mit geringen Grundkentnisse können neue Szenarien entworfen werden! Für statische Karten kann Clonk Bitmaps einlesen oder man verwendet direkt die internen Tools und kann Live eine Karte malen – Objekte können optional per Drag'n'Drop in die Karte reingezogen werden. Dynamische Karten können mittels Textdateien für den Generator geschrieben werden.</p>
+  '''
+
+  Scenario2: '''
+  <p>Das Aussehen der Karten kann man mit dem modden von Materialtexturen auch komplett ändern. Via Script können des Weiteren komplette Inhalte und Stories erzeugt werden!</p>
+  '''
+ 
