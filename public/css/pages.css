@@ -526,7 +526,7 @@
 }
 #ScenarioText2 {
   position: absolute;
-  top: 220px;
+  top: 230px;
   ((null)): 0;
   width: 210px;
 }
@@ -540,7 +540,9 @@
   cursor: pointer;
 }
 #Sidebar {
-  margin-top: 45px;
+  padding-left: 0px;
+  padding-right: 15px;
+  margin-top: 15px;
   width: 250px;
   position: absolute;
   right: 0px;
