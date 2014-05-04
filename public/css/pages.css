@@ -176,14 +176,8 @@
 }
 #externalLinks {
   position: absolute;
-  top: -14px;
-  left: 644px;
-}
-#externalLinks {
-  position: absolute;
-  left: 714px;
-  ((null)): 0;
-  margin-top: 1164px;
+  left: 684px;
+  top: -16px;
 }
 #externalLinks a:link,
 #externalLinks a:visited {
@@ -289,6 +283,150 @@
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+#Timeline {
+  position: relative;
+  top: -22px;
+  ((null)): 0;
+  width: 946px;
+  margin: 0px auto;
+  background-image: #f00;
+}
+#Header {
+  position: relative;
+}
+#Splash {
+  width: 300px;
+  position: absolute;
+  left: 690px;
+  top: 20px;
+}
+#Gif {
+  position: absolute;
+  top: 61px;
+  left: 210px;
+}
+#Shorttext {
+  position: relative;
+  width: 660px;
+}
+#GraphicsPic {
+  width: 200px;
+}
+#GraphicsText {
+  position: absolute;
+  top: 0px;
+  left: 315px;
+  width: 350px;
+}
+#ScriptPic {
+  position: relative;
+  top: 0px;
+  left: 380px;
+}
+#ScriptText {
+  position: absolute;
+  top: 0px;
+  ((null)): 0;
+  width: 365px;
+}
+#ScenarioText {
+  position: absolute;
+  top: -20px;
+  left: 235px;
+}
+#ScenarioPic {
+  position: relative top 0px;
+  height: 500px;
+}
+#ScenarioText2 {
+  position: absolute;
+  top: 230px;
+  ((null)): 0;
+  width: 210px;
+}
+#SoundText {
+  position: absolute;
+  top: -35px;
+  left: 315px;
+  width: 345px;
+}
+.Block {
+  position: relative;
+}
+#Chat {
+  position: relative;
+  margin-top: 50px;
+}
+#Chat h2 {
+  cursor: pointer;
+}
+#Sidebar {
+  padding-left: 0px;
+  padding-right: 15px;
+  margin-top: 15px;
+  width: 250px;
+  position: absolute;
+  right: 0px;
+  top: -42px;
+  background-color: #e9ddd1;
+  border-style: solid;
+  border-width: 12px 12px 12px 12px;
+  -webkit-border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
+  -moz-border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
+  -o-border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
+  border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
+  background-image: url("../images/dev/a.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+#Sidebar li {
+  margin: 0px;
+}
+#Sidebar ul,
+#Sidebar li {
+  list-style: none;
+  padding: 0px;
+}
+#Sidebar h6 {
+  text-shadow: 0px 0px 5px #fff;
+}
+.buttonsidebar {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 20px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec;
+  box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec;
+  background-color: #916453;
+  z-index: 2;
+}
+.buttonsidebar a:link,
+.buttonsidebar a:visited,
+.buttonsidebar a:active {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 1px #20130e;
+  border-bottom: 0px;
+}
+.buttonsidebar:hover {
+  background-color: #87d969;
+  -webkit-box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a;
+  box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+#Tutorials {
+  margin-left: 15px;
 }
 
 /* Home page */
@@ -467,138 +605,4 @@
   position: absolute;
   top: 67px;
   left: 250px;
-}
-
-#Timeline {
-  position: relative;
-  top: -22px;
-  ((null)): 0;
-  width: 946px;
-  margin: 0px auto;
-  background-image: #f00;
-}
-#Header {
-  position: relative;
-}
-#Splash {
-  width: 300px;
-  position: absolute;
-  left: 690px;
-  top: 20px;
-}
-#Gif {
-  position: absolute;
-  top: 61px;
-  left: 210px;
-}
-#Shorttext {
-  position: relative;
-  width: 660px;
-}
-#GraphicsPic {
-  width: 200px;
-}
-#GraphicsText {
-  position: absolute;
-  top: 0px;
-  left: 315px;
-  width: 350px;
-}
-#ScriptPic {
-  position: relative;
-  top: 0px;
-  left: 380px;
-}
-#ScriptText {
-  position: absolute;
-  top: 0px;
-  ((null)): 0;
-  width: 365px;
-}
-#ScenarioText {
-  position: absolute;
-  top: -20px;
-  left: 235px;
-}
-#ScenarioPic {
-  position: relative top 0px;
-  height: 500px;
-}
-#ScenarioText2 {
-  position: absolute;
-  top: 230px;
-  ((null)): 0;
-  width: 210px;
-}
-.Block {
-  position: relative;
-}
-#Chat {
-  width: 620px;
-}
-#Chat h2 {
-  cursor: pointer;
-}
-#Sidebar {
-  padding-left: 0px;
-  padding-right: 15px;
-  margin-top: 15px;
-  width: 250px;
-  position: absolute;
-  right: 0px;
-  top: -42px;
-  background-color: #e9ddd1;
-  border-style: solid;
-  border-width: 12px 12px 12px 12px;
-  -webkit-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
-  -moz-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
-  -o-border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
-  border-image: url("/images/dev/border.png") 12 12 12 12 fill repeat;
-  background-image: url("/images/dev/sidebarbg.png");
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-}
-#Sidebar li {
-  margin: 0px;
-}
-#Sidebar ul,
-#Sidebar li {
-  list-style: none;
-  padding: 0px;
-}
-.buttonsidebar {
-  display: inline-block;
-  margin: 5px;
-  padding: 6px 20px;
-  text-align: center;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec;
-  box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec;
-  background-color: #916453;
-  z-index: 2;
-}
-.buttonsidebar a:link,
-.buttonsidebar a:visited,
-.buttonsidebar a:active {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 1px 1px 1px #20130e;
-  border-bottom: 0px;
-}
-.buttonsidebar:hover {
-  background-color: #87d969;
-  -webkit-box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a;
-  box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-}
-#Tutorials {
-  margin-left: 15px;
 }

@@ -4,16 +4,19 @@ module.exports =
   nav:
     blog:
       url: '/blog'
-      width: 185
+      width: 155
     forums:
       url: '/forum/forum.pl'
-      width: 180
+      width: 145
     community:
       url: '/community'
-      width: 180
-    timeline:
-      url: '/timeline'
-      width: 165
+      width: 145
+    development:
+      url: '/development'
+      width: 155
+    league:
+      url: 'league'
+      width: 140
     comic:
       url: '/comic'
 

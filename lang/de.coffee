@@ -8,7 +8,8 @@ module.exports =
     blog: ['Blog', 'unsere Gedanken zu Clonk']
     forums: ['Forum', 'Plattform zum Austausch']
     community: ['Community', 'die Beste wo gibt']
-    timeline: ['Zeitreise', 'Nostalgie pur']
+    development: ['Entwicklung', 'ultimative Sucht']
+    league: ['League', 'die Besten der Besten']
     comic: ['Comics', 'einfach Clonk']
 
   twitch: 'Clonk Livestream auf Twitch.tv!'
@@ -105,8 +106,14 @@ module.exports =
     '<p><i>- Luchs, Nachtschatten, Nachtfalter</i></p>'
   ]
 
+  Whatyoucando: '''
+    <h2>Und was kannst du tun?</h2>
+    <p>Eine Community lebt nur solange ihre Mitglieder aktiv sind. Viele nutzen die Gelegenheit gemeinsam über den Masterserver zu spielen. Dabei sind schon viele Freundschaften entstanden! Andere beteiligen sich <a href="../forum/forum_show.pl">aktiv an Diskussionen</a> und steuern neue Ideen bei! Ein Teil der Community beschäftigt sich vor allem mit der Entwicklung von neuem Content. Ein Entwicklerteam lebt davon, wenn kleine Erfolge erzielt werden und andere in der Community die Erweiterungen spielen und dazu ihr Feedback geben.</p>
+    <p>Hier sind weitere Projekte, die in den letzten Jahren entstanden sind!</p>
+  '''
+
   Timeline: '''
-  <iframe src='https://clonkspot.org/TimelineJS/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=de&start_zoom_adjust=-5&height=650' width='100%' height='650' frameborder='0'></iframe>
+    <iframe src='https://clonkspot.org/TimelineJS/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=de&start_zoom_adjust=-5&height=650' width='100%' height='650' frameborder='0'></iframe>
   '''
 
   externalLinksH2:
@@ -140,4 +147,17 @@ module.exports =
   Scenario2: '''
   <p>Das Aussehen der Karten kann man mit dem modden von Materialtexturen auch komplett ändern. Via Script können des Weiteren komplette Inhalte und Stories erzeugt werden!</p>
   '''
+
+  Sound: '''
+    <h3>Musik & Sound </h3>
+    <p>Auch hier kann alles nur erdenkliche modifiziert werden. Die Dateien müssen dazu alle im Wave-Format vorhanden sein (bei Musik auch mid, xm, it, s3m, mod und ogg möglich). Als mächtiges und kostenloses Audioprogramm ist Audacity sehr zu empfehlen!</p>
+  '''
  
+  Chat:
+    'Chathilfe'
+
+  #Sidebar
+
+  Doku: '''
+    <a href="http://crdocs.clonkspot.org/de/sdk/">Online Doku</a>
+  '''

@@ -60,21 +60,18 @@
     <hr>
 
     <div class="Block">
-        <div id="">
-        <img src="../images/dev/hut.jpg" alt="graphics example">
-    </div>
+        <img src="../images/dev/dev_sound.jpg" alt="audacity example">
     
-    <div id="GraphicsText">
-        <h3>Musik & Sound</h3>
-        <p>Auch hier kann alles erdenkliche modifiziert werden. Clonk benötigt dafür, dass alle Dateien im <a href="http://de.wikipedia.org/wiki/Wav">Wave-Format</a> abgespeichert werden (bei Musik wäre auch mid, xm, it, s3m, mod und <a href="http://de.wikipedia.org/wiki/Ogg">ogg</a> möglich). Als mächtiges und kostenloses Verarbeitungsprogramm ist <a href=#>Audacity</a> sehr zu empfehlen.</p>
+        <div id="SoundText">
+            <%-@t.Sound %>
+        </div>
     </div>
-</div>
 
 </div> <!-- End Shorttext -->
 
 
 <div id="Chat">
-    <h2>Chathilfe ▼</h2>
+    <h2><%-@t.Chat %> ▼</h2>
     <iframe src="https://kiwiirc.com/client/irc.euirc.net/?theme=mini#clonkscript" style="border:0; width:100%; height:600px; display: none;"></iframe>
 </div>
 
@@ -87,7 +84,7 @@ $('#Chat h2').click(function() {
 <% end %>
 
 <div id="Sidebar">
-    <div class="buttonsidebar"><a href="#">Online Doku</a></div>
+    <div class="buttonsidebar"><%-@t.Doku %></div>
 
 <div id="Tutorials">
     <h6>Scripttutorials</h6>

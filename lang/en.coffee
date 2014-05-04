@@ -8,7 +8,8 @@ module.exports =
     blog: ['Blog', 'our thoughts about Clonk']
     forums: ['Forum', 'join the Diskussion']
     community: ['Community', 'the BEST']
-    timeline: ['Timeline', 'pure nostalgia']
+    development: ['Development', 'ultimate addiction']
+    league: ['League', 'the best of the best']
     comic: ['Comics', 'simply Clonk']
 
   twitch: 'Clonk Livestream on Twitch.tv!'
@@ -104,6 +105,12 @@ module.exports =
     '<p><i>- Luchs, Nachtschatten, Nachtfalter</i></p>'
   ]
 
+  Whatyoucando: '''
+    <h2>And how can you contribute?</h2>
+    <p>A community lives only as long as its members are active. Many take the opportunity to play together via the master server. From that, many friendships originated already! Others like to participate actively in discussions and contribute new ideas. A part of the community primarily concentrates on developing new content. Development teams depend on small success stories and from others in the community playing the content and giving feedback about it.</p>
+    <p>These are some more projects created in recent years:</p>
+  '''
+
   Timeline: '''
   <p>Unfortunately, the timeline wasn't translated in time. Below is the German version - translation coming soon!</p>
   <iframe src='https://clonkspot.org/TimelineJS/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=de&start_zoom_adjust=-5&height=650' width='100%' height='650' frameborder='0'></iframe>
@@ -141,4 +148,18 @@ module.exports =
   
   Scenario2: '''
     <p>By adding or replacing material textures, you can change the look to anything you want. Finally, with a scenario script you can create extensive worlds and stories!</p>
+  '''
+
+  Sound: '''
+    <h3>Music & Sound </h3>
+    <p>Another area for extensive modding. For sound, Clonk plays wave files. Additionally mid, xm, it, s3m, mod and ogg are supported for music. As powerful and free editing software, we recommend Audacity.</p>
+  '''
+
+  Chat:
+    'Instant help'
+
+  #Sidebar
+
+  Doku: '''
+    <a href="http://crdocs.clonkspot.org/en/sdk/">Online Documentation</a>
   '''
