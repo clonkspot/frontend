@@ -3,7 +3,7 @@
 module.exports =
   lang: 'en'
   otherlang: 'de'
-  langselect: 'Ich möchte Deutsch.'
+  langselect: 'Ich m&ouml;chte Deutsch.'
   nav:
     blog: ['Blog', 'our thoughts about Clonk']
     forums: ['Forum', 'join the Diskussion']
