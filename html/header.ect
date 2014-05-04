@@ -7,7 +7,7 @@
       </div>
     </a>
 
-    <a class="language" href="javascript:void(0)" onclick="document.cookie='language=<%= @t.otherlang %>';location.reload(true)">
+    <a class="language" href="javascript:void(0)" onclick="document.cookie='language=<%= @t.otherlang %>;path=/;max-age=31536000';location.reload(true)">
       <%- @t.langselect %> <img src="/images/flag_<%= @t.otherlang %>.png" alt="">
     </a>
 
