@@ -21,6 +21,11 @@ module.exports =
     terrible: 'Das ist furchtbar :-('
     picture: 'Dafür kannst du ein Bild betrachten! Geh zurück zur Startseite, wenn du damit fertig bist.'
 
+  # Footer
+  home: 'Startseite'
+  forums: 'Forum'
+  legal: 'Impressum'
+
   # Startseite
   index:
     posted: 'geschrieben von '

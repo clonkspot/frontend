@@ -21,6 +21,11 @@ module.exports =
     terrible: 'This is terrible. :-('
     picture: "But wait! Enjoy this picture! Go back to the homepage if you've finished this task."
 
+  # Footer
+  home: 'Home'
+  forums: 'Forums'
+  legal: 'Legal notice'
+
   index:
     posted: 'posted by '
 
