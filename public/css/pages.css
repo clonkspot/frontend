@@ -37,6 +37,7 @@
 }
 #quotatext {
   color: #0f1b4b;
+  text-shadow: 0 0 5px #fff;
   position: absolute;
   top: 2px;
   ((null)): 0;
@@ -377,7 +378,7 @@
   -moz-border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
   -o-border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
   border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
-  background-image: url("../images/dev/a.jpg");
+  background-image: url("../images/dev/sidebartex.jpg");
   background-repeat: no-repeat;
   background-position: 0 100%;
 }
@@ -424,6 +425,14 @@
   -ms-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
+}
+#dokulink:before {
+  content: url("../images/dev/doku.png");
+  padding-right: 3px;
+  float: left;
+  margin: 5px;
+  width: 20px;
+  height: 18px;
 }
 #Tutorials {
   margin-left: 15px;

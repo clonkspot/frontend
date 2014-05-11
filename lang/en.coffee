@@ -168,3 +168,7 @@ module.exports =
   Doku: '''
     <a href="http://crdocs.clonkspot.org/en/sdk/">Online Documentation</a>
   '''
+
+  EnglishNote: '''
+      <p>Due to lack of translation, the following tutorials are only available in german. Sorry :(</p>
+  '''

@@ -84,7 +84,11 @@ $('#Chat h2').click(function() {
 <% end %>
 
 <div id="Sidebar">
-    <div class="buttonsidebar"><%-@t.Doku %></div>
+    <div class="buttonsidebar" id="dokulink" style="margin-left: 50px; margin-top: 15px">
+        <%-@t.Doku %>
+    </div>
+
+<%-@t.EnglishNote %>
 
 <div id="Tutorials">
     <h6>Scripttutorials</h6>
