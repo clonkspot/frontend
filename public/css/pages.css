@@ -397,6 +397,9 @@
 #Sidebar h6 {
   text-shadow: 0px 0px 5px #fff;
 }
+#Sidebar p {
+  padding-left: 15px;
+}
 .buttonsidebar {
   display: inline-block;
   margin: 5px;
