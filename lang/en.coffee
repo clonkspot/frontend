@@ -170,5 +170,5 @@ module.exports =
   '''
 
   EnglishNote: '''
-      <p>Due to lack of translation, the following tutorials are only available in german. Sorry :(</p>
+      <p>Due to lack of translation, the following tutorials are only available in German. Sorry :(</p>
   '''
