@@ -24,6 +24,7 @@ module.exports =
   # Footer
   home: 'Startseite'
   forums: 'Forum'
+  development: 'Entwicklung'
   legal: 'Impressum'
 
   # Startseite
