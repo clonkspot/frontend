@@ -1,0 +1,146 @@
+@import "nib"
+
+#Timeline {
+  relative: top -22px
+  width: 946px
+  margin: 0px auto
+  background-image: red  
+}
+
+#Header {
+  position: relative
+}
+
+#Splash {
+  width: 300px
+  absolute: left 690px top 20px
+}
+
+#Gif {
+  absolute: top 61px left 210px
+}
+
+#Shorttext {
+  position: relative
+  width: 660px
+}
+
+#GraphicsPic {
+  width: 200px
+}
+
+#GraphicsText {
+  absolute: top 0px left 315px
+  width: 350px
+}
+
+#ScriptPic {
+  relative: top 0px left 380px
+}
+
+#ScriptText {
+  absolute: top 0px
+  width: 365px
+}
+
+#ScenarioText {
+  absolute: top -20px left 235px
+}
+
+#ScenarioPic {
+  position: relative top 0px
+  height: 500px
+}
+
+#ScenarioText2 {
+  absolute: top 230px
+  width: 210px
+}
+
+#SoundText {
+  absolute: top -35px left 315px
+  width: 345px
+}
+
+.Block {
+  position: relative
+}
+
+#Chat {
+  position: relative
+  margin-top: 50px
+
+  h2 {
+    cursor: pointer
+  }
+}
+
+#Sidebar {
+  padding-left: 0px
+  padding-right: 15px
+  margin-top: 15px
+  width: 250px
+  absolute: right 0px top -42px
+  background-color: #E9DDD1
+  border-style: solid
+  border-width: 12px 12px 12px 12px 
+  border-image: url(../images/dev/border.png) 12 12 12 12 fill repeat
+
+  background-image: url(../images/dev/sidebartex.jpg)
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+
+
+  li {
+    margin: 0px
+  }
+
+  ul, li { 
+    list-style: none
+    padding: 0px
+  }
+
+  h6 {
+    text-shadow: 0px 0px 5px white
+  }
+}
+
+.buttonsidebar {
+  display: inline-block
+  margin: 5px
+  padding: 6px 20px
+  text-align: center
+  border-radius: 5px
+  box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec
+  background-color: #916453
+  z-index: 2
+
+  a:link, a:visited, a:active {
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 700
+    color: white
+    text-shadow: 1px 1px 1px #20130e;
+    border-bottom: 0px
+  }
+
+  &:hover {
+    background-color: #87d969
+    box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a
+    transition: all 0.2s ease-out
+    -webkit-transition: all 0.2s ease-out
+  }
+}
+
+#dokulink:before {
+  content:url(../images/dev/doku.png)
+  padding-right: 3px
+  float: left
+  margin: 5px
+  width: 20px
+  height: 18px
+}
+
+#Tutorials {
+  margin-left: 15px
+}

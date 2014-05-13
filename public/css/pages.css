@@ -26,29 +26,43 @@
   position: relative;
   top: 0px;
   ((null)): 0;
-  background-color: #ddd;
-  border: dashed 1px #c0c0c0;
-/*border-top-left-radius: 10px
-    border-bottom-left-radius: 10px*/
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  padding-top: 0px;
+  background-image: url("../images/community/combg.jpg");
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 1006px;
+  height: 363px;
+  padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 15px;
 }
 #community #quotatext {
+  color: #0f1b4b;
+  text-shadow: 0 0 5px #fff;
+  position: absolute;
+  top: 2px;
+  ((null)): 0;
   width: 480px;
+  z-index: 3;
 }
 #community #imgcommunity {
   position: absolute;
-  top: 15px;
-  left: 590px;
+  top: 20px;
+  left: 610px;
   -webkit-animation: spin 550s linear infinite;
   -moz-animation: spin 550s linear infinite;
   -o-animation: spin 550s linear infinite;
   -ms-animation: spin 550s linear infinite;
   animation: spin 550s linear infinite;
+  z-index: 2;
+}
+#community #combg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
 #community #projects {
 /*img {border: 1px solid #101010}*/
@@ -167,23 +181,8 @@
 }
 #community #externalLinks {
   position: absolute;
-  top: -14px;
-  left: 644px;
-}
-#community ul {
-  padding: 0px;
-  margin: 0px;
-  width: 100px;
-}
-#community li {
-  padding-left: 0px;
-  display: inline;
-}
-#community #externalLinks {
-  position: absolute;
-  left: 714px;
-  ((null)): 0;
-  margin-top: 862px;
+  left: 684px;
+  top: -16px;
 }
 #community #externalLinks a:link,
 #community #externalLinks a:visited {
@@ -208,6 +207,16 @@
   -ms-transition: 0.2s;
   transition: 0.2s;
   background-color: #434343;
+  border-bottom: 0px;
+}
+#community #externalLinks ul {
+  padding: 0px;
+  margin: 0px;
+  width: 100px;
+}
+#community #externalLinks li {
+  padding-left: 0px;
+  display: inline;
 }
 .aWebsite,
 .aWebsite_alone,
@@ -219,31 +228,19 @@
   color: #fff;
   display: inline-block;
   -webkit-box-shadow: 0px 2px 0px 0px #910000;
-  -moz-box-shadow: 0px 2px 0px 0px #910000;
-  -webkit-box-shadow: 0px 2px 0px 0px #910000;
   box-shadow: 0px 2px 0px 0px #910000;
 }
 .aWebsite {
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 .aMiniblog {
   margin-left: 2px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 .aMiniblog_alone,
 .aWebsite_alone {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -291,6 +288,158 @@
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+#Timeline {
+  position: relative;
+  top: -22px;
+  ((null)): 0;
+  width: 946px;
+  margin: 0px auto;
+  background-image: #f00;
+}
+#Header {
+  position: relative;
+}
+#Splash {
+  width: 300px;
+  position: absolute;
+  left: 690px;
+  top: 20px;
+}
+#Gif {
+  position: absolute;
+  top: 61px;
+  left: 210px;
+}
+#Shorttext {
+  position: relative;
+  width: 660px;
+}
+#GraphicsPic {
+  width: 200px;
+}
+#GraphicsText {
+  position: absolute;
+  top: 0px;
+  left: 315px;
+  width: 350px;
+}
+#ScriptPic {
+  position: relative;
+  top: 0px;
+  left: 380px;
+}
+#ScriptText {
+  position: absolute;
+  top: 0px;
+  ((null)): 0;
+  width: 365px;
+}
+#ScenarioText {
+  position: absolute;
+  top: -20px;
+  left: 235px;
+}
+#ScenarioPic {
+  position: relative top 0px;
+  height: 500px;
+}
+#ScenarioText2 {
+  position: absolute;
+  top: 230px;
+  ((null)): 0;
+  width: 210px;
+}
+#SoundText {
+  position: absolute;
+  top: -35px;
+  left: 315px;
+  width: 345px;
+}
+.Block {
+  position: relative;
+}
+#Chat {
+  position: relative;
+  margin-top: 50px;
+}
+#Chat h2 {
+  cursor: pointer;
+}
+#Sidebar {
+  padding-left: 0px;
+  padding-right: 15px;
+  margin-top: 15px;
+  width: 250px;
+  position: absolute;
+  right: 0px;
+  top: -42px;
+  background-color: #e9ddd1;
+  border-style: solid;
+  border-width: 12px 12px 12px 12px;
+  -webkit-border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
+  -moz-border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
+  -o-border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
+  border-image: url("../images/dev/border.png") 12 12 12 12 fill repeat;
+  background-image: url("../images/dev/sidebartex.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+#Sidebar li {
+  margin: 0px;
+}
+#Sidebar ul,
+#Sidebar li {
+  list-style: none;
+  padding: 0px;
+}
+#Sidebar h6 {
+  text-shadow: 0px 0px 5px #fff;
+}
+.buttonsidebar {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 20px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec;
+  box-shadow: 0px -1px 0px 0px #49322a, 0px 2px 0px 0px #f5f1ec;
+  background-color: #916453;
+  z-index: 2;
+}
+.buttonsidebar a:link,
+.buttonsidebar a:visited,
+.buttonsidebar a:active {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 1px #20130e;
+  border-bottom: 0px;
+}
+.buttonsidebar:hover {
+  background-color: #87d969;
+  -webkit-box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a;
+  box-shadow: 0px -2px 0px 0px #f5f1ec, 0px 1px 0px 0px #49322a;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+#dokulink:before {
+  content: url("../images/dev/doku.png");
+  padding-right: 3px;
+  float: left;
+  margin: 5px;
+  width: 20px;
+  height: 18px;
+}
+#Tutorials {
+  margin-left: 15px;
 }
 
 /* Home page */
@@ -469,13 +618,4 @@
   position: absolute;
   top: 67px;
   left: 250px;
-}
-
-#Timeline {
-  position: relative;
-  top: -22px;
-  ((null)): 0;
-  width: 946px;
-  margin: 0px auto;
-  background-image: #f00;
 }

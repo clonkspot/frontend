@@ -8,24 +8,35 @@
 
   #quota {
     relative: top 0px
-    background-color: #dddddd
-    border: dashed 1px silver
-    /*border-top-left-radius: 10px
-    border-bottom-left-radius: 10px*/
-    border-radius: 10px
-    padding-top 0px
+    background-image: url(../images/community/combg.jpg)
+    background-repeat: no-repeat; 
+    // Make sure that the dimensions below match the background image.
+    box-sizing: border-box
+    width: 1006px
+    height: 363px
+    padding-top 30px
     padding-left: 30px
     padding-right: 30px
     padding-bottom: 15px
   }
 
   #quotatext {
+    color: #0F1B4B
+    text-shadow: 0 0 5px white
+    absolute: top 2px
     width: 480px
+    z-index: 3
   }
 
   #imgcommunity {
-    absolute: top 15px left 590px
+    absolute: top 20px left 610px
     animation:spin 550s linear infinite;
+    z-index: 2
+  }
+
+  #combg {
+    absolute: top 0px left 0px
+    z-index: 1
   }
 
   #projects {
@@ -132,23 +143,8 @@
   }
 
   #externalLinks {
-    absolute: top -14px left 644px
-  }
+    absolute: left 684px top -16px
 
-  ul {
-    padding 0px
-    margin 0px
-    width: 100px
-  }
-
-  li {
-    padding-left: 0px
-    display: inline
-  }
-
-  #externalLinks {
-    absolute: left 714px
-    margin-top: 862px
     a:link, a:visited {
       display: block
       font-weight: bold
@@ -164,9 +160,22 @@
       text-decoration:none
       margin-bottom: -2px
     }  
+
     a:hover, a:active {
-    transition:.2s;
-    background-color: #434343
+      transition:.2s;
+      background-color: #434343
+      border-bottom: 0px
+    }
+
+    ul {
+      padding 0px
+      margin 0px
+      width: 100px
+    }
+
+    li {
+      padding-left: 0px
+      display: inline
     }
   }
 
@@ -178,34 +187,22 @@
   padding: 6px 15px
   color: white
   display: inline-block
-
-  -webkit-box-shadow: 0px 2px 0px 0px rgba(145, 0, 0, 1);
-  -moz-box-shadow:    0px 2px 0px 0px rgba(145, 0, 0, 1);
-  box-shadow:         0px 2px 0px 0px rgba(145, 0, 0, 1);
+  box-shadow: 0px 2px 0px 0px rgba(145, 0, 0, 1);
 }
 
 .aWebsite {
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 
 .aMiniblog {
   margin-left: 2px
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
+
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
 .aMiniblog_alone, .aWebsite_alone {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 

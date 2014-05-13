@@ -8,7 +8,8 @@ module.exports =
     blog: ['Blog', 'unsere Gedanken zu Clonk']
     forums: ['Forum', 'Plattform zum Austausch']
     community: ['Community', 'die Beste wo gibt']
-    timeline: ['Zeitreise', 'Nostalgie pur']
+    development: ['Entwicklung', 'ultimative Sucht']
+    league: ['League', 'die Besten der Besten']
     comic: ['Comics', 'einfach Clonk']
 
   twitch: 'Clonk Livestream auf Twitch.tv!'
@@ -19,6 +20,11 @@ module.exports =
     heading: 'Das ist nicht die Seite, nach der du suchst.'
     terrible: 'Das ist furchtbar :-('
     picture: 'Dafür kannst du ein Bild betrachten! Geh zurück zur Startseite, wenn du damit fertig bist.'
+
+  # Footer
+  home: 'Startseite'
+  forums: 'Forum'
+  legal: 'Impressum'
 
   # Startseite
   index:
@@ -93,21 +99,70 @@ module.exports =
   <p>devcom-Clonk möchte eine Developer Community werden, in der Tutorials rund um das Thema Scripten in Clonk in ansprechender Form bereitgestellt werden.</p>
   '''
 
-  QuoteH2:
+  QuoteH1:
     'Ein Wort an die Community'
     
   Quote: [
     '<p>Clonk ist ein besonderes Spiel. Mindestens genauso besonders ist seine Community! Viele sind schon seit Jahren dabei – genauso wie wir.</p>'
     '''<p>Nach der für viele schockierenden <a href='http://www.clonk.de/forum/de/topic_show.pl?tid=10509'>Ankündigung im Clonk Forum</a> wird es vermutlich bald keine offizielle Clonk Seite als Anlaufpunkt mehr geben.</p>'''
     '<p><b>Wir möchten euch allen hier ein neues zu Hause geben.</b></p>'
-    '''<p>Damit es richtig gemütlich wird, basteln wir immer wieder an dieser Seite und sind für Vorschläge stets offen! Ebenfalls können Wünsche und Ideen im <a href='https://clonkspot.org/forum/forum_show.pl'><b>im Forum</b></a> geäußert werden.</p>'''
+    '''<p>Damit es richtig gemütlich wird, basteln wir immer wieder an dieser Seite und sind für Vorschläge stets offen! Ebenfalls können Wünsche und Ideen im <a href='..//forum/forum_show.pl'><b>im Forum</b></a> geäußert werden.</p>'''
     '<p>Clonkspot ist unser Geschenk an euch!</p>'
     '<p><i>- Luchs, Nachtschatten, Nachtfalter</i></p>'
   ]
 
+  Whatyoucando: '''
+    <h2>Und was kannst du tun?</h2>
+    <p>Eine Community lebt nur solange ihre Mitglieder aktiv sind. Viele nutzen die Gelegenheit gemeinsam über den Masterserver zu spielen. Dabei sind schon viele Freundschaften entstanden! Andere beteiligen sich <a href="../forum/forum_show.pl">aktiv an Diskussionen</a> und steuern neue Ideen bei! Ein Teil der Community beschäftigt sich vor allem mit der Entwicklung von neuem Content. Ein Entwicklerteam lebt davon, wenn kleine Erfolge erzielt werden und andere in der Community die Erweiterungen spielen und dazu ihr Feedback geben.</p>
+    <p>Hier sind weitere Projekte, die in den letzten Jahren entstanden sind!</p>
+  '''
+
   Timeline: '''
-  <iframe src='https://clonkspot.org/TimelineJS/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=de&start_zoom_adjust=-5&height=650' width='100%' height='650' frameborder='0'></iframe>
+    <iframe src='https://clonkspot.org/TimelineJS/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=de&start_zoom_adjust=-5&height=650' width='100%' height='650' frameborder='0'></iframe>
   '''
 
   externalLinksH2:
     'externe Links'
+
+  # Development  
+  
+  Heading:
+    'Alle Wege führen zu Clonk'
+
+  Intro:
+    'Clonk ist Bestens geeignet um zusätzlichen Content zu entwickeln. Doch wo anfangen? Hier wird dir geholfen!'
+
+  Mod:
+    'In diesen Bereichen lässt sich Clonk modden:'
+
+  Graphics: '''
+    <h3>Grafik</h3>
+    <p>Clonk Rage kann Ingame-Grafiken nur als Sprites (Bilder im PNG-Format) verarbeiten. Animationen werden als Teilausschnitt mit in die Datei gerendert und später per Koordinaten aus einer Textdatei zusammengefügt.</p>'''
+
+  Script: '''
+    <h3>Script</h3>
+    <p>Basierend auf C ist die Scriptsprache von Clonk c4script. Darin wird der Quellcode für ein Objekt oder ein Szenario geschrieben, welcher dann von der Engine gelesen wird. Viele Funktionen sind bereits vorhanden, es können aber auch eigene geschrieben werden.</p>
+  '''
+
+  Scenario: '''
+   <h3>Szenarien</h3>
+   <p>Mit geringen Grundkentnisse können neue Szenarien entworfen werden! Für statische Karten kann Clonk Bitmaps einlesen oder man verwendet direkt die internen Tools und kann Live eine Karte malen – Objekte können optional per Drag'n'Drop in die Karte reingezogen werden. Dynamische Karten können mittels Textdateien für den Generator geschrieben werden.</p>
+  '''
+
+  Scenario2: '''
+  <p>Das Aussehen der Karten kann man mit dem modden von Materialtexturen auch komplett ändern. Via Script können des Weiteren komplette Inhalte und Stories erzeugt werden!</p>
+  '''
+
+  Sound: '''
+    <h3>Musik & Sound </h3>
+    <p>Auch hier kann alles nur erdenkliche modifiziert werden. Die Dateien müssen dazu alle im Wave-Format vorhanden sein (bei Musik auch mid, xm, it, s3m, mod und ogg möglich). Als mächtiges und kostenloses Audioprogramm ist Audacity sehr zu empfehlen!</p>
+  '''
+ 
+  Chat:
+    'Chathilfe'
+
+  #Sidebar
+
+  Doku: '''
+    <a href="http://crdocs.clonkspot.org/de/sdk/">Online Doku</a>
+  '''

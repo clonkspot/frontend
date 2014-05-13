@@ -8,7 +8,8 @@ module.exports =
     blog: ['Blog', 'our thoughts about Clonk']
     forums: ['Forum', 'join the Diskussion']
     community: ['Community', 'the BEST']
-    timeline: ['Timeline', 'pure nostalgia']
+    development: ['Development', 'ultimate addiction']
+    league: ['League', 'the best of the best']
     comic: ['Comics', 'simply Clonk']
 
   twitch: 'Clonk Livestream on Twitch.tv!'
@@ -19,6 +20,11 @@ module.exports =
     heading: 'This is not the page you are looking for.'
     terrible: 'This is terrible. :-('
     picture: "But wait! Enjoy this picture! Go back to the homepage if you've finished this task."
+
+  # Footer
+  home: 'Home'
+  forums: 'Forums'
+  legal: 'Legal notice'
 
   index:
     posted: 'posted by '
@@ -92,7 +98,7 @@ module.exports =
   <p>devcom-Clonk is an upcoming platform by developers for developers. Here you will find tutorials about everything related to scripting in Clonk. It focuses on bringing people together and giving newcomers a good start into development.</p>
   '''
 
-  QuoteH2:
+  QuoteH1:
     'A word to the community'
     
   Quote: [
@@ -104,6 +110,12 @@ module.exports =
     '<p><i>- Luchs, Nachtschatten, Nachtfalter</i></p>'
   ]
 
+  Whatyoucando: '''
+    <h2>And how can you contribute?</h2>
+    <p>A community lives only as long as its members are active. Many take the opportunity to play together via the master server. From that, many friendships originated already! Others like to participate actively in discussions and contribute new ideas. A part of the community primarily concentrates on developing new content. Development teams depend on small success stories and from others in the community playing the content and giving feedback about it.</p>
+    <p>These are some more projects created in recent years:</p>
+  '''
+
   Timeline: '''
   <p>Unfortunately, the timeline wasn't translated in time. Below is the German version - translation coming soon!</p>
   <iframe src='https://clonkspot.org/TimelineJS/embed/index.html?source=0Anfld4_8DEA2dFBWd1BkVFpXN1cwNWRyVm14OWdhMnc&font=Bevan-PotanoSans&maptype=toner&lang=de&start_zoom_adjust=-5&height=650' width='100%' height='650' frameborder='0'></iframe>
@@ -111,3 +123,52 @@ module.exports =
 
   externalLinksH2:
     'External links'
+  
+ 
+  # Development  
+  
+  Heading:
+    'All roads lead to Clonk.'
+  
+  Intro:
+    '''Clonk's strength is its openness for modding and additional content. But where to begin? Here! Let's get started.'''
+  
+  Mod:
+    'These are the areas of modding for Clonk:'
+
+  Graphics: '''
+    <h3>Graphics</h3>
+    <p>For ingame graphics, Clonk Rage only supports sprites (with images in PNG format). Animations are included with the regular graphics in the same file, and get overlaid ingame according to coordinates specified in a text file.
+  '''
+
+  Script: '''
+    <h3>Script</h3>
+    <p>The scripting language of Clonk, based on C, is called "C4Script". Used for all objects and scenarios, the engine interprets it to create all the wonderful behaviour you can see. Many functions are at your fingertips, but of course you're free to write your own.</p>
+  '''
+
+  Scenario: '''
+    <h3>Levels</h3>
+    <p>With only basic knowledge you're ready to build new levels! For static maps, Clonk reads bitmap graphics, or you draw them live ingame with the built-in tools. They also allow placing objects via drag'n'drop. Dynamic maps use a generator that reads map specifications from text files.</p>
+  '''
+  
+  Scenario2: '''
+    <p>By adding or replacing material textures, you can change the look to anything you want. Finally, with a scenario script you can create extensive worlds and stories!</p>
+  '''
+
+  Sound: '''
+    <h3>Music & Sound </h3>
+    <p>Another area for extensive modding. For sound, Clonk plays wave files. Additionally mid, xm, it, s3m, mod and ogg are supported for music. As powerful and free editing software, we recommend Audacity.</p>
+  '''
+
+  Chat:
+    'Instant help'
+
+  #Sidebar
+
+  Doku: '''
+    <a href="http://crdocs.clonkspot.org/en/sdk/">Online Documentation</a>
+  '''
+
+  EnglishNote: '''
+      <p>Due to lack of translation, the following tutorials are only available in german. Sorry :(</p>
+  '''
