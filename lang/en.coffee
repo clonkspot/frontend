@@ -166,7 +166,7 @@ module.exports =
   #Sidebar
 
   Doku: '''
-    <a href="http://crdocs.clonkspot.org/en/sdk/">Online Documentation</a>
+    <a href="http://crdocs.clonkspot.org/en/sdk/">Online Docs</a>
   '''
 
   EnglishNote: '''
