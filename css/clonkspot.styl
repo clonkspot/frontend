@@ -2,6 +2,7 @@
 
 @import "nib"
 @import "lib/variables"
+@import "lib/mixins"
 
 html {
   background: #B3B3B3 url(/images/bg.jpg) no-repeat
@@ -9,16 +10,17 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif
-  font-size: 16px
-  line-height: 24pt
-  color: #212121
-
-  width: mainWidth
   background-color: white
   margin: 0 auto
   text-align: left
   position: relative
+}
+
+// Namespace for styles which only apply to the main pages in this repo.
+body.clonkspot {
+  main-styles()
+
+  width: mainWidth
 }
 
 img {

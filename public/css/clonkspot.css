@@ -4,15 +4,17 @@ html {
   background-position: 50% 0;
 }
 body {
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+}
+body.clonkspot {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 24pt;
   color: #212121;
   width: 1006px;
-  background-color: #fff;
-  margin: 0 auto;
-  text-align: left;
-  position: relative;
 }
 img {
   border: none;
@@ -188,6 +190,12 @@ a:buttonlink:active {
 }
 
 /* Layout */
+header {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24pt;
+  color: #212121;
+}
 header .topimg,
 header nav > div {
   width: 1006px;
@@ -274,6 +282,10 @@ header .twitch a:visited {
   color: #fff;
 }
 footer {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24pt;
+  color: #212121;
   margin-top: 30px;
   padding-left: 50px;
   height: 50px;
