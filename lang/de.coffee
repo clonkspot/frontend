@@ -9,7 +9,7 @@ module.exports =
     forums: ['Forum', 'Plattform zum Austausch']
     community: ['Community', 'die Beste wo gibt']
     development: ['Entwicklung', 'ultimative Sucht']
-    league: ['League', 'die Besten der Besten']
+    league: ['Liga', 'die Besten der Besten']
     comic: ['Comics', 'einfach Clonk']
 
   twitch: 'Clonk Livestream auf Twitch.tv!'
