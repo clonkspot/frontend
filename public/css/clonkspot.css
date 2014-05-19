@@ -59,7 +59,7 @@ normal {
   text-shadow: 2px 2px #1f1e1d;
   z-index: 1;
 }
-li {
+ul {
   list-style-image: url("../images/ulicon.png");
 }
 h1 {
