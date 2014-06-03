@@ -6,7 +6,7 @@ module.exports =
   langselect: 'Ich m&ouml;chte Deutsch.'
   nav:
     blog: ['Blog', 'our thoughts about Clonk']
-    forums: ['Forum', 'join the Diskussion']
+    forums: ['Forum', 'join the discussion']
     community: ['Community', 'the BEST']
     development: ['Development', 'ultimate addiction']
     league: ['League', 'the best of the best']
