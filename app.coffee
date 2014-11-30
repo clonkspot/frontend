@@ -30,9 +30,10 @@ else
 
   # Proxy api requests to the online backend.
   app.use '/api', proxy(url.parse(cfg.get('proxy.api')))
-  # Proxy blog and forum pages to prevent broken links in the dev environment.
+  # Proxy blog, forum and league pages to prevent broken links in the dev environment.
   app.use '/blog', proxy(url.parse('https://clonkspot.org/blog'))
   app.use '/forum', proxy(url.parse('https://clonkspot.org/forum'))
+  app.use '/league', proxy(url.parse('https://clonkspot.org/league'))
 
 app.use express.static('public')
 app.use express.cookieParser()
