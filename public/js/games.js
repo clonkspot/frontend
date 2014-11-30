@@ -446,7 +446,9 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
   };
 
   unquote = function(str) {
-    return str.slice(1, -1);
+    return str.slice(1, -1).replace(/\\(\d+)/g, function(match, n) {
+      return String.fromCharCode(parseInt(n, 8));
+    });
   };
 
   ractive = new Ractive({

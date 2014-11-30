@@ -5,7 +5,10 @@ findIndex = (array, fun) ->
     if fun(item)
       return i
 
-unquote = (str) -> str.slice(1, -1)
+unquote = (str) ->
+  str.slice(1, -1)
+     .replace /\\(\d+)/g, (match, n) ->
+       String.fromCharCode parseInt(n, 8)
 
 ractive = new Ractive
   el: '#games'
