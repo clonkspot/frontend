@@ -22,7 +22,9 @@ ractive = new Ractive
     getPlayers: (r) ->
       players = []
       for client in r['[Reference]'][0]['[PlayerInfos]'][0]['[Client]']
-        for player in client['[Player]']
+        array = client['[Player]']
+        continue unless array?
+        for player in array
           players.push unquote(player.Name)
       return players
 

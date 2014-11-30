@@ -462,14 +462,17 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
         return (_ref = r['[Reference]'][0].MaxPlayers) != null ? _ref : '?';
       },
       getPlayers: function(r) {
-        var client, player, players, _i, _j, _len, _len1, _ref, _ref1;
+        var array, client, player, players, _i, _j, _len, _len1, _ref;
         players = [];
         _ref = r['[Reference]'][0]['[PlayerInfos]'][0]['[Client]'];
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           client = _ref[_i];
-          _ref1 = client['[Player]'];
-          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
-            player = _ref1[_j];
+          array = client['[Player]'];
+          if (array == null) {
+            continue;
+          }
+          for (_j = 0, _len1 = array.length; _j < _len1; _j++) {
+            player = array[_j];
             players.push(unquote(player.Name));
           }
         }
