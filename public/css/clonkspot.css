@@ -153,6 +153,22 @@ h6 {
   position: relative;
   top: 2px;
 }
+.link-list {
+  background-color: #3a3a3a;
+}
+.link-list a {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-bottom: 6px solid #cf0401;
+}
+.link-list a:hover {
+  background-color: #cf0401;
+}
 footer a {
   margin-right: 50px;
 }
