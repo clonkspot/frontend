@@ -12,6 +12,8 @@ module.exports = (grunt) ->
         files: 'public/js/main.js': 'js/main.coffee'
       home:
         files: 'public/js/home.js': 'js/home.coffee'
+      games:
+        files: 'public/js/games.js': 'js/games.coffee'
     watch:
       stylus:
         files: 'css/**/*.styl'
