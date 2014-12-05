@@ -433,7 +433,7 @@ process.binding = function (name) {
 });
 
 require.define("/games.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
-  var events, findIndex, ractive, rmGame, unquote;
+  var events, findIndex, ractive, rmGame;
 
   findIndex = function(array, fun) {
     var i, item, _i, _len;
@@ -445,19 +445,16 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
     }
   };
 
-  unquote = function(str) {
-    return str.slice(1, -1).replace(/\\(\d+)/g, function(match, n) {
-      return String.fromCharCode(parseInt(n, 8));
-    });
-  };
-
   ractive = new Ractive({
     el: '#games',
     template: '#games-template',
     data: {
       games: [],
+      getScenarioTitle: function(r) {
+        return r['[Reference]'][0].Title;
+      },
       getHostName: function(r) {
-        return unquote(r['[Reference]'][0]['[Client]'][0].Name);
+        return r['[Reference]'][0]['[Client]'][0].Name;
       },
       getMaxPlayerCount: function(r) {
         var _ref;
@@ -475,7 +472,9 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
           }
           for (_j = 0, _len1 = array.length; _j < _len1; _j++) {
             player = array[_j];
-            players.push(unquote(player.Name));
+            if (!((player.Flags != null) && ~player.Flags.indexOf('Removed'))) {
+              players.push(player.Name);
+            }
           }
         }
         return players;

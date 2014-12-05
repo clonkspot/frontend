@@ -5,19 +5,17 @@ findIndex = (array, fun) ->
     if fun(item)
       return i
 
-unquote = (str) ->
-  str.slice(1, -1)
-     .replace /\\(\d+)/g, (match, n) ->
-       String.fromCharCode parseInt(n, 8)
-
 ractive = new Ractive
   el: '#games'
   template: '#games-template'
   data:
     games: []
 
+    getScenarioTitle: (r) ->
+      r['[Reference]'][0].Title
+
     getHostName: (r) ->
-      unquote(r['[Reference]'][0]['[Client]'][0].Name)
+      r['[Reference]'][0]['[Client]'][0].Name
 
     getMaxPlayerCount: (r) ->
       r['[Reference]'][0].MaxPlayers ? '?'
@@ -28,7 +26,8 @@ ractive = new Ractive
         array = client['[Player]']
         continue unless array?
         for player in array
-          players.push unquote(player.Name)
+          unless player.Flags? and ~player.Flags.indexOf('Removed')
+            players.push player.Name
       return players
 
   addGame: (game) ->
