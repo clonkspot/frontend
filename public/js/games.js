@@ -454,7 +454,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
       if (game.is_password_needed) {
         base++;
       }
-      return base * (+game.date_created);
+      return base * (Date.now() - game.date_created);
     };
     return getWeight(a) - getWeight(b);
   };

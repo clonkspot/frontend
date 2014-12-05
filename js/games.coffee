@@ -14,7 +14,7 @@ compareGames = (a, b) ->
     else 
       30
     base++ if game.is_password_needed
-    return base * (+game.date_created)
+    return base * (Date.now() - game.date_created)
   getWeight(a) - getWeight(b)
 
 ractive = new Ractive
