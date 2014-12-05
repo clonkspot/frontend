@@ -5,6 +5,18 @@ findIndex = (array, fun) ->
     if fun(item)
       return i
 
+compareGames = (a, b) ->
+  getWeight = ({game}) ->
+    base = if game.status == 'lobby'
+      10
+    else if game.is_join_allowed
+      20
+    else 
+      30
+    base-- if game.is_password_needed
+    return base * (+game.date_created)
+  getWeight(a) - getWeight(b)
+
 ractive = new Ractive
   el: '#games'
   template: '#games-template'
@@ -31,25 +43,29 @@ ractive = new Ractive
       return players
 
   addGame: (game) ->
-    @get('games').push game
+    games = @get('games')
+    games.push game
+    games.sort(compareGames)
 
   updateGame: (game) ->
     games = @get('games')
     i = findIndex games, (g) -> game.id is g.id
     if i?
       games.splice i, 1, game
+      games.sort(compareGames)
 
   removeGame: (game) ->
     games = @get('games')
     i = findIndex games, (g) -> game.id is g.id
     if i?
       games.splice i, 1
+      games.sort(compareGames)
 
 events = new EventSource '/league/game_events.php'
 
 events.addEventListener 'init', (e) ->
   games = JSON.parse(e.data)
-  ractive.set 'games', games
+  ractive.set 'games', games.sort(compareGames)
 , false
 
 events.addEventListener 'create', (e) ->

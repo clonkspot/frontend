@@ -433,7 +433,7 @@ process.binding = function (name) {
 });
 
 require.define("/games.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
-  var events, findIndex, ractive, rmGame;
+  var compareGames, events, findIndex, ractive, rmGame;
 
   findIndex = function(array, fun) {
     var i, item, _i, _len;
@@ -443,6 +443,20 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
         return i;
       }
     }
+  };
+
+  compareGames = function(a, b) {
+    var getWeight;
+    getWeight = function(_arg) {
+      var base, game;
+      game = _arg.game;
+      base = game.status === 'lobby' ? 10 : game.is_join_allowed ? 20 : 30;
+      if (game.is_password_needed) {
+        base--;
+      }
+      return base * (+game.date_created);
+    };
+    return getWeight(a) - getWeight(b);
   };
 
   ractive = new Ractive({
@@ -481,7 +495,10 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
       }
     },
     addGame: function(game) {
-      return this.get('games').push(game);
+      var games;
+      games = this.get('games');
+      games.push(game);
+      return games.sort(compareGames);
     },
     updateGame: function(game) {
       var games, i;
@@ -490,7 +507,8 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
         return game.id === g.id;
       });
       if (i != null) {
-        return games.splice(i, 1, game);
+        games.splice(i, 1, game);
+        return games.sort(compareGames);
       }
     },
     removeGame: function(game) {
@@ -500,7 +518,8 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
         return game.id === g.id;
       });
       if (i != null) {
-        return games.splice(i, 1);
+        games.splice(i, 1);
+        return games.sort(compareGames);
       }
     }
   });
@@ -510,7 +529,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
   events.addEventListener('init', function(e) {
     var games;
     games = JSON.parse(e.data);
-    return ractive.set('games', games);
+    return ractive.set('games', games.sort(compareGames));
   }, false);
 
   events.addEventListener('create', function(e) {
