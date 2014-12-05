@@ -452,7 +452,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
       game = _arg.game;
       base = game.status === 'lobby' ? 10 : game.is_join_allowed ? 20 : 30;
       if (game.is_password_needed) {
-        base--;
+        base++;
       }
       return base * (+game.date_created);
     };
@@ -509,8 +509,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
     addGame: function(game) {
       var games;
       games = this.get('games');
-      games.push(game);
-      return games.sort(compareGames);
+      return games.unshift(game);
     },
     updateGame: function(game) {
       var games, i;
@@ -519,7 +518,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
         return game.id === g.id;
       });
       if (i != null) {
-        games.splice(i, 1, game);
+        this.set('games.' + i, game);
         return games.sort(compareGames);
       }
     },

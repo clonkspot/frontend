@@ -52,14 +52,14 @@ ractive = new Ractive
 
   addGame: (game) ->
     games = @get('games')
-    games.push game
-    games.sort(compareGames)
+    games.unshift game
+    # Will be sorted properly on first update.
 
   updateGame: (game) ->
     games = @get('games')
     i = findIndex games, (g) -> game.id is g.id
     if i?
-      games.splice i, 1, game
+      @set 'games.'+i, game
       games.sort(compareGames)
 
   removeGame: (game) ->
