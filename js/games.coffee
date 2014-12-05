@@ -42,6 +42,14 @@ ractive = new Ractive
             players.push player.Name
       return players
 
+    getTags: (game) ->
+      tags = [game.status]
+      tags.push (if game.type == 'noleague' then game.type else 'league')
+      tags.push 'lzb' if game.is_join_allowed
+      tags.push 'pw' if game.is_password_needed
+      return tags.join ' '
+        
+
   addGame: (game) ->
     games = @get('games')
     games.push game

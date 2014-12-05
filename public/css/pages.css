@@ -452,6 +452,12 @@
 #games .game-list p {
   line-height: 18px;
 }
+#games .game-list .running {
+  opacity: 0.7;
+}
+#games .game-list .running:not(.lzb) {
+  cursor: not-allowed;
+}
 
 /* Home page */
 #home {

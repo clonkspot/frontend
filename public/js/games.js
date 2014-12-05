@@ -492,6 +492,18 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
           }
         }
         return players;
+      },
+      getTags: function(game) {
+        var tags;
+        tags = [game.status];
+        tags.push((game.type === 'noleague' ? game.type : 'league'));
+        if (game.is_join_allowed) {
+          tags.push('lzb');
+        }
+        if (game.is_password_needed) {
+          tags.push('pw');
+        }
+        return tags.join(' ');
       }
     },
     addGame: function(game) {

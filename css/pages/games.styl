@@ -2,12 +2,20 @@
   .game-list {
     a {
       // Fix collapsing margins.
-      padding-top: 1px;
-      padding-left: 16px;
+      padding-top: 1px
+      padding-left: 16px
     }
 
     p {
-      line-height: 18px;
+      line-height: 18px
+    }
+
+    .running {
+      opacity: 0.7
+
+      &:not(.lzb) {
+        cursor: not-allowed
+      }
     }
   }
 }
