@@ -458,6 +458,13 @@
 #games .game-list .running:not(.lzb) {
   cursor: not-allowed;
 }
+#games .game-list .fa-lock {
+  display: none;
+}
+#games .game-list .pw .fa-lock {
+  display: inline-block;
+  margin-left: 0.5em;
+}
 
 /* Home page */
 #home {

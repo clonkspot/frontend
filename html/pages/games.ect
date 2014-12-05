@@ -1,5 +1,8 @@
 <% extend 'layout.ect' %> 
 
+<% block 'head': %>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<% end %>
 
 <% block 'script': %>
   <script src="//cdn.ractivejs.org/0.6.1/ractive.js" type="text/javascript"></script>
@@ -15,7 +18,7 @@
   <div class="game-list link-list">
     {{#games}}
     <a href="clonk://league.clonkspot.org:80/?action=query&game_id={{id}}" class="{{getTags(game)}}">
-      <h2>{{getScenarioTitle(reference)}}</h2>
+      <h2>{{getScenarioTitle(reference)}} <i class="fa fa-lock"></i></h2>
       <p><small>auf {{getHostName(reference)}} | {{getPlayers(reference).length || '0'}} / {{getMaxPlayerCount(reference)}} Spieler</small></p>
       <p><small>{{getPlayers(reference).join(', ')}}</small></p>
     </a>
