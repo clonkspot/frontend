@@ -13,7 +13,7 @@ compareGames = (a, b) ->
       20
     else 
       30
-    base-- if game.is_password_needed
+    base++ if game.is_password_needed
     return base * (+game.date_created)
   getWeight(a) - getWeight(b)
 
