@@ -3,7 +3,7 @@
     <a href="/">
       <img src="/images/header.jpg" alt="header">
       <div class="logo">
-	<img src="/images/logo.png" alt="clonkspot - your hub for Clonk.">
+        <img src="/images/logo.png" alt="clonkspot - your hub for Clonk.">
       </div>
     </a>
 
@@ -18,14 +18,14 @@
   <nav>
     <div>
       <a href="/">
-	<img src="/images/home<%- if @req.url is '/' then '_hl' else '' %>.png" alt="Home">
+        <img src="/images/home<%- if @req.url is '/' then '_hl' else '' %>.png" alt="Home">
       </a>
       <% for key, dataitem of @data.nav : %>
       <a href="<%- dataitem.url %>"
-	class="<%- if @req.url.startsWith(dataitem.url) then 'active' else '' %>"
-	style="<%- if width = dataitem.width then "width: #{width}px" else '' %>">
-	<b><%= @t.nav[key][0] %></b>
-	<small><%= @t.nav[key][1] %></small>
+        class="<%- if @req.url.startsWith(dataitem.url) then 'active' else '' %>"
+        style="<%- if width = dataitem.width then "width: #{width}px" else '' %>">
+        <b><%= @t.nav[key][0] %></b>
+        <small><%= @t.nav[key][1] %></small>
       </a>
       <% end %>
     </div>
@@ -33,13 +33,13 @@
 
   <% if @req.url is '/_layout': %>
   <script>
-	(function() {
-	  var url, el;
-	  url = location.pathname + '/';
-	  url = url.slice(0, url.indexOf('/', 1));
-	  el = document.querySelector('nav a[href^="' + url + '"]')
-	  el && el.classList.add('active');
-	})();
+    (function() {
+      var url, el;
+      url = location.pathname + '/';
+      url = url.slice(0, url.indexOf('/', 1));
+      el = document.querySelector('nav a[href^="' + url + '"]')
+      el && el.classList.add('active');
+    })();
   </script>
   <% end %>
 
