@@ -24,7 +24,7 @@ ractive = new Ractive
     games: []
 
     getScenarioTitle: (r) ->
-      r['[Reference]'][0].Title
+      r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
 
     getHostName: (r) ->
       r['[Reference]'][0]['[Client]'][0].Name
