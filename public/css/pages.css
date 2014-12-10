@@ -446,8 +446,15 @@
 }
 
 #games .game-list a {
-  padding-top: 1px;
+  height: 112px;
+  display: flex;
+}
+#games .game-list .game-info {
   padding-left: 16px;
+}
+#games .game-list h2,
+#games .game-list p {
+  margin: 0.5em 0;
 }
 #games .game-list p {
   line-height: 18px;
