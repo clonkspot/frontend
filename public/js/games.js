@@ -467,6 +467,9 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
       getScenarioTitle: function(r) {
         return r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '');
       },
+      getScenarioFilename: function(r) {
+        return r['[Reference]'][0]['[Scenario]'][0].Filename;
+      },
       getHostName: function(r) {
         return r['[Reference]'][0]['[Client]'][0].Name;
       },

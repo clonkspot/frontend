@@ -449,6 +449,9 @@
   height: 112px;
   display: flex;
 }
+#games .game-list img {
+  width: 150px;
+}
 #games .game-list .game-info {
   padding-left: 16px;
 }

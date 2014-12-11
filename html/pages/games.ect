@@ -19,7 +19,7 @@
   <div class="game-list link-list">
     {{#games}}
     <a href="clonk://league.clonkspot.org:80/?action=query&game_id={{id}}" class="{{getTags(game)}}" intro-outro="slide">
-      <img src="/images/games/nothumb.png" alt="">
+      <img src="/images/games/Title.png/{{getScenarioFilename(reference)}}" alt="">
       <div class="game-info">
         <h2>{{getScenarioTitle(reference)}} <i class="fa fa-lock"></i></h2>
         <p>auf {{getHostName(reference)}} | {{getPlayers(reference).length || '0'}} / {{getMaxPlayerCount(reference)}} Spieler</p>
