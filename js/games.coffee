@@ -31,7 +31,9 @@ ractive = new Ractive
     status: 'connecting'
 
     getScenarioTitle: (r) ->
-      r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
+      r['[Reference]'][0].Title
+        .replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
+        .replace(/<\/?i>/g, '')
 
     getScenarioFilename: (r) ->
       r['[Reference]'][0]['[Scenario]'][0].Filename.replace(/\\/g, '/')
