@@ -38,7 +38,9 @@ ractive = new Ractive
 
     getPlayers: (r) ->
       players = []
-      for client in r['[Reference]'][0]['[PlayerInfos]'][0]['[Client]']
+      clients = r['[Reference]'][0]['[PlayerInfos]']?[0]['[Client]']
+      return players unless clients?
+      for client in clients
         array = client['[Player]']
         continue unless array?
         for player in array
