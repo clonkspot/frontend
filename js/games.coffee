@@ -28,7 +28,7 @@ ractive = new Ractive
       r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
 
     getScenarioFilename: (r) ->
-      r['[Reference]'][0]['[Scenario]'][0].Filename
+      r['[Reference]'][0]['[Scenario]'][0].Filename.replace(/\\/g, '/')
 
     getHostName: (r) ->
       r['[Reference]'][0]['[Client]'][0].Name
