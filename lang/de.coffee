@@ -9,7 +9,7 @@ module.exports =
     forums: ['Forum', 'Plattform zum Austausch']
     community: ['Community', 'die Beste wo gibt']
     development: ['Entwicklung', 'ultimative Sucht']
-    league: ['Liga', 'die Besten der Besten']
+    games: ['Server', 'spiel&#x2019; mit']
     comic: ['Comics', 'einfach Clonk']
 
   twitch: 'Clonk Livestream auf Twitch.tv!'
@@ -22,10 +22,12 @@ module.exports =
     picture: 'Dafür kannst du ein Bild betrachten! Geh zurück zur Startseite, wenn du damit fertig bist.'
 
   # Footer
-  home: 'Startseite'
-  forums: 'Forum'
-  development: 'Entwicklung'
-  legal: 'Impressum'
+  footer:
+    home: 'Startseite'
+    forums: 'Forum'
+    development: 'Entwicklung'
+    league: 'Liga'
+    legal: 'Impressum'
 
   # Startseite
   index:

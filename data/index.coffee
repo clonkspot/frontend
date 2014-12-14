@@ -13,10 +13,10 @@ module.exports =
       width: 145
     development:
       url: '/development'
-      width: 155
-    league:
-      url: '/league/'
-      width: 140
+      width: 160
+    games:
+      url: '/games'
+      width: 135
     comic:
       url: '/comic'
 

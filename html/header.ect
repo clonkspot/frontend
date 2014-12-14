@@ -24,8 +24,8 @@
       <a href="<%- dataitem.url %>"
         class="<%- if @req.url.startsWith(dataitem.url) then 'active' else '' %>"
         style="<%- if width = dataitem.width then "width: #{width}px" else '' %>">
-        <b><%= @t.nav[key][0] %></b>
-        <small><%= @t.nav[key][1] %></small>
+        <b><%- @t.nav[key][0] %></b>
+        <small><%- @t.nav[key][1] %></small>
       </a>
       <% end %>
     </div>

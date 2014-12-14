@@ -9,7 +9,7 @@ module.exports =
     forums: ['Forum', 'join the discussion']
     community: ['Community', 'the BEST']
     development: ['Development', 'ultimate addiction']
-    league: ['League', 'the best of the best']
+    games: ['Servers', 'play along']
     comic: ['Comics', 'simply Clonk']
 
   twitch: 'Clonk Livestream on Twitch.tv!'
@@ -22,10 +22,12 @@ module.exports =
     picture: "But wait! Enjoy this picture! Go back to the homepage if you've finished this task."
 
   # Footer
-  home: 'Home'
-  forums: 'Forums'
-  development: 'Development'
-  legal: 'Legal notice'
+  footer:
+    home: 'Home'
+    forums: 'Forums'
+    development: 'Development'
+    league: 'League'
+    legal: 'Legal notice'
 
   index:
     posted: 'posted by '
