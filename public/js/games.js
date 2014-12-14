@@ -450,11 +450,11 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
     getWeight = function(_arg) {
       var base, game;
       game = _arg.game;
-      base = game.status === 'lobby' ? 10 : game.is_join_allowed ? 20 : 30;
-      if (game.is_password_needed) {
+      base = game == null ? 40 : game.status === 'lobby' ? 10 : game.is_join_allowed ? 20 : 30;
+      if (game != null ? game.is_password_needed : void 0) {
         base++;
       }
-      return base * (Date.now() - game.date_created);
+      return base * (Date.now() - (game != null ? game.date_created : void 0));
     };
     return getWeight(a) - getWeight(b);
   };

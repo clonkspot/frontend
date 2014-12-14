@@ -7,14 +7,16 @@ findIndex = (array, fun) ->
 
 compareGames = (a, b) ->
   getWeight = ({game}) ->
-    base = if game.status == 'lobby'
+    base = if not game?
+      40 # not sure when this happens
+    else if game.status == 'lobby'
       10
     else if game.is_join_allowed
       20
     else 
       30
-    base++ if game.is_password_needed
-    return base * (Date.now() - game.date_created)
+    base++ if game?.is_password_needed
+    return base * (Date.now() - game?.date_created)
   getWeight(a) - getWeight(b)
 
 ractive = new Ractive
