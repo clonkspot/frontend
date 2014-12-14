@@ -435,6 +435,11 @@ process.binding = function (name) {
 require.define("/games.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
   var compareGames, events, findIndex, ractive, rmGame;
 
+  if (window.EventSource == null) {
+    $('#games .status').show();
+    return;
+  }
+
   findIndex = function(array, fun) {
     var i, item, _i, _len;
     for (i = _i = 0, _len = array.length; _i < _len; i = ++_i) {

@@ -1,5 +1,9 @@
 # Masterserver viewer
 
+unless window.EventSource?
+  $('#games .status').show()
+  return
+
 findIndex = (array, fun) ->
   for item, i in array
     if fun(item)
