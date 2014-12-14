@@ -31,4 +31,12 @@
     </a>
     {{/games}}
   </div>
+  <div class="status {{status}}">
+    <i class="connected fa fa-wifi" title="<%= @t.games.status.connected %>"></i>
+    <i class="connecting fa fa-spin fa-circle-o-notch" title="<%= @t.games.status.connecting %>"></i>
+    <i class="disconnected fa fa-plug" title="<%= @t.games.status.disconnected %>"></i>
+    <p>
+      {{totalPlayers}} <%= @t.games.players %> in {{games.length}} <%= @t.games.games %>
+    </p>
+  </div>
 </script>

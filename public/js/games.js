@@ -464,6 +464,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
     template: '#games-template',
     data: {
       games: [],
+      status: 'connecting',
       getScenarioTitle: function(r) {
         return r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '');
       },
@@ -507,6 +508,18 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
           tags.push('pw');
         }
         return tags.join(' ');
+      }
+    },
+    computed: {
+      totalPlayers: function() {
+        var games, getPlayers;
+        games = this.get('games');
+        getPlayers = this.get('getPlayers');
+        return games.reduce((function(n, _arg) {
+          var reference;
+          reference = _arg.reference;
+          return n + getPlayers(reference).length;
+        }), 0);
       }
     },
     addGame: function(game) {
@@ -567,6 +580,14 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
   events.addEventListener('end', rmGame, false);
 
   events.addEventListener('delete', rmGame, false);
+
+  events.onopen = function() {
+    return ractive.set('status', 'connected');
+  };
+
+  events.onerror = function() {
+    return ractive.set('status', 'disconnected');
+  };
 
 }).call(this);
 

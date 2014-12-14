@@ -1,4 +1,6 @@
 #games {
+  background-color: #3a3a3a
+
   .game-list {
     a {
       height: 112px
@@ -36,5 +38,27 @@
       display: inline-block
       margin-left: 0.5em
     }
+  }
+
+  .status {
+    padding: 0 30px
+    color: white
+
+    p {
+      margin: 0
+    }
+
+    i {
+      display: none
+      float: right
+      margin-top: 0.5em
+    }
+
+    for status in '.connecting' '.connected' '.disconnected' {
+      &{status} {status} {
+        display: block
+      }
+    }
+
   }
 }

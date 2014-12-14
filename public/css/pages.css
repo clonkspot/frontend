@@ -445,6 +445,9 @@
   margin-left: 15px;
 }
 
+#games {
+  background-color: #3a3a3a;
+}
 #games .game-list a {
   height: 112px;
   display: flex;
@@ -474,6 +477,27 @@
 #games .game-list .pw .fa-lock {
   display: inline-block;
   margin-left: 0.5em;
+}
+#games .status {
+  padding: 0 30px;
+  color: #fff;
+}
+#games .status p {
+  margin: 0;
+}
+#games .status i {
+  display: none;
+  float: right;
+  margin-top: 0.5em;
+}
+#games .status.connecting .connecting {
+  display: block;
+}
+#games .status.connected .connected {
+  display: block;
+}
+#games .status.disconnected .disconnected {
+  display: block;
 }
 
 /* Home page */

@@ -170,5 +170,10 @@ module.exports =
 
   # Games
   games:
+    games: 'Spielen'
     on: 'auf'
     players: 'Spieler'
+    status:
+      connecting: 'Verbindungsaufbau'
+      connected: 'Verbunden'
+      disconnected: 'Nicht verbunden'

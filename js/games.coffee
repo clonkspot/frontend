@@ -22,6 +22,7 @@ ractive = new Ractive
   template: '#games-template'
   data:
     games: []
+    status: 'connecting'
 
     getScenarioTitle: (r) ->
       r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
@@ -52,6 +53,11 @@ ractive = new Ractive
       tags.push 'pw' if game.is_password_needed
       return tags.join ' '
         
+  computed:
+    totalPlayers: ->
+      games = @get 'games'
+      getPlayers = @get 'getPlayers'
+      games.reduce ((n, {reference}) -> n + getPlayers(reference).length), 0
 
   addGame: (game) ->
     games = @get('games')
@@ -95,4 +101,7 @@ rmGame = (e) ->
 
 events.addEventListener 'end', rmGame, false
 events.addEventListener 'delete', rmGame, false
+
+events.onopen =  -> ractive.set 'status', 'connected'
+events.onerror = -> ractive.set 'status', 'disconnected'
 

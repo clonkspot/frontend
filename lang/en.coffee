@@ -176,5 +176,10 @@ module.exports =
 
   # Games
   games:
+    games: 'games'
     on: 'on'
     players: 'players'
+    status:
+      connecting: 'Connecting'
+      connected: 'Connected'
+      disconnected: 'Disconnected'
