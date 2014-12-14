@@ -167,3 +167,8 @@ module.exports =
   Doku: '''
     <a href="http://crdocs.clonkspot.org/de/sdk/">Online Doku</a>
   '''
+
+  # Games
+  games:
+    on: 'auf'
+    players: 'Spieler'

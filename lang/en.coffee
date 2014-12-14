@@ -173,3 +173,8 @@ module.exports =
   EnglishNote: '''
       <p>Due to lack of translation, the following tutorials are only available in German. Sorry :(</p>
   '''
+
+  # Games
+  games:
+    on: 'on'
+    players: 'players'
