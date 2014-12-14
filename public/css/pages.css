@@ -484,6 +484,7 @@
 }
 #games .status p {
   margin: 0;
+  font-size: 12px;
 }
 #games .status i {
   display: none;
