@@ -41,11 +41,12 @@
     <p>
       {{totalPlayers}} <%= @t.games.players %> in {{games.length}} <%= @t.games.games %>
       |
-      <a href="javascript:void 0" on-click="toggle-notifications">{{notifications.length}} notifications</a>
+      <a href="javascript:void 0" on-click="toggle-notifications">{{notifications.length}} <%= @t.games.notifications.title %></a>
     </p>
 
     {{#showNotifications}}
     <div intro-outro="slide" class="notifications">
+      <p><%= @t.games.notifications.desc %></p>
       <ul>
         {{#notifications:i}}
         <li intro-outro="slide">
@@ -60,10 +61,7 @@
           </form>
         </li>
       </ul>
-      <p>
-        The given entry is matched case-insensitively against the scenario
-        name and file name. There is no wildcard support.
-      </p>
+      <p><%= @t.games.notifications.explanation %></p>
     </div>
     {{/showNotifications}}
   </div>

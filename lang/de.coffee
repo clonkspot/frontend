@@ -179,3 +179,7 @@ module.exports =
       connecting: 'Verbindungsaufbau'
       connected: 'Verbunden'
       disconnected: 'Nicht verbunden'
+    notifications:
+      title: 'Benachrichtigungen'
+      desc: 'Zeige eine Benachrichtigung, wenn ein passendes Spiel gestartet wird:'
+      explanation: 'Die Einträge werden im Szenariotitel und im Dateiname gesucht. Dabei wird Groß-/Kleinschreibung ignoriert.'

@@ -185,3 +185,7 @@ module.exports =
       connecting: 'Connecting'
       connected: 'Connected'
       disconnected: 'Disconnected'
+    notifications:
+      title: 'notifications'
+      desc: 'Show a notification when a matching game is started:'
+      explanation: 'The entries are matched case-insensitively against the scenario title and file name. There is no wildcard support.'

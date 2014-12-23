@@ -505,6 +505,9 @@
 #games .status.disconnected .disconnected {
   display: block;
 }
+#games .status .notifications ul {
+  margin: 0;
+}
 
 /* Home page */
 #home {
