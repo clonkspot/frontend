@@ -491,7 +491,7 @@
   margin: 0;
   font-size: 12px;
 }
-#games .status i {
+#games .status > i {
   display: none;
   float: right;
   margin-top: 0.5em;

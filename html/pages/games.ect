@@ -40,6 +40,31 @@
     <i class="disconnected fa fa-plug" title="<%= @t.games.status.disconnected %>"></i>
     <p>
       {{totalPlayers}} <%= @t.games.players %> in {{games.length}} <%= @t.games.games %>
+      |
+      <a href="javascript:void 0" on-click="toggle-notifications">{{notifications.length}} notifications</a>
     </p>
+
+    {{#showNotifications}}
+    <div intro-outro="slide" class="notifications">
+      <ul>
+        {{#notifications:i}}
+        <li intro-outro="slide">
+          {{query}}
+          <a href="javascript:void 0" on-click="removeNotification(i)"><i class="fa fa-times"></i></a>
+        </li>
+        {{/notifications}}
+        <li>
+          <form action="javascript:void 0">
+            <input value="{{newQuery}}" placeholder="S2Stylands">
+            <button type=submit on-click="add-notification"><i class="fa fa-plus"></i></button>
+          </form>
+        </li>
+      </ul>
+      <p>
+        The given entry is matched case-insensitively against the scenario
+        name and file name. There is no wildcard support.
+      </p>
+    </div>
+    {{/showNotifications}}
   </div>
 </script>

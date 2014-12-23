@@ -433,7 +433,7 @@ process.binding = function (name) {
 });
 
 require.define("/games.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
-  var compareGames, events, findIndex, ractive, rmGame;
+  var checkNotification, compareGames, events, findIndex, ractive, rmGame;
 
   if (window.EventSource == null) {
     $('#games .status').show();
@@ -470,6 +470,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
     data: {
       games: [],
       status: 'connecting',
+      notifications: [],
       getScenarioTitle: function(r) {
         return r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '').replace(/<\/?i>/g, '');
       },
@@ -556,8 +557,40 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
         games.splice(i, 1);
         return games.sort(compareGames);
       }
+    },
+    removeNotification: function(n) {
+      return this.get('notifications').splice(n, 1);
     }
   });
+
+  ractive.on('toggle-notifications', function() {
+    var nextState;
+    nextState = !this.get('showNotifications');
+    return this.set('showNotifications', nextState);
+  });
+
+  ractive.on('add-notification', function() {
+    var query;
+    query = this.get('newQuery');
+    this.get('notifications').push({
+      query: query
+    });
+    return this.set('newQuery', '');
+  });
+
+  checkNotification = function(game) {
+    return function(n) {
+      var str, _i, _len, _ref;
+      _ref = [game.reference['[Reference]'][0]['[Scenario]'][0].Filename, game.reference['[Reference]'][0].Title];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        str = _ref[_i];
+        if (~str.indexOf(n.query)) {
+          console.log('notify: ' + n.query);
+          return;
+        }
+      }
+    };
+  };
 
   events = new EventSource('/league/game_events.php');
 
@@ -570,7 +603,8 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
   events.addEventListener('create', function(e) {
     var game;
     game = JSON.parse(e.data);
-    return ractive.addGame(game);
+    ractive.addGame(game);
+    return ractive.get('notifications').forEach(checkNotification(game));
   }, false);
 
   events.addEventListener('update', function(e) {

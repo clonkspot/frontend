@@ -30,6 +30,8 @@ ractive = new Ractive
     games: []
     status: 'connecting'
 
+    notifications: []
+
     getScenarioTitle: (r) ->
       r['[Reference]'][0].Title
         .replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
@@ -88,6 +90,33 @@ ractive = new Ractive
       games.splice i, 1
       games.sort(compareGames)
 
+  # Removes the nth notification.
+  removeNotification: (n) ->
+    @get('notifications').splice n, 1
+
+ractive.on 'toggle-notifications', ->
+  # TODO: Check whether notifications are available.
+  nextState = not @get 'showNotifications'
+  @set 'showNotifications', nextState
+ractive.on 'add-notification', ->
+  query = @get 'newQuery'
+  @get('notifications').push {query}
+  @set 'newQuery', ''
+
+# Checks a single notification query against a game, creating a
+# notification on match.
+checkNotification = (game) ->
+  # Manual currying
+  (n) ->
+    for str in [
+      game.reference['[Reference]'][0]['[Scenario]'][0].Filename
+      game.reference['[Reference]'][0].Title
+    ]
+      if ~str.indexOf(n.query)
+        # TODO: Send notification
+        console.log 'notify: ' + n.query
+        return
+
 events = new EventSource '/league/game_events.php'
 
 events.addEventListener 'init', (e) ->
@@ -98,6 +127,7 @@ events.addEventListener 'init', (e) ->
 events.addEventListener 'create', (e) ->
   game = JSON.parse(e.data)
   ractive.addGame game
+  ractive.get('notifications').forEach(checkNotification(game))
 , false
 
 events.addEventListener 'update', (e) ->
