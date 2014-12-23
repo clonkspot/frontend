@@ -462,10 +462,12 @@
 #games .game-list .running:not(.lzb) {
   cursor: not-allowed;
 }
-#games .game-list .fa-lock {
+#games .game-list .fa-lock,
+#games .game-list .fa-trophy {
   display: none;
 }
-#games .game-list .pw .fa-lock {
+#games .game-list .pw .fa-lock,
+#games .game-list .league .fa-trophy {
   display: inline-block;
   margin-left: 0.5em;
 }

@@ -181,6 +181,9 @@ module.exports =
     games: 'games'
     on: 'on'
     players: 'players'
+    tags:
+      league: 'league game'
+      password: 'password protected'
     status:
       connecting: 'Connecting'
       connected: 'Connected'

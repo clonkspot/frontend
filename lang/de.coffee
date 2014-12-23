@@ -175,6 +175,9 @@ module.exports =
     games: 'Spielen'
     on: 'auf'
     players: 'Spieler'
+    tags:
+      league: 'Ligaspiel'
+      password: 'Passwortgeschützt'
     status:
       connecting: 'Verbindungsaufbau'
       connected: 'Verbunden'
