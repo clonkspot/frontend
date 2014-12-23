@@ -432,8 +432,53 @@ process.binding = function (name) {
 
 });
 
+require.define("/lib/referencereader.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
+  module.exports = {
+    getScenarioTitle: function(r) {
+      return r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '').replace(/<\/?i>/g, '');
+    },
+    getScenarioFilename: function(r) {
+      return r['[Reference]'][0]['[Scenario]'][0].Filename.replace(/\\/g, '/');
+    },
+    getHostName: function(r) {
+      return r['[Reference]'][0]['[Client]'][0].Name;
+    },
+    getMaxPlayerCount: function(r) {
+      var _ref;
+      return (_ref = r['[Reference]'][0].MaxPlayers) != null ? _ref : '?';
+    },
+    getPlayers: function(r) {
+      var array, client, clients, player, players, _i, _j, _len, _len1, _ref;
+      players = [];
+      clients = (_ref = r['[Reference]'][0]['[PlayerInfos]']) != null ? _ref[0]['[Client]'] : void 0;
+      if (clients == null) {
+        return players;
+      }
+      for (_i = 0, _len = clients.length; _i < _len; _i++) {
+        client = clients[_i];
+        array = client['[Player]'];
+        if (array == null) {
+          continue;
+        }
+        for (_j = 0, _len1 = array.length; _j < _len1; _j++) {
+          player = array[_j];
+          if (!((player.Flags != null) && ~player.Flags.indexOf('Removed'))) {
+            players.push(player.Name);
+          }
+        }
+      }
+      return players;
+    }
+  };
+
+}).call(this);
+
+});
+
 require.define("/games.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
-  var checkNotification, compareGames, events, findIndex, ractive, rmGame;
+  var ReferenceReader, checkNotification, compareGames, events, findIndex, ractive, rmGame;
+
+  ReferenceReader = require('./lib/referencereader.coffee');
 
   if (window.EventSource == null) {
     $('#games .status').show();
@@ -471,41 +516,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
       games: [],
       status: 'connecting',
       notifications: [],
-      getScenarioTitle: function(r) {
-        return r['[Reference]'][0].Title.replace(/<c [0-9a-f]{6}>|<\/c>/g, '').replace(/<\/?i>/g, '');
-      },
-      getScenarioFilename: function(r) {
-        return r['[Reference]'][0]['[Scenario]'][0].Filename.replace(/\\/g, '/');
-      },
-      getHostName: function(r) {
-        return r['[Reference]'][0]['[Client]'][0].Name;
-      },
-      getMaxPlayerCount: function(r) {
-        var _ref;
-        return (_ref = r['[Reference]'][0].MaxPlayers) != null ? _ref : '?';
-      },
-      getPlayers: function(r) {
-        var array, client, clients, player, players, _i, _j, _len, _len1, _ref;
-        players = [];
-        clients = (_ref = r['[Reference]'][0]['[PlayerInfos]']) != null ? _ref[0]['[Client]'] : void 0;
-        if (clients == null) {
-          return players;
-        }
-        for (_i = 0, _len = clients.length; _i < _len; _i++) {
-          client = clients[_i];
-          array = client['[Player]'];
-          if (array == null) {
-            continue;
-          }
-          for (_j = 0, _len1 = array.length; _j < _len1; _j++) {
-            player = array[_j];
-            if (!((player.Flags != null) && ~player.Flags.indexOf('Removed'))) {
-              players.push(player.Name);
-            }
-          }
-        }
-        return players;
-      },
+      RR: ReferenceReader,
       getTags: function(game) {
         var tags;
         tags = [game.status];
@@ -566,6 +577,20 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
   ractive.on('toggle-notifications', function() {
     var nextState;
     nextState = !this.get('showNotifications');
+    if (nextState) {
+      if (window.Notification == null) {
+        alert("Notifications aren't supported by your browser.");
+        return;
+      }
+      if (Notification.permission !== 'granted') {
+        Notification.requestPermission(function(status) {
+          if (status === 'granted') {
+            return ractive.fire('toggle-notifications');
+          }
+        });
+        return;
+      }
+    }
     return this.set('showNotifications', nextState);
   });
 
@@ -585,7 +610,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         str = _ref[_i];
         if (~str.indexOf(n.query)) {
-          console.log('notify: ' + n.query);
+          new Notification;
           return;
         }
       }

@@ -1,5 +1,7 @@
 # Masterserver viewer
 
+ReferenceReader = require './lib/referencereader.coffee'
+
 unless window.EventSource?
   $('#games .status').show()
   return
@@ -32,31 +34,7 @@ ractive = new Ractive
 
     notifications: []
 
-    getScenarioTitle: (r) ->
-      r['[Reference]'][0].Title
-        .replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
-        .replace(/<\/?i>/g, '')
-
-    getScenarioFilename: (r) ->
-      r['[Reference]'][0]['[Scenario]'][0].Filename.replace(/\\/g, '/')
-
-    getHostName: (r) ->
-      r['[Reference]'][0]['[Client]'][0].Name
-
-    getMaxPlayerCount: (r) ->
-      r['[Reference]'][0].MaxPlayers ? '?'
-
-    getPlayers: (r) ->
-      players = []
-      clients = r['[Reference]'][0]['[PlayerInfos]']?[0]['[Client]']
-      return players unless clients?
-      for client in clients
-        array = client['[Player]']
-        continue unless array?
-        for player in array
-          unless player.Flags? and ~player.Flags.indexOf('Removed')
-            players.push player.Name
-      return players
+    RR: ReferenceReader
 
     getTags: (game) ->
       tags = [game.status]
@@ -124,7 +102,7 @@ checkNotification = (game) ->
     ]
       if ~str.indexOf(n.query)
         # TODO: Send notification
-        console.log 'notify: ' + n.query
+        new Notification
         return
 
 events = new EventSource '/league/game_events.php'
