@@ -94,15 +94,23 @@ ractive.on 'add-notification', ->
 # Checks a single notification query against a game, creating a
 # notification on match.
 checkNotification = (game) ->
+  ref = game.reference
   # Manual currying
-  (n) ->
+  ({query}) ->
+    ql = query.toLowerCase()
+    title = ReferenceReader.getScenarioTitle(ref)
+    filename = ReferenceReader.getScenarioFilename(ref)
     for str in [
-      game.reference['[Reference]'][0]['[Scenario]'][0].Filename
-      game.reference['[Reference]'][0].Title
+      title
+      filename
     ]
-      if ~str.indexOf(n.query)
-        # TODO: Send notification
-        new Notification
+      if ~str.toLowerCase().indexOf(ql)
+        # Send notification
+        n = new Notification title,
+          icon: '/images/games/Title.png/' + filename
+          body: "Filter: #{query}"
+        n.onclick = ->
+          location.href = "clonk://league.clonkspot.org:80/?action=query&game_id=#{game.id}"
         return
 
 events = new EventSource '/league/game_events.php'

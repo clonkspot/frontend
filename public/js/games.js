@@ -604,13 +604,25 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
   });
 
   checkNotification = function(game) {
-    return function(n) {
-      var str, _i, _len, _ref;
-      _ref = [game.reference['[Reference]'][0]['[Scenario]'][0].Filename, game.reference['[Reference]'][0].Title];
+    var ref;
+    ref = game.reference;
+    return function(_arg) {
+      var filename, n, ql, query, str, title, _i, _len, _ref;
+      query = _arg.query;
+      ql = query.toLowerCase();
+      title = ReferenceReader.getScenarioTitle(ref);
+      filename = ReferenceReader.getScenarioFilename(ref);
+      _ref = [title, filename];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         str = _ref[_i];
-        if (~str.indexOf(n.query)) {
-          new Notification;
+        if (~str.toLowerCase().indexOf(ql)) {
+          n = new Notification(title, {
+            icon: '/images/games/Title.png/' + filename,
+            body: "Filter: " + query
+          });
+          n.onclick = function() {
+            return location.href = "clonk://league.clonkspot.org:80/?action=query&game_id=" + game.id;
+          };
           return;
         }
       }
