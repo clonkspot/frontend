@@ -532,13 +532,12 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
     },
     computed: {
       totalPlayers: function() {
-        var games, getPlayers;
+        var games;
         games = this.get('games');
-        getPlayers = this.get('getPlayers');
         return games.reduce((function(n, _arg) {
           var reference;
           reference = _arg.reference;
-          return n + getPlayers(reference).length;
+          return n + ReferenceReader.getPlayers(reference).length;
         }), 0);
       }
     },

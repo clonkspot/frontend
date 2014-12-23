@@ -46,8 +46,7 @@ ractive = new Ractive
   computed:
     totalPlayers: ->
       games = @get 'games'
-      getPlayers = @get 'getPlayers'
-      games.reduce ((n, {reference}) -> n + getPlayers(reference).length), 0
+      games.reduce ((n, {reference}) -> n + ReferenceReader.getPlayers(reference).length), 0
 
   addGame: (game) ->
     games = @get('games')
