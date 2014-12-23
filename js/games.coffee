@@ -95,9 +95,19 @@ ractive = new Ractive
     @get('notifications').splice n, 1
 
 ractive.on 'toggle-notifications', ->
-  # TODO: Check whether notifications are available.
   nextState = not @get 'showNotifications'
+  if nextState
+    # Check whether notifications are available.
+    unless window.Notification?
+      alert "Notifications aren't supported by your browser."
+      return
+    unless Notification.permission is 'granted'
+      Notification.requestPermission (status) ->
+        ractive.fire 'toggle-notifications' if status is 'granted'
+      return
+
   @set 'showNotifications', nextState
+
 ractive.on 'add-notification', ->
   query = @get 'newQuery'
   @get('notifications').push {query}
