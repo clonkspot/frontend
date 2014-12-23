@@ -515,7 +515,15 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
     data: {
       games: [],
       status: 'connecting',
-      notifications: [],
+      notifications: (function() {
+        var err;
+        try {
+          return JSON.parse(localStorage.gameNotifications);
+        } catch (_error) {
+          err = _error;
+          return [];
+        }
+      })(),
       RR: ReferenceReader,
       getTags: function(game) {
         var tags;
@@ -600,6 +608,13 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
       query: query
     });
     return this.set('newQuery', '');
+  });
+
+  ractive.observe('notifications', function(newVal) {
+    return localStorage.gameNotifications = JSON.stringify(newVal);
+  }, {
+    init: false,
+    defer: true
   });
 
   checkNotification = function(game) {

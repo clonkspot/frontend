@@ -32,7 +32,11 @@ ractive = new Ractive
     games: []
     status: 'connecting'
 
-    notifications: []
+    notifications: do ->
+      try
+        return JSON.parse(localStorage.gameNotifications)
+      catch err
+        return []
 
     RR: ReferenceReader
 
@@ -89,6 +93,10 @@ ractive.on 'add-notification', ->
   query = @get 'newQuery'
   @get('notifications').push {query}
   @set 'newQuery', ''
+
+ractive.observe 'notifications', (newVal) ->
+  localStorage.gameNotifications = JSON.stringify(newVal)
+, init: false, defer: true
 
 # Checks a single notification query against a game, creating a
 # notification on match.
