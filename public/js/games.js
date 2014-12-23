@@ -604,6 +604,9 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
   ractive.on('add-notification', function() {
     var query;
     query = this.get('newQuery');
+    if (!(query != null ? query.length : void 0)) {
+      return;
+    }
     this.get('notifications').push({
       query: query
     });

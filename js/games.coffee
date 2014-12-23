@@ -91,6 +91,7 @@ ractive.on 'toggle-notifications', ->
 
 ractive.on 'add-notification', ->
   query = @get 'newQuery'
+  return unless query?.length
   @get('notifications').push {query}
   @set 'newQuery', ''
 
