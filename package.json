@@ -17,12 +17,12 @@
     "convict": "~0.3.3"
   },
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib-stylus": "~0.4.1",
-    "grunt-contrib-watch": "~0.2.0",
+    "browserify": "~1.18.0",
     "chai": "~1.5.0",
+    "grunt": "~0.4.0",
+    "grunt-contrib-stylus": "~0.20.0",
+    "grunt-contrib-watch": "~0.2.0",
     "mocha": "~1.8.1",
-    "supertest": "~0.5.1",
-    "browserify": "~1.18.0"
+    "supertest": "~0.5.1"
   }
 }
