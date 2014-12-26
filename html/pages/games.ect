@@ -22,7 +22,7 @@
   <div class="game-list link-list snow">
     {{#games}}
     <a href="clonk://league.clonkspot.org:80/?action=query&game_id={{id}}" class="{{getTags(game)}}" intro-outro="slide">
-      <img src="/images/games/Title.png/{{RR.getScenarioFilename(reference)}}" alt="">
+      <img src="{{getTitleImage(reference)}}" alt="">
       <div class="game-info">
         <h2>
           {{RR.getScenarioTitle(reference)}}

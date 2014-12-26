@@ -25,6 +25,11 @@ compareGames = (a, b) ->
     return base * (Date.now() - game?.date_created)
   getWeight(a) - getWeight(b)
 
+getTitleImage = (reference) ->
+  filename = ReferenceReader.getScenarioFilename(reference)
+  crc = ReferenceReader.getScenarioCRC(reference)
+  "/images/games/Title.png/#{filename}?hash=#{crc}"
+
 ractive = new Ractive
   el: '#games'
   template: '#games-template'
@@ -39,6 +44,7 @@ ractive = new Ractive
         return []
 
     RR: ReferenceReader
+    getTitleImage : getTitleImage
 
     getTags: (game) ->
       tags = [game.status]
@@ -115,7 +121,7 @@ checkNotification = (game) ->
       if ~str.toLowerCase().indexOf(ql)
         # Send notification
         n = new Notification title,
-          icon: '/images/games/Title.png/' + filename
+          icon: getTitleImage(ref)
           body: "Filter: #{query}"
         n.onclick = ->
           location.href = "clonk://league.clonkspot.org:80/?action=query&game_id=#{game.id}"

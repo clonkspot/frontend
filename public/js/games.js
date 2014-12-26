@@ -440,6 +440,9 @@ require.define("/lib/referencereader.coffee",function(require,module,exports,__d
     getScenarioFilename: function(r) {
       return r['[Reference]'][0]['[Scenario]'][0].Filename.replace(/\\/g, '/');
     },
+    getScenarioCRC: function(r) {
+      return r['[Reference]'][0]['[Scenario]'][0].ContentsCRC;
+    },
     getHostName: function(r) {
       return r['[Reference]'][0]['[Client]'][0].Name;
     },
@@ -476,7 +479,7 @@ require.define("/lib/referencereader.coffee",function(require,module,exports,__d
 });
 
 require.define("/games.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
-  var ReferenceReader, checkNotification, compareGames, events, findIndex, ractive, rmGame;
+  var ReferenceReader, checkNotification, compareGames, events, findIndex, getTitleImage, ractive, rmGame;
 
   ReferenceReader = require('./lib/referencereader.coffee');
 
@@ -509,6 +512,13 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
     return getWeight(a) - getWeight(b);
   };
 
+  getTitleImage = function(reference) {
+    var crc, filename;
+    filename = ReferenceReader.getScenarioFilename(reference);
+    crc = ReferenceReader.getScenarioCRC(reference);
+    return "/images/games/Title.png/" + filename + "?hash=" + crc;
+  };
+
   ractive = new Ractive({
     el: '#games',
     template: '#games-template',
@@ -525,6 +535,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
         }
       })(),
       RR: ReferenceReader,
+      getTitleImage: getTitleImage,
       getTags: function(game) {
         var tags;
         tags = [game.status];
@@ -634,7 +645,7 @@ require.define("/games.coffee",function(require,module,exports,__dirname,__filen
         str = _ref[_i];
         if (~str.toLowerCase().indexOf(ql)) {
           n = new Notification(title, {
-            icon: '/images/games/Title.png/' + filename,
+            icon: getTitleImage(ref),
             body: "Filter: " + query
           });
           n.onclick = function() {

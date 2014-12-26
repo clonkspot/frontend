@@ -9,6 +9,9 @@ module.exports =
   getScenarioFilename: (r) ->
     r['[Reference]'][0]['[Scenario]'][0].Filename.replace(/\\/g, '/')
 
+  getScenarioCRC: (r) ->
+    r['[Reference]'][0]['[Scenario]'][0].ContentsCRC
+
   getHostName: (r) ->
     r['[Reference]'][0]['[Client]'][0].Name
 
