@@ -139,16 +139,16 @@ module.exports =
     'In diesen Bereichen lässt sich Clonk modden:'
 
   Graphics: '''
-    <h3>Grafik</h3>
+    <h4>Grafik</h4>
     <p>Clonk Rage kann Ingame-Grafiken nur als Sprites (Bilder im PNG-Format) verarbeiten. Animationen werden als Teilausschnitt mit in die Datei gerendert und später per Koordinaten aus einer Textdatei zusammengefügt.</p>'''
 
   Script: '''
-    <h3>Script</h3>
+    <h4>Script</h4>
     <p>Basierend auf C ist die Scriptsprache von Clonk c4script. Darin wird der Quellcode für ein Objekt oder ein Szenario geschrieben, welcher dann von der Engine gelesen wird. Viele Funktionen sind bereits vorhanden, es können aber auch eigene geschrieben werden.</p>
   '''
 
   Scenario: '''
-   <h3>Szenarien</h3>
+   <h4>Szenarien</h4>
    <p>Mit geringen Grundkentnisse können neue Szenarien entworfen werden! Für statische Karten kann Clonk Bitmaps einlesen oder man verwendet direkt die internen Tools und kann Live eine Karte malen – Objekte können optional per Drag'n'Drop in die Karte reingezogen werden. Dynamische Karten können mittels Textdateien für den Generator geschrieben werden.</p>
   '''
 
@@ -157,7 +157,7 @@ module.exports =
   '''
 
   Sound: '''
-    <h3>Musik & Sound </h3>
+    <h4>Musik & Sound </h4>
     <p>Auch hier kann alles nur erdenkliche modifiziert werden. Die Dateien müssen dazu alle im Wave-Format vorhanden sein (bei Musik auch mid, xm, it, s3m, mod und ogg möglich). Als mächtiges und kostenloses Audioprogramm ist Audacity sehr zu empfehlen!</p>
   '''
  
