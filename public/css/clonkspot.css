@@ -1,44 +1,4 @@
 /* Clonkspot CSS */
-.snow {
-  background-image: url("/images/snow/snow1.png"), url("/images/snow/snow2.png"), url("/images/snow/snow3.png");
-  -webkit-animation: snowy 20s linear infinite;
-  -moz-animation: snowy 20s linear infinite;
-  -o-animation: snowy 20s linear infinite;
-  -ms-animation: snowy 20s linear infinite;
-  animation: snowy 20s linear infinite;
-}
-@-moz-keyframes snowy {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-  100% {
-    background-position: 500px 1000px, 300px 300px, 400px 400px;
-  }
-}
-@-webkit-keyframes snowy {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-  100% {
-    background-position: 500px 1000px, 300px 300px, 400px 400px;
-  }
-}
-@-o-keyframes snowy {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-  100% {
-    background-position: 500px 1000px, 300px 300px, 400px 400px;
-  }
-}
-@keyframes snowy {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-  100% {
-    background-position: 500px 1000px, 300px 300px, 400px 400px;
-  }
-}
 html {
   background: #b3b3b3 url("/images/bg.jpg") no-repeat;
   background-position: 50% 0;
@@ -146,11 +106,12 @@ h6 {
   -webkit-box-shadow: inset 0px 0px 3px 0px #fff;
   box-shadow: inset 0px 0px 3px 0px #fff;
   background-color: #87d969;
-  background-image: -webkit-linear-gradient(#87d969 5%, #61b346 100%);
-  background-image: -moz-linear-gradient(#87d969 5%, #61b346 100%);
-  background-image: -o-linear-gradient(#87d969 5%, #61b346 100%);
-  background-image: -ms-linear-gradient(#87d969 5%, #61b346 100%);
-  background-image: linear-gradient(#87d969 5%, #61b346 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #87d969), color-stop(1, #61b346));
+  background-image: -webkit-linear-gradient(top, #87d969 5%, #61b346 100%);
+  background-image: -moz-linear-gradient(top, #87d969 5%, #61b346 100%);
+  background-image: -o-linear-gradient(top, #87d969 5%, #61b346 100%);
+  background-image: -ms-linear-gradient(top, #87d969 5%, #61b346 100%);
+  background-image: linear-gradient(top, #87d969 5%, #61b346 100%);
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: 1px solid #74a67b;
@@ -181,11 +142,12 @@ h6 {
 }
 .ExternalButton:hover {
   background-color: #61b346;
-  background-image: -webkit-linear-gradient(#91dc77 5%, #87d969 100%);
-  background-image: -moz-linear-gradient(#91dc77 5%, #87d969 100%);
-  background-image: -o-linear-gradient(#91dc77 5%, #87d969 100%);
-  background-image: -ms-linear-gradient(#91dc77 5%, #87d969 100%);
-  background-image: linear-gradient(#91dc77 5%, #87d969 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #91dc77), color-stop(1, #87d969));
+  background-image: -webkit-linear-gradient(top, #91dc77 5%, #87d969 100%);
+  background-image: -moz-linear-gradient(top, #91dc77 5%, #87d969 100%);
+  background-image: -o-linear-gradient(top, #91dc77 5%, #87d969 100%);
+  background-image: -ms-linear-gradient(top, #91dc77 5%, #87d969 100%);
+  background-image: linear-gradient(top, #91dc77 5%, #87d969 100%);
 }
 .ExternalButton:active {
   position: relative;
