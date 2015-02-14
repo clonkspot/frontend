@@ -1,0 +1,14 @@
+<% # Single header item %>
+
+
+<% [title, desc] = @t.nav[@key] %>
+<a href="<%- @item.url %>"
+  class="<%- if @req.url.startsWith(@item.url) then 'active' else '' %>">
+  <b><%- title %></b>
+  <small><%- desc %></small>
+  <span class="sub">
+    <% for subkey, subitem of @item.sub: %>
+      <% include 'headeritem.ect', {key: subkey, item: subitem, @t, @req} %>
+    <% end %>
+  </span>
+</a>

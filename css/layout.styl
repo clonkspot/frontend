@@ -47,28 +47,28 @@ header {
   }
 
   nav {
-    padding = 14px
-    height: 89px - padding
-    padding-top: padding
+    height: 89px
+
+    display: flex
+    align-items: center
 
     background: #D4D4D4
     border-top: 2px solid #696969
 
     white-space: nowrap
 
-    > div {
-      box-sizing: border-box
-      padding-left: 30px
+    .headeritem {
+      position: relative
+      &:first-child {
+        flex: 0 0 100px
+        display: flex
+        justify-content: center
+        padding-top: 10px
+      }
     }
 
     a {
-      display: inline-block
-      width: 144px
-      &:first-child {
-        width: 70px
-        relative: top 10px left 0
-      }
-      &.active {
+      &.active, &:hover {
         color: csRed !important
       }
       b {
@@ -81,9 +81,6 @@ header {
         font-size: 10px
         line-height: inherit
       }
-    }
-    a:hover {
-      color: #ce0400
     }
     
   }

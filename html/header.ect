@@ -16,19 +16,16 @@
   </div>
 
   <nav>
-    <div>
+    <div class="headeritem">
       <a href="/">
         <img src="/images/home<%- if @req.url is '/' then '_hl' else '' %>.png" alt="Home">
       </a>
-      <% for key, dataitem of @data.nav : %>
-      <a href="<%- dataitem.url %>"
-        class="<%- if @req.url.startsWith(dataitem.url) then 'active' else '' %>"
-        style="<%- if width = dataitem.width then "width: #{width}px" else '' %>">
-        <b><%- @t.nav[key][0] %></b>
-        <small><%- @t.nav[key][1] %></small>
-      </a>
-      <% end %>
     </div>
+    <% for key, item of @data.nav : %>
+      <div class="headeritem">
+        <% include 'headeritem.ect', {key, item, @t, @req} %>
+      </div>
+    <% end %>
   </nav>
 
   <% if @req.url is '/_layout': %>
