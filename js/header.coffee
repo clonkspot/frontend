@@ -4,13 +4,13 @@ showhide = ->
   showid = null
   hideid = null
   show = ->
-    el = $(@).addClass('active').removeClass('active-anim')
-    showid = setTimeout (-> el.addClass('active-anim')), 20
+    el = $(@).addClass('open').removeClass('open-anim')
+    showid = setTimeout (-> el.addClass('open-anim')), 20
     clearTimeout hideid
 
   hide = ->
-    el = $(@).removeClass 'active-anim'
-    hideid = setTimeout (-> el.removeClass('active')), 400
+    el = $(@).removeClass 'open-anim'
+    hideid = setTimeout (-> el.removeClass('open')), 400
     clearTimeout showid
 
   [show, hide]
