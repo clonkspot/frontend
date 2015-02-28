@@ -14,6 +14,7 @@ module.exports = (grunt) ->
         files: 'public/js/home.js': 'js/home.coffee'
       games:
         files: 'public/js/games.js': 'js/games.coffee'
+    coffee:
       header:
         files: 'public/js/header.js': 'js/header.coffee'
     watch:
@@ -22,12 +23,13 @@ module.exports = (grunt) ->
         tasks: 'stylus'
       browserify:
         files: 'js/**/*'
-        tasks: 'browserify'
+        tasks: ['browserify', 'coffee']
 
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['stylus', 'browserify']
+  grunt.registerTask 'default', ['stylus', 'browserify', 'coffee']
 
   grunt.registerMultiTask 'browserify', 'Runs browserify', ->
     browserify = require 'browserify'
