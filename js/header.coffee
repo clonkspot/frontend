@@ -1,5 +1,7 @@
 # Header interaction
 
+$ = jQuery
+
 showhide = ->
   showid = null
   hideid = null
