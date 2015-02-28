@@ -47,7 +47,8 @@ header {
   }
 
   nav {
-    height: 89px
+    nav-height = 89px
+    height: nav-height
 
     display: flex
     align-items: center
@@ -72,10 +73,6 @@ header {
     }
 
     a {
-      &:not(:first-child) {
-        display: none
-        height: 100%
-      }
       &.active, &:hover {
         color: csRed !important
       }
@@ -91,12 +88,38 @@ header {
       }
     }
 
-    .active a {
-      display: flex
-      justify-content: center
-      flex-direction: column
-      &:first-child, small {
+    .sub {
+      display: none
+      height: 100%
+      
+      a {
+        transition: transform 0.5s
+      }
+
+      trans = 15px
+      a:nth-child(1) {
+        transform: translateY(trans)
+      }
+      a:nth-child(2) {
+        transform: translateY((trans * -1))
+      }
+    }
+
+    .active {
+      > a, small {
         display: none
+      }
+      .sub {
+        display: flex
+        justify-content: center
+        flex-direction: column
+
+      }
+    }
+
+    .active-anim {
+      a {
+        transform: translateY(0) !important
       }
     }
     
