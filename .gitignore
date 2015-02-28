@@ -2,3 +2,8 @@
 /public/images
 /public/layerslider
 /public/layout/*.html
+/public/css
+/public/js/games.js
+/public/js/header.js
+/public/js/home.js
+/public/js/main.js
