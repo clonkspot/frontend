@@ -18,6 +18,10 @@ showhide = ->
 $('nav .headeritem').each ->
   sub = $(@).children('.sub')
   if sub.children().length
+    if sub.find('.active').length
+      $(@).addClass('open open-anim')
+      return
+
     [show, hide] = showhide()
     $(@)
       .hover(show, hide)
