@@ -6,9 +6,8 @@
   class="<%- if @req.url.startsWith(@item.url) then 'active' else '' %>">
   <b><%- title %></b>
   <small><%- desc %></small>
-  <span class="sub">
-    <% for subkey, subitem of @item.sub: %>
-      <% include 'headeritem.ect', {key: subkey, item: subitem, @t, @req} %>
-    <% end %>
-  </span>
+
+  <% for subkey, subitem of @item.sub: %>
+    <% include 'headeritem.ect', {key: subkey, item: subitem, @t, @req} %>
+  <% end %>
 </a>

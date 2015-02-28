@@ -9,7 +9,9 @@ module.exports =
     forums: ['Forum', 'Plattform zum Austausch']
     community: ['Community', 'die Beste wo gibt']
     development: ['Entwicklung', 'ultimative Sucht']
+    play: ['Spiele', 'Multiplayer!']
     games: ['Server', 'spiel&#x2019; mit']
+    league: ['Liga', 'wer ist der große Zampano?']
     comic: ['Comics', 'einfach Clonk']
 
   twitch: 'Clonk Livestream auf Twitch.tv!'
