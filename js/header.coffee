@@ -1,6 +1,6 @@
 # Header interaction
 
-$ = jQuery
+$ = window.jQuery
 
 showhide = ->
   showid = null
@@ -17,17 +17,30 @@ showhide = ->
 
   [show, hide]
 
-$('nav .headeritem').each ->
-  sub = $(@).children('.sub')
-  if sub.children().length
-    if sub.find('.active').length
-      $(@).addClass('open open-anim')
-      return
+main = ->
+  $('nav .headeritem').each ->
+    sub = $(@).children('.sub')
+    if sub.children().length
+      if sub.find('.active').length
+        $(@).addClass('open open-anim')
+        return
 
-    [show, hide] = showhide()
-    $(@)
-      .hover(show, hide)
-      .on 'touchstart', (e) ->
-        return if $(e.target).parents('.sub').length
-        show.call(this)
-        e.preventDefault()
+      [show, hide] = showhide()
+      $(@)
+        .hover(show, hide)
+        .on 'touchstart', (e) ->
+          return if $(e.target).parents('.sub').length
+          show.call(this)
+          e.preventDefault()
+
+# Check if jQuery is available.
+if $?
+  main()
+else
+  head = document.getElementsByTagName('head')[0]
+  script = document.createElement('script')
+  script.src = '/js/jquery.js'
+  script.onload = ->
+    $ = window.jQuery
+    main()
+  head.appendChild(script)
