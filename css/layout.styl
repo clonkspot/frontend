@@ -96,6 +96,10 @@ header {
         transition: transform 0.5s
       }
 
+      small {
+        display: none
+      }
+
       trans = 15px
       a:nth-child(1) {
         transform: translateY(trans)
@@ -106,7 +110,7 @@ header {
     }
 
     .active {
-      > a, small {
+      > a {
         display: none
       }
       .sub {
