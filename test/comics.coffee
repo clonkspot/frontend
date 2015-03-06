@@ -20,8 +20,8 @@ describe 'Comics', ->
         request.get('/comic')
           .end (err, res) ->
             throw err if err
-            for c in comics
-              res.text.should.contain c
+            for {title} in comics
+              res.text.should.contain title
             done()
 
   describe 'GET /comic/:id', ->
