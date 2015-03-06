@@ -1,6 +1,19 @@
 <% extend 'layout.ect' %>
 
-<div class="content" id="comic">
+<% comic = @data.comics[@id-1] %>
+
+<% block 'head': %>
+<style>
+  body, .content {
+    background-color: <%= comic.bg %>
+  }
+  .content, .content h3, .content a {
+    color: <%= comic.fg %>
+  }
+</style>
+<% end %>
+
+<div class="content" id="comic" style="background-color: <%= comic.bg %>">
   <nav class=controls>
     <% if @id > 1: %>
       <!--<a href="/comic/1"><img src="/images/comics/first.png" alt="|<"></a>-->
@@ -17,13 +30,13 @@
     <% end %>
   </nav>
 
-  <img src="/images/comics/comic<%= @id %>.png" alt="Comic #<%= @id %>: <%= @data.comics[@id-1] %>">
+  <img src="/images/comics/comic<%= @id %>.png" alt="Comic #<%= @id %>: <%= comic.title %>">
 
   <section class=archive>
     <h3>Archive</h3>
     <ol>
       <% for comic, id in @data.comics: %>
-        <li><a href="/comic/<%= id+1 %>"><%= comic %></a></li>
+        <li><a href="/comic/<%= id+1 %>"><%= comic.title %></a></li>
       <% end %>
     </ol>
   </section>
