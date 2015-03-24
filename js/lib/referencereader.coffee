@@ -1,6 +1,6 @@
 # Reads information out of the reference JSON structure.
 
-module.exports =
+RR =
   getScenarioTitle: (r) ->
     r['[Reference]'][0].Title
       .replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
@@ -29,3 +29,10 @@ module.exports =
         unless player.Flags? and ~player.Flags.indexOf('Removed')
           players.push player.Name
     return players
+
+RR.getPlayers.default = []
+
+# Don't throw an error when the reference does not exist.
+for name, func of RR
+  do (func) ->
+    exports[name] = (r) -> if r? then func(r) else func.default ? ''

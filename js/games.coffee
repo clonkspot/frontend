@@ -49,6 +49,7 @@ ractive = new Ractive
     getTitleImage : getTitleImage
 
     getTags: (game) ->
+      return '' unless game?
       tags = [game.status]
       tags.push (if game.type == 'noleague' then game.type else 'league')
       tags.push 'lzb' if game.is_join_allowed
