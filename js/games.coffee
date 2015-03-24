@@ -2,6 +2,8 @@
 
 ReferenceReader = require './lib/referencereader.coffee'
 
+Ractive.DEBUG = /unminified/.test -> `/*unminified*/`
+
 unless window.EventSource?
   $('#games .status').show()
   return
