@@ -182,21 +182,3 @@ a:buttonlink:hover {color: white;}
 a:buttonlink:active {color: white;}
 
 @font-face { font-family: Rockwell; src: url('Rockwell_Bold.ttf'); }
-
-// April's Fools
-a:hover:not(body) {
-  animation-duration: 1s
-  animation-name: april
-  animation-iteration-count: infinite
-  animation-timing-function: linear
-  transform-style: preserve-3d
-}
-
-@keyframes april {
-  from {
-    transform: rotateY(0deg)
-  }
-  to {
-    transform: rotateY(360deg)
-  }
-}
