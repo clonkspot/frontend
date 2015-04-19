@@ -91,7 +91,7 @@ angular.module('clonkspotNewsApp', [])
     ImportYouTube.prototype.name = 'YouTube'
     ImportYouTube.prototype.getItems = function() {
       var self = this
-      $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/' + this.playlist + '?alt=json&callback=JSON_CALLBACK')
+      $http.jsonp('https://gdata.youtube.com/feeds/api/playlists/' + this.playlist + '?alt=json&callback=JSON_CALLBACK')
         .success(function(videos) {
           // Transform videos.
           self.items = videos.feed.entry.map(function(video) {
@@ -119,7 +119,7 @@ angular.module('clonkspotNewsApp', [])
     ImportAtom.prototype.name = 'Atom Feed'
     ImportAtom.prototype.type = 'newpost'
     ImportAtom.prototype.url = function() {
-      return "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'" + encodeURIComponent(this.feed) + "'%20and%20itemPath%3D'feed.entry'&format=json&callback=JSON_CALLBACK"
+      return "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'" + encodeURIComponent(this.feed) + "'%20and%20itemPath%3D'feed.entry'&format=json&callback=JSON_CALLBACK"
     }
     ImportAtom.prototype.getItems = function() {
       var self = this
@@ -144,7 +144,7 @@ angular.module('clonkspotNewsApp', [])
     var youtubeList = language == 'de' ? 'PLigNApmAXiiRp69Gw_2U1MN1vhiYLdkQH' : 'PLigNApmAXiiTBM7vXR0hwyBV2o61lqj0S'
     return {
       youtube: new ImportYouTube(youtubeList),
-      blog: new ImportAtom('Blog', 'blog', 'http://clonkspot.org/blog/feed/atom/')
+      blog: new ImportAtom('Blog', 'blog', 'https://clonkspot.org/blog/feed/atom/')
     }
   }])
   .controller('ImportCtrl', ['$scope', 'ImportSites', function($scope, ImportSites) {
