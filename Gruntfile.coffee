@@ -8,8 +8,6 @@ module.exports = (grunt) ->
           'public/css/clonkspot.css': 'css/*.styl'
           'public/css/pages.css': 'css/pages/*.styl'
     browserify:
-      main:
-        files: 'public/js/main.js': 'js/main.coffee'
       home:
         files: 'public/js/home.js': 'js/home.coffee'
       games:
