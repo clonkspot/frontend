@@ -14,22 +14,22 @@ findIndex = (array, fun) ->
       return i
 
 compareGames = (a, b) ->
-  getWeight = ({game}) ->
+  getWeight = (game) ->
     base = if not game?
       40 # not sure when this happens
     else if game.status == 'lobby'
       10
-    else if game.is_join_allowed
+    else if game.flags.joinAllowed
       20
-    else 
+    else
       30
-    base++ if game?.is_password_needed
-    return base * (Date.now() - game?.date_created)
+    base++ if game?.flags.passwordNeeded
+    return base * (Date.now() - new Date(game?.created).valueOf())
   getWeight(a) - getWeight(b)
 
-getTitleImage = (reference) ->
-  filename = ReferenceReader.getScenarioFilename(reference)
-  crc = ReferenceReader.getScenarioCRC(reference)
+getTitleImage = (game) ->
+  filename = game.scenario.filename
+  crc = game.scenario.contentsCRC
   "/images/games/Title.png/#{filename}?hash=#{crc}"
 
 ractive = new Ractive
@@ -52,14 +52,14 @@ ractive = new Ractive
       return '' unless game?
       tags = [game.status]
       tags.push (if game.type == 'noleague' then game.type else 'league')
-      tags.push 'lzb' if game.is_join_allowed
-      tags.push 'pw' if game.is_password_needed
+      tags.push 'lzb' if game.flags.joinAllowed
+      tags.push 'pw' if game.flags.passwordNeeded
       return tags.join ' '
         
   computed:
     totalPlayers: ->
       games = @get 'games'
-      games.reduce ((n, {reference}) -> n + ReferenceReader.getPlayers(reference).length), 0
+      games.reduce ((n, game) -> n + ReferenceReader.getPlayers(game).length), 0
 
   addGame: (game) ->
     games = @get('games')
@@ -111,12 +111,11 @@ ractive.observe 'notifications', (newVal) ->
 # Checks a single notification query against a game, creating a
 # notification on match.
 checkNotification = (game) ->
-  ref = game.reference
   # Manual currying
   ({query}) ->
     ql = query.toLowerCase()
-    title = ReferenceReader.getScenarioTitle(ref)
-    filename = ReferenceReader.getScenarioFilename(ref)
+    title = ReferenceReader.getScenarioTitle(game)
+    filename = ReferenceReader.getScenarioFilename(game)
     for str in [
       title
       filename
@@ -124,13 +123,13 @@ checkNotification = (game) ->
       if ~str.toLowerCase().indexOf(ql)
         # Send notification
         n = new Notification title,
-          icon: getTitleImage(ref)
+          icon: getTitleImage(game)
           body: "Filter: #{query}"
         n.onclick = ->
           location.href = "clonk://league.clonkspot.org:80/?action=query&game_id=#{game.id}"
         return
 
-events = new EventSource '/league/game_events.php'
+events = new EventSource '/league/poll_game_events.php'
 
 events.addEventListener 'init', (e) ->
   games = JSON.parse(e.data)

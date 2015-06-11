@@ -1,38 +1,18 @@
 # Reads information out of the reference JSON structure.
 
 RR =
-  getScenarioTitle: (r) ->
-    r['[Reference]'][0].Title
+  getScenarioTitle: (g) ->
+    g.title
       .replace(/<c [0-9a-f]{6}>|<\/c>/g, '')
       .replace(/<\/?i>/g, '')
 
-  getScenarioFilename: (r) ->
-    r['[Reference]'][0]['[Scenario]'][0].Filename.replace(/\\/g, '/')
+  getScenarioFilename: (g) ->
+    g.scenario.filename.replace(/\\/g, '/')
 
-  getScenarioCRC: (r) ->
-    r['[Reference]'][0]['[Scenario]'][0].ContentsCRC
+  getMaxPlayerCount: (g) ->
+    g.maxPlayers ? '?'
 
-  getHostName: (r) ->
-    r['[Reference]'][0]['[Client]'][0].Name
+  getPlayers: (g) ->
+    g.players.map (p) -> p.name
 
-  getMaxPlayerCount: (r) ->
-    r['[Reference]'][0].MaxPlayers ? '?'
-
-  getPlayers: (r) ->
-    players = []
-    clients = r['[Reference]'][0]['[PlayerInfos]']?[0]['[Client]']
-    return players unless clients?
-    for client in clients
-      array = client['[Player]']
-      continue unless array?
-      for player in array
-        unless player.Flags? and ~player.Flags.indexOf('Removed')
-          players.push player.Name
-    return players
-
-RR.getPlayers.default = []
-
-# Don't throw an error when the reference does not exist.
-for name, func of RR
-  do (func) ->
-    exports[name] = (r) -> if r? then func(r) else func.default ? ''
+module.exports = RR

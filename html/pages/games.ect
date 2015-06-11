@@ -21,19 +21,19 @@
 <script id="games-template" type="text/ractive">
   <div class="game-list link-list">
     {{#games}}
-    <a href="clonk://league.clonkspot.org:80/?action=query&game_id={{id}}" class="{{getTags(game)}}" intro-outro="slide">
-      <img src="{{getTitleImage(reference)}}" alt="">
+    <a href="clonk://league.clonkspot.org:80/?action=query&game_id={{id}}" class="{{getTags(this)}}" intro-outro="slide">
+      <img src="{{getTitleImage(this)}}" alt="">
       <div class="game-info">
         <h2>
-          {{RR.getScenarioTitle(reference)}}
+          {{RR.getScenarioTitle(this)}}
           <i class="fa fa-trophy" title="<%= @t.games.tags.league %>"></i>
           <i class="fa fa-lock" title="<%= @t.games.tags.password %>"></i>
         </h2>
         <p>
-          <%= @t.games.on %> {{RR.getHostName(reference)}} |
-          {{RR.getPlayers(reference).length || '0'}} / {{RR.getMaxPlayerCount(reference)}} <%= @t.games.players %>
+          <%= @t.games.on %> {{host}} |
+          {{players.length || '0'}} / {{RR.getMaxPlayerCount(this)}} <%= @t.games.players %>
         </p>
-        <p><small>{{RR.getPlayers(reference).join(', ')}}</small></p>
+        <p><small>{{RR.getPlayers(this).join(', ')}}</small></p>
       </div>
     </a>
     {{/games}}
