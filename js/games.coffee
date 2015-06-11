@@ -129,7 +129,7 @@ checkNotification = (game) ->
           location.href = "clonk://league.clonkspot.org:80/?action=query&game_id=#{game.id}"
         return
 
-events = new EventSource '/league/poll_game_events.php'
+events = new EventSource '/league/game_events.php'
 
 events.addEventListener 'init', (e) ->
   games = JSON.parse(e.data)
