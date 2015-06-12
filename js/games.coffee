@@ -16,15 +16,15 @@ findIndex = (array, fun) ->
 compareGames = (a, b) ->
   getWeight = (game) ->
     base = if not game?
-      40 # not sure when this happens
+      1 # not sure when this happens
     else if game.status == 'lobby'
-      10
+      30
     else if game.flags.joinAllowed
       20
     else
-      30
-    base++ if game?.flags.passwordNeeded
-    return base * (Date.now() - new Date(game?.created).valueOf())
+      10
+    base-- if game?.flags.passwordNeeded
+    return base * (-new Date(game?.created).valueOf())
   getWeight(a) - getWeight(b)
 
 getTitleImage = (game) ->
