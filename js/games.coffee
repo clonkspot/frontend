@@ -66,16 +66,16 @@ ractive = new Ractive
     games.unshift game
     # Will be sorted properly on first update.
 
-  updateGame: (game) ->
+  updateGame: (game, pred) ->
     games = @get('games')
-    i = findIndex games, (g) -> game.id is g.id
+    i = findIndex games, (g) -> game.id is g.id and pred(g)
     if i?
       @set 'games.'+i, game
       games.sort(compareGames)
 
-  removeGame: (game) ->
+  removeGame: (game, pred) ->
     games = @get('games')
-    i = findIndex games, (g) -> game.id is g.id
+    i = findIndex games, (g) -> game.id is g.id and pred(g)
     if i?
       games.splice i, 1
       games.sort(compareGames)
@@ -126,34 +126,56 @@ checkNotification = (game) ->
           icon: getTitleImage(game)
           body: "Filter: #{query}"
         n.onclick = ->
-          location.href = "clonk://league.clonkspot.org:80/?action=query&game_id=#{game.id}"
+          location.href = game.eventSource.joinURL(game.id)
         return
 
-events = new EventSource '/league/game_events.php'
+eventSources = [
+  url: '/league/game_events.php'
+  joinURL: (id) -> "clonk://league.clonkspot.org:80/?action=query&game_id=#{id}"
+,
+  url: '/openclonk-league/poll_game_events.php'
+  joinURL: (id) -> "openclonk://league.openclonk.org:80/league.php?action=query&game_id=#{id}"
+]
 
-events.addEventListener 'init', (e) ->
-  games = JSON.parse(e.data)
-  ractive.set 'games', games.sort(compareGames)
-, false
+eventSources.forEach (eventSrc) ->
+  # Adds the event source to identify games later.
+  transformGame = (game) -> game.eventSource = eventSrc
+  ourGame = (game) -> game.eventSource is eventSrc
 
-events.addEventListener 'create', (e) ->
-  game = JSON.parse(e.data)
-  ractive.addGame game
-  ractive.get('notifications').forEach(checkNotification(game))
-, false
+  events = new EventSource eventSrc.url
 
-events.addEventListener 'update', (e) ->
-  game = JSON.parse(e.data)
-  ractive.updateGame game
-, false
+  # Init: Replace all our games.
+  events.addEventListener 'init', (e) ->
+    games = ractive.get('games').filter (g) -> not ourGame(g)
+    newGames = JSON.parse(e.data)
+    newGames.forEach(transformGame)
+    games = games.concat newGames
+    ractive.set 'games', games.sort(compareGames)
+  , false
 
-rmGame = (e) ->
-  game = JSON.parse(e.data)
-  ractive.removeGame game
+  # Create: Add a single new game.
+  events.addEventListener 'create', (e) ->
+    game = JSON.parse(e.data)
+    transformGame(game)
+    ractive.addGame game
+    ractive.get('notifications').forEach(checkNotification(game))
+  , false
 
-events.addEventListener 'end', rmGame, false
-events.addEventListener 'delete', rmGame, false
+  # Update: Change an existing game.
+  events.addEventListener 'update', (e) ->
+    game = JSON.parse(e.data)
+    transformGame(game)
+    ractive.updateGame game, ourGame
+  , false
 
-events.onopen =  -> ractive.set 'status', 'connected'
-events.onerror = -> ractive.set 'status', 'disconnected'
+  rmGame = (e) ->
+    game = JSON.parse(e.data)
+    ractive.removeGame game, ourGame
+
+  events.addEventListener 'end', rmGame, false
+  events.addEventListener 'delete', rmGame, false
+
+  # XXX: Do something less racy here.
+  events.onopen =  -> ractive.set 'status', 'connected'
+  events.onerror = -> ractive.set 'status', 'disconnected'
 
