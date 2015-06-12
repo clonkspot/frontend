@@ -28,6 +28,7 @@ compareGames = (a, b) ->
   getWeight(a) - getWeight(b)
 
 getTitleImage = (game) ->
+  return '' unless game?
   filename = game.scenario.filename
   crc = game.scenario.contentsCRC
   "/images/games/Title.png/#{filename}?hash=#{crc}"

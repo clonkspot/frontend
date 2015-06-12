@@ -13,6 +13,12 @@ RR =
     g.maxPlayers ? '?'
 
   getPlayers: (g) ->
-    g.players.map (p) -> p.name
+    players = g.players?.map (p) -> p.name
+    players ? []
 
-module.exports = RR
+RR.getPlayers.default = []
+
+# Don't throw an error when the game does not exist.
+for name, func of RR
+  do (func) ->
+    exports[name] = (g) -> if g? then func(g) else func.default ? ''
