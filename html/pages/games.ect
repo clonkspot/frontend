@@ -19,7 +19,7 @@
 
 
 <script id="games-template" type="text/ractive">
-  <div class="game-list link-list">
+  <div class="game-list link-list <%= if new Date().getMonth() == 11 then 'snow' else '' %>">
     {{#games}}
     <a href="{{eventSource.joinURL(id)}}" class="{{getTags(this)}}" intro-outro="slide">
       <img src="{{getTitleImage(this)}}" alt="">
