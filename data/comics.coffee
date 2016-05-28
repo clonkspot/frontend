@@ -11,4 +11,8 @@ module.exports = [
     title: 'Everything runs on 1.21 Gigawatts'
     bg: '#101F28'
     fg: '#c5e5f8'
+  ,
+    title: 'That dang S2-Meteorite'
+    bg: '#2d1d22'
+    fg: '#eddce1'
 ]
