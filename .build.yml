@@ -17,4 +17,4 @@ tasks:
       npm run test
       [[ "$GITHUB_REF" = refs/heads/master ]] || complete-build
   - deploy: |
-      ssh -o StrictHostKeyChecking=no clnk@lupus.uberspace.de ~/deploy/frontend.sh
+      ssh -o StrictHostKeyChecking=no clnk@lupus.uberspace.de deploy/frontend.sh
