@@ -1,0 +1,20 @@
+image: archlinux
+packages:
+  - nodejs
+  - npm
+secrets:
+  - 3612b5e9-3819-4f44-ad00-bd5bf63e8dad # deploy key
+sources:
+  - https://github.com/clonkspot/frontend
+
+tasks:
+  - build: |
+      cd frontend
+      npm install
+      npm run build
+  - test: |
+      cd frontend
+      npm run test
+      [[ "$GITHUB_REF" = refs/heads/master ]] || complete-build
+  - deploy: |
+      ssh -o StrictHostKeyChecking=no clnk@lupus.uberspace.de ~/deploy/frontend.sh

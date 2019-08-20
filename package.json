@@ -28,6 +28,8 @@
     "supertest": "~0.5.1"
   },
   "scripts": {
-    "start": "node run.js"
+    "start": "node run.js",
+    "build": "grunt && grunt layout",
+    "test": "mocha"
   }
 }
