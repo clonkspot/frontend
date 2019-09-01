@@ -74,6 +74,7 @@ module.exports =
     download:
       version: 'Choose version:'
       oc: 'in development'
+      lc_link: 'https://forum.clonkspot.org/t/legacyclonk-334-is-here-community-update-for-clonk-rage/1247/4'
 
   # Community
   interestingProjectsH2:
