@@ -5,4 +5,4 @@ chai.should()
 
 request = require 'supertest'
 {app} = require '../app'
-GLOBAL.request = request(app)
+global.request = request(app)
