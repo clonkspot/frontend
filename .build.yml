@@ -3,7 +3,7 @@ packages:
   - nodejs
   - npm
 secrets:
-  - 3612b5e9-3819-4f44-ad00-bd5bf63e8dad # deploy key
+  - 1073e969-9be9-4809-aac2-076b39494398 # deploy key
 sources:
   - https://github.com/clonkspot/frontend
 
