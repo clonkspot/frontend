@@ -54,7 +54,7 @@ if $?
 else
   head = document.getElementsByTagName('head')[0]
   script = document.createElement('script')
-  script.src = '/js/jquery.js'
+  script.src = 'https://clonkspot.org/js/jquery.js'
   script.onload = ->
     $ = window.jQuery
     main()
