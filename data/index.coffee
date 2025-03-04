@@ -1,6 +1,7 @@
 # General data
 
 module.exports =
+  base: 'https://clonkspot.org'
   nav:
     blog:
       url: '/blog'

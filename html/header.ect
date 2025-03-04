@@ -1,29 +1,29 @@
 <header>
   <div class="topimg">
-    <a href="/">
-      <img src="/images/header.jpg" alt="header">
+    <a href="<%= @data.base %>/">
+      <img src="<%= @data.base %>/images/header.jpg" alt="header">
       <div class="logo">
-        <img src="/images/logo<%= if new Date().getMonth() == 11 then '_christmas' else '' %>.png" alt="clonkspot - your hub for Clonk.">
+        <img src="<%= @data.base %>/images/logo<%= if new Date().getMonth() == 11 then '_christmas' else '' %>.png" alt="clonkspot - your hub for Clonk.">
       </div>
     </a>
 
     <a class="language" href="javascript:void(0)" onclick="document.cookie='language=<%= @t.otherlang %>;path=/;max-age=31536000';location.reload(true)">
-      <%- @t.langselect %> <img src="/images/flag_<%= @t.otherlang %>.png" alt="">
+      <%- @t.langselect %> <img src="<%= @data.base %>/images/flag_<%= @t.otherlang %>.png" alt="">
     </a>
 
-    <a class="icon discord" href="https://discord.gg/rXS9F84sTM"><img src="/images/discord.png" alt="Discord"></a>
-    <a class="icon youtube" href="https://youtube.com/user/clonkspot"><img src="/images/youtube.png" alt="YouTube"></a>
+    <a class="icon discord" href="https://discord.gg/rXS9F84sTM"><img src="<%= @data.base %>/images/discord.png" alt="Discord"></a>
+    <a class="icon youtube" href="https://youtube.com/user/clonkspot"><img src="<%= @data.base %>/images/youtube.png" alt="YouTube"></a>
   </div>
 
   <nav>
     <div class="headeritem">
-      <a href="/">
-        <img src="/images/home<%- if @req.url is '/' then '_hl' else '' %>.png" alt="Home">
+      <a href="<%= @data.base %>/">
+        <img src="<%= @data.base %>/images/home<%- if @req.url is '/' then '_hl' else '' %>.png" alt="Home">
       </a>
     </div>
     <% for key, item of @data.nav : %>
       <div class="headeritem">
-        <% include 'headeritem.ect', {key, item, @t, @req} %>
+        <% include 'headeritem.ect', {key, item, @t, @req, base: @data.base} %>
       </div>
     <% end %>
   </nav>
@@ -40,7 +40,7 @@
   </script>
   <% end %>
 
-  <script async src="/js/header.js"></script>
+  <script async src="<%= @data.base %>/js/header.js"></script>
 
   <!-- Twitch stream notification shown via JS -->
   <div class="twitch">

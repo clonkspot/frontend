@@ -2,7 +2,7 @@
 
 
 <% [title, desc] = @t.nav[@key] %>
-<a href="<%- @item.url %>"
+<a href="<%= @base %><%- @item.url %>"
   class="<%- if @req.url.startsWith(@item.url) then 'active' else '' %>">
   <b><%- title %></b>
   <small><%- desc %></small>
@@ -11,7 +11,7 @@
 <% if @item.sub?: %>
   <div class="sub">
   <% for subkey, subitem of @item.sub: %>
-    <% include 'headeritem.ect', {key: subkey, item: subitem, @t, @req} %>
+    <% include 'headeritem.ect', {key: subkey, item: subitem, @t, @req, @base} %>
   <% end %>
   </div>
 <% end %>
