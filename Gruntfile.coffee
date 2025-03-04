@@ -41,6 +41,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'layout', 'Create the static layout files', ->
     done = @async()
     request = require('supertest')(require('./app').app)
+    n = 2
     ['de', 'en'].forEach (lang) ->
       request.get('/_layout')
         .set('Accept-Language', lang)
@@ -49,4 +50,4 @@ module.exports = (grunt) ->
           throw err if err
           for key, content of res.body
             grunt.file.write "public/layout/#{key}-#{lang}.html", content
-          done()
+          done() if --n == 0
