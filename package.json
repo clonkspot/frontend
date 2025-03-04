@@ -28,6 +28,19 @@
     "mocha": "~1.8.1",
     "supertest": "~0.5.1"
   },
+  "bin": {
+    "clonkspot-frontend": "run.js"
+  },
+  "files": [
+    "app.coffee",
+    "cfg.coffee",
+    "run.js",
+    "data",
+    "html",
+    "lang",
+    "lib",
+    "public"
+  ],
   "scripts": {
     "start": "node run.js",
     "build": "grunt && grunt layout",
