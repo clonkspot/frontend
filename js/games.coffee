@@ -131,10 +131,10 @@ checkNotification = (game) ->
         return
 
 eventSources = [
-  url: '/league/game_events'
+  url: 'https://league.clonkspot.org/game_events'
   joinURL: (id) -> "clonk://league.clonkspot.org:80/?action=query&game_id=#{id}"
 ,
-  url: '/openclonk-league/game_events'
+  url: 'https://league.openclonk.org/game_events'
   joinURL: (id) -> "openclonk://league.openclonk.org:80/league.php?action=query&game_id=#{id}"
 ]
 
